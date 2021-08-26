@@ -26,6 +26,9 @@ def walruses():
 def hawkers():
     return render_template("hawkers.html")
 
+@app.route( '/sarayu/')
+def sarayu():
+    return render_template("sarayu.html")
 
 # runs the application on the development server
 if __name__ == "__main__":
