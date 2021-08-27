@@ -30,6 +30,11 @@ def hawkers():
 def sarayu():
     return render_template("sarayu.html")
 
+@app.route('/stub/')
+def stub():
+    return render_template("stub.html")
+
+
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
