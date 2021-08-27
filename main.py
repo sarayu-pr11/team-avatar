@@ -28,10 +28,7 @@ def hawkers():
 
 @app.route( '/sarayu/')
 def sarayu():
-    if request.form:
-        name = request.form.get("name")
-        if len(name) != 0:
-                return render_template("sarayu.html", name=name)
+    return render_template("sarayu.html")
 
 @app.route('/stub/')
 def stub():
