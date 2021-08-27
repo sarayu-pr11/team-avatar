@@ -33,6 +33,11 @@ def sarayu():
         if len(name) != 0:
                 return render_template("sarayu.html", name=name)
 
+@app.route('/stub/')
+def stub():
+    return render_template("stub.html")
+
+
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
