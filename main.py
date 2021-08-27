@@ -28,7 +28,10 @@ def hawkers():
 
 @app.route( '/sarayu/')
 def sarayu():
-    return render_template("sarayu.html")
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:
+                return render_template("sarayu.html", name=name)
 
 # runs the application on the development server
 if __name__ == "__main__":
