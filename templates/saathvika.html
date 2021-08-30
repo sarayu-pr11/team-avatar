@@ -2,22 +2,22 @@
 {% extends "layouts/base.html" %}
 
 <!- This variable sets name of browser tab  -->
-{% set project = "Stub" %}
+{% set project = "Saathvika" %}
 
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
     <!- Try building a new body here ->
-    <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family:serif;";>
+    <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family:monospace; color:ghostwhite";>
 
         <div class="col-12">
-            <p>Hello, {{name}}!</p>
+            <p>Ahoy there, {{name}}!</p>
         </div>
 
         <div class="col-12">
-            <form action="/greet" id="stub" method="POST" >
+            <form action="/saathvika" id="saathvika" method="POST" >
                 <label for="name">Type a greeting name?</label>
                 <input name="name" id="name">
-                <input type="submit" value="Greetings!">
+                <input type="submit" value="Welcome Aboard!">
             </form>
         </div>
 
@@ -25,7 +25,3 @@
     </div>
 {% endblock %}
 
-<!- This is turning off birds background from base.html -->
-{% block background %}
-
-{% endblock %}
