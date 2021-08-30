@@ -27,20 +27,20 @@ def hawkers():
     return render_template("hawkers.html")
 
 
-@app.route('/stub/')
+@app.route('/saathvika/')
 def stub():
     return render_template("stub.html")
 
 
-@app.route('/greet', methods=['GET', 'POST'])
+@app.route('/saathvika', methods=['GET', 'POST'])
 def greet():
     # submit button has been pushed
     if request.form:
         name = request.form.get("name")
         if len(name) != 0:  # input field has content
-            return render_template("stub.html", name=name)
+            return render_template("saathvika.html", name=name)
     # starting and empty input default
-    return render_template("stub.html", name="World")
+    return render_template("saathvika.html", name="World")
 
 
 # runs the application on the development server
