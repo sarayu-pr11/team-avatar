@@ -7,14 +7,14 @@
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
     <!- Try building a new body here ->
-    <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family:monospace; color:ghostwhite";>
+    <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family:serif;";>
 
         <div class="col-12">
-            <p>Ahoy there, {{name}}!</p>
+            <p>Ahoy There, {{name}}!</p>
         </div>
 
         <div class="col-12">
-            <form action="/saathvika" id="saathvika" method="POST" >
+            <form action="/saathvika/" id="saathvika" method="POST" >
                 <label for="name">Type a greeting name?</label>
                 <input name="name" id="name">
                 <input type="submit" value="Welcome Aboard!">
@@ -24,4 +24,3 @@
 
     </div>
 {% endblock %}
-
