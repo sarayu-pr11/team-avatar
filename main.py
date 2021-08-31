@@ -29,7 +29,7 @@ def hawkers():
 
 @app.route('/saathvika/')
 def saathvika():
-    return render_template("stub.html")
+    return render_template("saathvika.html")
 
 @app.route('/sarayu/')
 def sarayu():
