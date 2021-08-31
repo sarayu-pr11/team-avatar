@@ -27,12 +27,12 @@ def hawkers():
     return render_template("hawkers.html")
 
 
-@app.route('/stub/')
-def stub():
+@app.route('/saathvika/')
+def saathvika():
     return render_template("stub.html")
 
 @app.route('/sarayu/')
-def stub():
+def sarayu():
     return render_template("sarayu.html")
 
 @app.route('/sarayu2', methods=['GET', 'POST'])
@@ -45,24 +45,8 @@ def sarayu2():
     # starting and empty input default
     return render_template("sarayu.html", name="World")
 
-@app.route('/stub/', methods=['GET', 'POST'])
+@app.route('/saathvika', methods=['GET', 'POST'])
 def greet():
-    # submit button has been pushed
-    if request.form:
-        name = request.form.get("name")
-        if len(name) != 0:  # input field has content
-            return render_template("stub.html", name=name)
-    # starting and empty input default
-    return render_template("stub.html", name="World")
-
-
-@app.route('/saathvika/')
-def stub2():
-    return render_template("saathvika.html")
-
-
-@app.route('/saathvika/', methods=['GET', 'POST'])
-def greet2():
     # submit button has been pushed
     if request.form:
         name = request.form.get("name")
