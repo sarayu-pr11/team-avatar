@@ -33,7 +33,7 @@ def sarayu():
 
 
 @app.route('/sarayu/', methods=['GET', 'POST'])
-def sarayu():
+def sarayu2():
     # submit button has been pushed
     if request.form:
         name = request.form.get("name")
