@@ -27,16 +27,13 @@ def hawkers():
     return render_template("hawkers.html")
 
 
-@app.route('/saathvika/')
-def saathvika():
-    return render_template("stub.html")
-
 @app.route('/sarayu/')
 def sarayu():
     return render_template("sarayu.html")
 
-@app.route('/sarayu2', methods=['GET', 'POST'])
-def sarayu2():
+
+@app.route('/sarayu/', methods=['GET', 'POST'])
+def sarayu():
     # submit button has been pushed
     if request.form:
         name = request.form.get("name")
@@ -45,7 +42,13 @@ def sarayu2():
     # starting and empty input default
     return render_template("sarayu.html", name="World")
 
-@app.route('/saathvika', methods=['GET', 'POST'])
+
+@app.route('/saathvika/')
+def saathvika():
+    return render_template("saathvika.html")
+
+
+@app.route('/saathvika/', methods=['GET', 'POST'])
 def greet():
     # submit button has been pushed
     if request.form:
@@ -54,7 +57,6 @@ def greet():
             return render_template("saathvika.html", name=name)
     # starting and empty input default
     return render_template("saathvika.html", name="World")
-
 
 
 # runs the application on the development server
