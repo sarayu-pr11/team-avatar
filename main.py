@@ -65,7 +65,7 @@ def pranavi():
 
 
 @app.route('/pranavi/', methods=['GET', 'POST'])
-def pranavi2():
+def greet2():
     # submit button has been pushed
     if request.form:
         name = request.form.get("name")
@@ -73,6 +73,7 @@ def pranavi2():
             return render_template("pranavi.html", name=name)
     # starting and empty input default
     return render_template("pranavi.html", name="World")
+
 
 
 # runs the application on the development server
