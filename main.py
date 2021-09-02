@@ -72,7 +72,7 @@ def pranavi2():
         if len(name) != 0:  # input field has content
             return render_template("pranavi.html", name=name)
     # starting and empty input default
-    return render_template("sarayu.html", name="World")
+    return render_template("pranavi.html", name="World")
 
 
 # runs the application on the development server
