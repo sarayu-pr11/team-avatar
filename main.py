@@ -65,7 +65,7 @@ def pranavi():
 
 
 @app.route('/pranavi/', methods=['GET', 'POST'])
-def pranavi2():
+def greet():
     # submit button has been pushed
     if request.form:
         name = request.form.get("name")
