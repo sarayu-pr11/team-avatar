@@ -60,12 +60,12 @@ def greet():
 
 
 @app.route('/pranavi/')
-def sarayu():
+def pranavi():
     return render_template("pranavi.html")
 
 
 @app.route('/pranavi/', methods=['GET', 'POST'])
-def sarayu2():
+def pranavi2():
     # submit button has been pushed
     if request.form:
         name = request.form.get("name")
