@@ -1,0 +1,22 @@
+{% extends "layouts/base.html" %}
+
+{% set project = "Pranavi" %}
+
+{% block body %}
+<div class="center-block" style="margin: 2% 2% 5%; text-align:center; font-family:cursive;";>
+
+    <div class="col-12">
+        <p>Hello,  {{name}}!</p>
+    </div>
+
+    <div class="col-12">
+        <form action="/pranavi/" id="pranavi" method="POST" >
+            <label for="name">Type your name?</label>
+            <input name="name" id="name">
+            <input type="submit" value="Nice to meet you!">
+        </form>
+    </div>
+
+
+</div>
+{% endblock %}
