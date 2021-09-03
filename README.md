@@ -1,3 +1,23 @@
+# Team Colors: Website
+
+Checklist:
+- everyone needs to begin adding their individual projects to the website
+- make an about page for each person
+- needs a dropdown menu
+- each menu needs a stub code page
+
+# Theme: Color Wheel
+
+Design Step 1: Ideation
+- theme is colorwheel/a guide to del norte
+- each slice of the color wheel would coordinate to a specific problem many incoming or resident students would have
+- could build on each problem with multiple layers to the colorwheel
+- each person's about me page needs their greeter project and all their projects
+- wireframe and design each web page
+- begin importing important files (ex. main.py, .html templates)
+- begin coding each webpage
+
+
 ## [Flask Portfolio Starter](https://nighthawkcodingsociety.com/projectsearch/details/Flask%20Portfolio%20Starter)
 Runtime link: https://portfolio.nighthawkcodingsociety.com/
 ### Idea
