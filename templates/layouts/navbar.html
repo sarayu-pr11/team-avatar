@@ -13,6 +13,17 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
             <a class="nav-link" href={{ url_for('saathvika') }}>Saathvika</a>
             <a class="nav-link" href={{ url_for('sarayu') }}>Sarayu</a>
             <a class="nav-link" href={{ url_for('pranavi') }}>Pranavi</a>
+            <h2></h2>
+            <p></p>
+
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Menu</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a class="nav-link" href={{  url_for('pranavi') }}  >Pranavi</a>
+                    <a class="nav-link" href={{  url_for('saathvika') }}>Saathvika</a>
+                    <a class="nav-link" href={{  url_for('sarayu') }}  >Sarayu</a>
+                </div>
+            </div>
 
             <!DOCTYPE html>
             <html>
@@ -20,7 +31,7 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                 <meta name="viewport" content="width=device-width, initial-scale=1">
                 <style>
                     .dropbtn {
-                        background-color: #3498DB;
+                        background-color: #15286b;
                         color: white;
                         padding: 16px;
                         font-size: 16px;
@@ -33,7 +44,7 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                     }
 
                     .dropdown {
-                        position: relative;
+                        position: left;
                         display: inline-block;
                     }
 
@@ -61,21 +72,10 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
             </head>
             <body>
 
-            <h2>Clickable Dropdown</h2>
-            <p>Click on the button to open the dropdown menu.</p>
+            <h2></h2>
+            <p></p>
 
-            <li class="dropdown sm-scrn">
-                <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true" data-hover="dropdown" href="#https://www.innovkraft.com/achievements">
-                    Achievements
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a href="https://www.innovkraft.com/achievements/#id-of-awards-section">Awards & Recognition</a></li>
-                    <li><a href="https://www.innovkraft.com/achievements/#id-of-academic-section">Academic Achievements</a></li>
-                    <li><a href="https://www.innovkraft.com/achievements/#id-of-transport-section">Transport Service</a></li>
-                    <li><a href="https://www.innovkraft.com/achievements/#id-of-RCIS-section">RCIS in media</a></li>
-                    <li><a href="https://www.innovkraft.com/achievements/#id-of-news-section">News & Events</a></li>
-                </ul>
-            </li>
+
 
             <script>
                 /* When the user clicks on the button,
