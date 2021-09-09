@@ -75,7 +75,6 @@ def greet2():
     return render_template("pranavi.html", name="World")
 
 
-
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
