@@ -74,20 +74,20 @@ def greet2():
     # starting and empty input default
     return render_template("pranavi.html", name="World")
 
-@app.route('/bulb/')
-def bulb():
-    return render_template("binary.html")
+@app.route('/lab/')
+def lab():
+    return render_template("mini-labs.html")
 
 
-@app.route('/bulb/', methods=['GET', 'POST'])
-def bulb2():
+@app.route('/lab/', methods=['GET', 'POST'])
+def lab2():
     # submit button has been pushed
     if request.form:
         name = request.form.get("name")
         if len(name) != 0:  # input field has content
-            return render_template("binary.html.html", name=name)
+            return render_template("mini-labs.html", name=name)
     # starting and empty input default
-    return render_template("binary.html", name="World")
+    return render_template("mini-labs.html", name="World")
 
 
 
