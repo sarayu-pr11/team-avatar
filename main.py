@@ -49,7 +49,7 @@ def saathvika():
 
 
 @app.route('/saathvika/', methods=['GET', 'POST'])
-def pranavi2():
+def greet():
     # submit button has been pushed
     if request.form:
         name = request.form.get("name")
@@ -73,8 +73,6 @@ def greet2():
             return render_template("pranavi.html", name=name)
     # starting and empty input default
     return render_template("pranavi.html", name="World")
-
-
 
 
 # runs the application on the development server
