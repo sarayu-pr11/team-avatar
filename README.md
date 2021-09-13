@@ -6,10 +6,10 @@
 1. [Contributors](#contributers) 
 2. [Pair Share Journals](https://docs.google.com/document/d/1aB6TsPf0lRSEx4cQRl--_8EPWaObHeHZDB2GYMo9ias/edit) 
 3. [Project Ideation]
-4. [Sprint 0 - Introduction](https://youtu.be/8iYBFtuoYHM)
+4. [Sprint 0 - Introduction](#Sprint0)
 5. [Sprints 1,2 - Innovation]
 6. [Sprints 3,4 - Prototyping]
-##   <h2 id="contributers">Contributers</h2>
+###   <h2 id="contributers">Contributers</h2>
 
 | Name | GitHub ID and Profile | Tasks | Scrum Board | Commits |
 |:-----|:----------------------|:-----:|:-----------:|:-------:|
@@ -18,6 +18,8 @@
 | Pranavi Inukurti | [@PranaviInukurti](https://github.com/PranaviInukurti) | [Tasks](https://github.com/sarayu-pr11/flask_portfolio/issues/assigned/PranaviInukurti) |[Scrum Board](https://github.com/sarayu-pr11/flask_portfolio/projects/1?card_filter_query=assignee%3Apranaviinukurti) | [Commits](https://github.com/sarayu-pr11/flask_portfolio/commits?author=PranaviInukurti)
 
 ## Checklist:
+###   <h2 id="Sprint0">Sprint 0</h2>
+https://youtu.be/8iYBFtuoYHM
 ### Week 1:
 https://www.loom.com/share/e19e644693bf4a93a81d8e421734f465
 https://github.com/sarayu-pr11/flask_portfolio/projects/1?card_filter_query=week+1
