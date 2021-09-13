@@ -18,7 +18,7 @@
 | Pranavi Inukurti | [@PranaviInukurti](https://github.com/PranaviInukurti) | [Tasks](https://github.com/sarayu-pr11/flask_portfolio/issues/assigned/PranaviInukurti) |[Scrum Board](https://github.com/sarayu-pr11/flask_portfolio/projects/1?card_filter_query=assignee%3Apranaviinukurti) [Commits](https://github.com/sarayu-pr11/flask_portfolio/commits?author=PranaviInukurti)
 
 ## Checklist:
-### Week 2:
+### Week 1:
 https://www.loom.com/share/e19e644693bf4a93a81d8e421734f465
 https://github.com/sarayu-pr11/flask_portfolio/projects/1?card_filter_query=week+1
 ### Week 2:
@@ -27,7 +27,7 @@ https://github.com/sarayu-pr11/flask_portfolio/projects/1?card_filter_query=week
 - make an about page for each person
   - include greet project
   - https://github.com/sarayu-pr11/flask_portfolio/issues/4
-### Week 4:
+### Week 3:
 - make a dropdown menu
   - each menu needs a stub code page 
   - https://github.com/sarayu-pr11/flask_portfolio/issues/11
