@@ -3,7 +3,7 @@
 ## [Scrum Board](https://github.com/sarayu-pr11/flask_portfolio/projects/1)
 ## [Insights with Contributors and Commits](https://github.com/sarayu-pr11/flask_portfolio/graphs/contributors)
 ## Table of Contents
-1. [Contributors] 
+1. [Contributors](#contributers) 
 2. [Pair Share Journals](https://docs.google.com/document/d/1aB6TsPf0lRSEx4cQRl--_8EPWaObHeHZDB2GYMo9ias/edit) 
 3. [Project Ideation]
 4. [Sprint 0 - Introduction](https://youtu.be/8iYBFtuoYHM)
@@ -13,9 +13,9 @@
 
 | Name | GitHub ID and Profile | Tasks | Scrum Board | Commits |
 |:-----|:----------------------|:-----:|:-----------:|:-------:|
-| Sarayu Pochimireddy | [@sarayu-pr11](https://github.com/sarayu-pr11) | [Tasks](https://github.com/sarayu-pr11/flask_portfolio/issues/assigned/sarayu-pr11) |[Scrum Board](https://github.com/sarayu-pr11/flask_portfolio/projects/1?card_filter_query=assignee%3Asarayu-pr11) [Commits](https://github.com/sarayu-pr11/flask_portfolio/commits?author=sarayu-pr11)
-| Saathvika Ajith | [@Saathvika-Ajith](https://github.com/Saathvika-Ajith) | [Tasks](https://github.com/sarayu-pr11/flask_portfolio/issues/assigned/Saathvika-Ajith) | [Scrum Board](https://github.com/sarayu-pr11/flask_portfolio/projects/1?card_filter_query=assignee%3Asaathvika-ajith) [Commits](https://github.com/sarayu-pr11/flask_portfolio/commits?author=Saathvika-Ajith)
-| Pranavi Inukurti | [@PranaviInukurti](https://github.com/PranaviInukurti) | [Tasks](https://github.com/sarayu-pr11/flask_portfolio/issues/assigned/PranaviInukurti) |[Scrum Board](https://github.com/sarayu-pr11/flask_portfolio/projects/1?card_filter_query=assignee%3Apranaviinukurti) [Commits](https://github.com/sarayu-pr11/flask_portfolio/commits?author=PranaviInukurti)
+| Sarayu Pochimireddy | [@sarayu-pr11](https://github.com/sarayu-pr11) | [Tasks](https://github.com/sarayu-pr11/flask_portfolio/issues/assigned/sarayu-pr11) |[Scrum Board](https://github.com/sarayu-pr11/flask_portfolio/projects/1?card_filter_query=assignee%3Asarayu-pr11) | [Commits](https://github.com/sarayu-pr11/flask_portfolio/commits?author=sarayu-pr11)
+| Saathvika Ajith | [@Saathvika-Ajith](https://github.com/Saathvika-Ajith) | [Tasks](https://github.com/sarayu-pr11/flask_portfolio/issues/assigned/Saathvika-Ajith) | [Scrum Board](https://github.com/sarayu-pr11/flask_portfolio/projects/1?card_filter_query=assignee%3Asaathvika-ajith) | [Commits](https://github.com/sarayu-pr11/flask_portfolio/commits?author=Saathvika-Ajith)
+| Pranavi Inukurti | [@PranaviInukurti](https://github.com/PranaviInukurti) | [Tasks](https://github.com/sarayu-pr11/flask_portfolio/issues/assigned/PranaviInukurti) |[Scrum Board](https://github.com/sarayu-pr11/flask_portfolio/projects/1?card_filter_query=assignee%3Apranaviinukurti) | [Commits](https://github.com/sarayu-pr11/flask_portfolio/commits?author=PranaviInukurti)
 
 ## Checklist:
 ### Week 1:
