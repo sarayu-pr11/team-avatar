@@ -40,13 +40,14 @@ https://github.com/sarayu-pr11/flask_portfolio/projects/1?card_filter_query=week
   
 ---
 
-## Theme: Color Wheel
+## Theme: Color Wheel/Guide to Del Norte
 
 ### Design Step 1: Ideation
 - the theme is a colorwheel guide to del norte
-- each slice of the color wheel would coordinate to a specific problem many incoming or resident students would have
+- each slice of the color wheel would coordinate to a specific problem or guide many incoming or resident students would have
 - we could build on each problem with multiple layers to the colorwheel
 - everything within would be color coded, background will have to be black so colors stand out
+- there could be slices for clubs, teaching materials, etc.
 ### Design Step 2: Specification
 ### Design Step 3: Prototyping/Developing
 ### Design Step 4: Testing/Feedback
