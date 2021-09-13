@@ -5,10 +5,9 @@
 ## Table of Contents
 1. [Contributors](#contributers) 
 2. [Pair Share Journals](https://docs.google.com/document/d/1aB6TsPf0lRSEx4cQRl--_8EPWaObHeHZDB2GYMo9ias/edit) 
-3. [Project Ideation]
-4. [Sprint 0 - Introduction](#Sprint0)
-5. [Sprints 1,2 - Innovation]
-6. [Sprints 3,4 - Prototyping]
+3. [Sprint 0 - Introduction](#Sprint0)
+4. [Sprints 1,2 - Innovation](#Sprint1)
+5. [Sprints 3,4 - Prototyping](#Sprint2)
 ###   <h2 id="contributers">Contributers</h2>
 
 | Name | GitHub ID and Profile | Tasks | Scrum Board | Commits |
@@ -17,19 +16,18 @@
 | Saathvika Ajith | [@Saathvika-Ajith](https://github.com/Saathvika-Ajith) | [Tasks](https://github.com/sarayu-pr11/flask_portfolio/issues/assigned/Saathvika-Ajith) | [Scrum Board](https://github.com/sarayu-pr11/flask_portfolio/projects/1?card_filter_query=assignee%3Asaathvika-ajith) | [Commits](https://github.com/sarayu-pr11/flask_portfolio/commits?author=Saathvika-Ajith)
 | Pranavi Inukurti | [@PranaviInukurti](https://github.com/PranaviInukurti) | [Tasks](https://github.com/sarayu-pr11/flask_portfolio/issues/assigned/PranaviInukurti) |[Scrum Board](https://github.com/sarayu-pr11/flask_portfolio/projects/1?card_filter_query=assignee%3Apranaviinukurti) | [Commits](https://github.com/sarayu-pr11/flask_portfolio/commits?author=PranaviInukurti)
 
-## Checklist:
 ###   <h2 id="Sprint0">Sprint 0</h2>
 https://youtu.be/8iYBFtuoYHM
-### Week 1:
+###   <h2 id="Sprint1">Sprint 1,2</h2>
 https://www.loom.com/share/e19e644693bf4a93a81d8e421734f465
 https://github.com/sarayu-pr11/flask_portfolio/projects/1?card_filter_query=week+1
-### Week 2:
+
 https://www.loom.com/share/a9551328dc9c4ee78b4951f9c8c14095
 https://github.com/sarayu-pr11/flask_portfolio/projects/1?card_filter_query=week+2
 - make an about page for each person
   - include greet project
   - https://github.com/sarayu-pr11/flask_portfolio/issues/4
-### Week 3:
+###   <h2 id="Sprint2">Sprint 3,4</h2>
 - make a dropdown menu
   - each menu needs a stub code page 
   - https://github.com/sarayu-pr11/flask_portfolio/issues/11
