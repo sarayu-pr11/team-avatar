@@ -3,13 +3,14 @@
 ## [Scrum Board](https://github.com/sarayu-pr11/flask_portfolio/projects/1)
 ## [Insights with Contributors and Commits](https://github.com/sarayu-pr11/flask_portfolio/graphs/contributors)
 ## Table of Contents
-1. [Contributors]
-2. [Pair Share Journals]
+1. [Contributors] 
+2. [Pair Share Journals](https://docs.google.com/document/d/1aB6TsPf0lRSEx4cQRl--_8EPWaObHeHZDB2GYMo9ias/edit) 
 3. [Project Ideation]
-4. [Sprint 0 - Introduction]
+4. [Sprint 0 - Introduction](https://youtu.be/8iYBFtuoYHM)
 5. [Sprints 1,2 - Innovation]
 6. [Sprints 3,4 - Prototyping]
-## Contributors
+##   <h2 id="contributers">Contributers</h2>
+
 | Name | GitHub ID and Profile | Tasks | Scrum Board | Commits |
 |:-----|:----------------------|:-----:|:-----------:|:-------:|
 | Sarayu Pochimireddy | [@sarayu-pr11](https://github.com/sarayu-pr11) | [Tasks](https://github.com/sarayu-pr11/flask_portfolio/issues/assigned/sarayu-pr11) |[Scrum Board](https://github.com/sarayu-pr11/flask_portfolio/projects/1?card_filter_query=assignee%3Asarayu-pr11) [Commits](https://github.com/sarayu-pr11/flask_portfolio/commits?author=sarayu-pr11)
@@ -18,10 +19,15 @@
 
 ## Checklist:
 ### Week 2:
+https://www.loom.com/share/e19e644693bf4a93a81d8e421734f465
+https://github.com/sarayu-pr11/flask_portfolio/projects/1?card_filter_query=week+1
+### Week 2:
+https://www.loom.com/share/a9551328dc9c4ee78b4951f9c8c14095
+https://github.com/sarayu-pr11/flask_portfolio/projects/1?card_filter_query=week+2
 - make an about page for each person
   - include greet project
   - https://github.com/sarayu-pr11/flask_portfolio/issues/4
-### Week 3:
+### Week 4:
 - make a dropdown menu
   - each menu needs a stub code page 
   - https://github.com/sarayu-pr11/flask_portfolio/issues/11
