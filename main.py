@@ -59,7 +59,7 @@ def saathvika():
 
 
 @app.route('/saathvika/', methods=['GET', 'POST'])
-def saathvika2():
+def greet():
     # submit button has been pushed
     if request.form:
         name = request.form.get("name")
@@ -75,7 +75,7 @@ def pranavi():
 
 
 @app.route('/pranavi/', methods=['GET', 'POST'])
-def pranavi2():
+def greet2():
     # submit button has been pushed
     if request.form:
         name = request.form.get("name")
