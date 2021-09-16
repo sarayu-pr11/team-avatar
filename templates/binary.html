@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-{% extends "layout.html" %}
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
 
 <!-- Search for all the Hack: below for hack-a-thon and mini-lab requirements -->
 <!-- need to adjust Templates to start -->
@@ -144,6 +145,7 @@
             </div>
 
             <div class="col-12">
+                <form action="/binary/" id="binary" method="POST" >
                 <table class="table">
                     <tr>
                         {% for i in range(BITS) %}

@@ -10,9 +10,11 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
         <div class="navbar-nav">
             <!-- url_for is a Jinja2 pre-processor that finds route from function name (def) -->
             <!-- stub is shown using the name of the route -->
-            <a class="nav-link" href={{ url_for('saathvika') }}>Saathvika</a>
-            <a class="nav-link" href={{ url_for('sarayu') }}>Sarayu</a>
-            <a class="nav-link" href={{ url_for('pranavi') }}>Pranavi</a>
+            <a class="nav-link" style="font-family: 'Monotype Corsiva';color:red" href={{url_for('home')}}>Home</a>
+            <a class="nav-link" style="font-family: 'Monotype Corsiva';color:darkorange" href={{url_for('binary')}}>Binary</a>
+            <a class="nav-link" style="font-family: 'Monotype Corsiva';color:goldenrod" href={{url_for('pranavi')}}>Pranavi</a>
+            <a class="nav-link" style="font-family: 'Monotype Corsiva';color:green" href={{url_for('sarayu')}}>Sarayu</a>
+            <a class="nav-link" style="font-family: 'Monotype Corsiva';color:darkblue" href={{url_for('saathvika')}}>Saathvika</a>
 
 
 
