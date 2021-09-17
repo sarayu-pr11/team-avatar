@@ -59,7 +59,7 @@ def saathvika():
 
 
 @app.route('/saathvika/', methods=['GET', 'POST'])
-def greet():
+def saathvika2():
     # submit button has been pushed
     if request.form:
         name = request.form.get("name")
@@ -75,7 +75,7 @@ def pranavi():
 
 
 @app.route('/pranavi/', methods=['GET', 'POST'])
-def greet2():
+def pranavi2():
     # submit button has been pushed
     if request.form:
         name = request.form.get("name")
@@ -83,6 +83,23 @@ def greet2():
             return render_template("pranavi.html", name=name)
     # starting and empty input default
     return render_template("pranavi.html", name="World")
+
+
+@app.route('/greet/')
+def greet():
+    return render_template("greet.html")
+
+
+@app.route('/greet/', methods=['GET', 'POST'])
+def greet2():
+    # submit button has been pushed
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("greet.html", name=name)
+    # starting and empty input default
+    return render_template("greet.html", name="World")
+
 
 # runs the application on the development server
 if __name__ == "__main__":

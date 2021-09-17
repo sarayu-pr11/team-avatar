@@ -1,0 +1,26 @@
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
+
+<!- This variable sets name of browser tab  -->
+{% set project = "Saathvika" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+<!- Try building a new body here ->
+<div class="center-block" style="margin: 7% 10% 10%; text-align:center; font-family:monospace; color:ghostwhite";>
+
+    <div class="col-12">
+        <p>Hello There, {{name}}!</p>
+    </div>
+
+    <div class="col-12">
+        <form action="/greet/" id="greet2" method="POST" >
+            <label for="name">What's Your Name?</label>
+            <input name="name" id="name">
+            <input type="submit" value="Welcome to Del Norte!">
+        </form>
+    </div>
+    <br> </br>
+    <img src="https://t3.ftcdn.net/jpg/03/67/35/72/360_F_367357209_BG07SVnnB4HSHSaMiHajfZhrZZAE859A.jpg" alt="Welcome" style="width:318px;height:180px;">
+</div>
+{% endblock %}
