@@ -8,20 +8,21 @@ This HTML is set up as a fragment allowing it to be "included" by other HTML fil
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav"; style="font-size: 22px;" >
-            <a class="nav-link" style="font-family: 'Monotype Corsiva';color:red" href={{url_for('home')}}>Home</a>
-            <a class="nav-link" style="font-family: 'Monotype Corsiva';color:darkorange" href={{url_for('binary')}}>Binary</a>
-
 
             <h2></h2>
             <p></p>
 
 
+
             <div class="dropdown"; style="font-family: 'Monotype Corsiva';color: ghostwhite">
-                <button onclick="myFunction()" class="dropbtn">About Us</button>
-                <div id="myDropdown" class="dropdown-content">
-                    <a class="nav-link" style="font-family: 'Monotype Corsiva';color:goldenrod" href={{url_for('pranavi')}}>Pranavi</a>
-                    <a class="nav-link" style="font-family: 'Monotype Corsiva';color:green" href={{url_for('sarayu')}}>Sarayu</a>
-                    <a class="nav-link" style="font-family: 'Monotype Corsiva';color:darkblue" href={{url_for('saathvika')}}>Saathvika</a>
+                <button onclick="myFunction3()" class="dropbtn">Colors</button>
+                <div id="Dropdown3" class="dropdown-content">
+                    <a class="nav-link" style="font-family: 'Monotype Corsiva';color:red" href={{url_for('home')}}>Red</a>
+                    <a class="nav-link" style="font-family: 'Monotype Corsiva';color:darkorange" href={{url_for('home')}}>Orange</a>
+                    <a class="nav-link" style="font-family: 'Monotype Corsiva';color:goldenrod" href={{url_for('home')}}>Yellow</a>
+                    <a class="nav-link" style="font-family: 'Monotype Corsiva';color:green" href={{url_for('home')}}>Green</a>
+                    <a class="nav-link" style="font-family: 'Monotype Corsiva';color:darkblue" href={{url_for('home')}}>Blue</a>
+                    <a class="nav-link" style="font-family: 'Monotype Corsiva';color:darkmagenta" href={{url_for('home')}}>Purple</a>
 
 
                 </div>
@@ -42,11 +43,12 @@ This HTML is set up as a fragment allowing it to be "included" by other HTML fil
                     }
 
                     .dropbtn:hover, .dropbtn:focus {
-                        background-color: darkblue;
+                        background-color: ghostwhite;
+                        color: black;
                     }
 
                     .dropdown {
-                        position: left;
+                        position: center;
                         display: inline-block;
                     }
 
@@ -67,7 +69,7 @@ This HTML is set up as a fragment allowing it to be "included" by other HTML fil
                         display: block;
                     }
 
-                    .dropdown a:hover {background-color: #ddd;}
+                    .dropdown a:hover {background-color: ghostwhite;}
 
                     .show {display: block;}
                 </style>
@@ -79,9 +81,11 @@ This HTML is set up as a fragment allowing it to be "included" by other HTML fil
 
 
             <div class="dropdown"; style="font-family: 'Monotype Corsiva';color: ghostwhite">
-                <button onclick="myFunction()" class="dropbtn">Mini-Labs</button>
-                <div id="myDropdown" class="dropdown-content">
-
+                <button onclick="myFunction2()" class="dropbtn">Mini-Labs</button>
+                <div id="Dropdown2" class="dropdown-content">
+                    <a class="nav-link" style="font-family: 'Monotype Corsiva';color:red" href={{url_for('home')}}>Home</a>
+                    <a class="nav-link" style="font-family: 'Monotype Corsiva';color:darkorange" href={{url_for('greet')}}>Greet</a>
+                    <a class="nav-link" style="font-family: 'Monotype Corsiva';color:goldenrod" href={{url_for('binary')}}>Binary</a>
 
 
                 </div>
@@ -102,11 +106,12 @@ This HTML is set up as a fragment allowing it to be "included" by other HTML fil
                     }
 
                     .dropbtn:hover, .dropbtn:focus {
-                        background-color: darkblue;
+                        background-color: ghostwhite;
+                        color: black;
                     }
 
                     .dropdown {
-                        position: left;
+                        position: center;
                         display: inline-block;
                     }
 
@@ -127,7 +132,70 @@ This HTML is set up as a fragment allowing it to be "included" by other HTML fil
                         display: block;
                     }
 
-                    .dropdown a:hover {background-color: #ddd;}
+                    .dropdown a:hover {background-color: ghostwhite;}
+
+                    .show {display: block;}
+                </style>
+            </head>
+            <body>
+
+            <h2></h2>
+            <p></p>
+
+
+            <div class="dropdown"; style="font-family: 'Monotype Corsiva';color: ghostwhite">
+                <button onclick="myFunction1()" class="dropbtn">About Us</button>
+                <div id="Dropdown1" class="dropdown-content">
+                    <a class="nav-link" style="font-family: 'Monotype Corsiva';color:green" href={{url_for('sarayu')}}>Sarayu</a>
+                    <a class="nav-link" style="font-family: 'Monotype Corsiva';color:darkblue" href={{url_for('saathvika')}}>Saathvika</a>
+                    <a class="nav-link" style="font-family: 'Monotype Corsiva';color:darkmagenta" href={{url_for('pranavi')}}>Pranavi</a>
+
+
+                </div>
+            </div>
+
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <style>
+                    .dropbtn {
+                        background-color: black;
+                        color: ghostwhite;
+                        padding: 16px;
+                        font-size: 22px;
+                        border: none;
+                        cursor: pointer;
+                    }
+
+                    .dropbtn:hover, .dropbtn:focus {
+                        background-color: ghostwhite;
+                        color: black;
+                    }
+
+                    .dropdown {
+                        position: center;
+                        display: inline-block;
+                    }
+
+                    .dropdown-content {
+                        display: none;
+                        position: absolute;
+                        background-color: ghostwhite;
+                        min-width: 160px;
+                        overflow: auto;
+                        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                        z-index: 1;
+                    }
+
+                    .dropdown-content a {
+                        color: black;
+                        padding: 12px 16px;
+                        text-decoration: none;
+                        display: block;
+                    }
+
+                    .dropdown a:hover {background-color: ghostwhite;}
 
                     .show {display: block;}
                 </style>
@@ -141,8 +209,18 @@ This HTML is set up as a fragment allowing it to be "included" by other HTML fil
             <script>
                 /* When the user clicks on the button,
                 toggle between hiding and showing the dropdown content */
-                function myFunction() {
-                    document.getElementById("myDropdown").classList.toggle("show");
+                function myFunction2() {
+                    document.getElementById("Dropdown2").classList.toggle("show");
+                }
+
+                function myFunction1() {
+                    document.getElementById("Dropdown1").classList.toggle("show");
+
+                }
+
+                function myFunction3() {
+                    document.getElementById("Dropdown3").classList.toggle("show");
+
                 }
 
                 // Close the dropdown if the user clicks outside of it
