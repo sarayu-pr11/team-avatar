@@ -39,6 +39,9 @@ https://github.com/sarayu-pr11/flask_portfolio/projects/1?card_filter_query=week
 - wireframe concepts for webpage design
   - three or more ideas needed
   - https://github.com/sarayu-pr11/flask_portfolio/issues/6
+- add css and desgin elements to website
+  - make the website and code nicer to view
+  - https://github.com/sarayu-pr11/flask_portfolio/issues/12 
   
 ---
 
