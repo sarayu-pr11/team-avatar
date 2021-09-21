@@ -6,11 +6,11 @@
 ## [Daily Journal](https://docs.google.com/document/d/1aB6TsPf0lRSEx4cQRl--_8EPWaObHeHZDB2GYMo9ias/edit) 
 --- 
 ###   <h2 id="contributers">Contributors</h2>
-| Name | GitHub ID and Profile | Tasks | Scrum Board | Commits |
-|:-----|:----------------------|:-----:|:-----------:|:-------:|
-| Sarayu Pochimireddy | [@sarayu-pr11](https://github.com/sarayu-pr11) | [Tasks](https://github.com/sarayu-pr11/flask_portfolio/issues/assigned/sarayu-pr11) |[Scrum Board](https://github.com/sarayu-pr11/flask_portfolio/projects/1?card_filter_query=assignee%3Asarayu-pr11) | [Commits](https://github.com/sarayu-pr11/flask_portfolio/commits?author=sarayu-pr11)
-| Saathvika Ajith | [@Saathvika-Ajith](https://github.com/Saathvika-Ajith) | [Tasks](https://github.com/sarayu-pr11/flask_portfolio/issues/assigned/Saathvika-Ajith) | [Scrum Board](https://github.com/sarayu-pr11/flask_portfolio/projects/1?card_filter_query=assignee%3Asaathvika-ajith) | [Commits](https://github.com/sarayu-pr11/flask_portfolio/commits?author=Saathvika-Ajith)
-| Pranavi Inukurti | [@PranaviInukurti](https://github.com/PranaviInukurti) | [Tasks](https://github.com/sarayu-pr11/flask_portfolio/issues/assigned/PranaviInukurti) |[Scrum Board](https://github.com/sarayu-pr11/flask_portfolio/projects/1?card_filter_query=assignee%3Apranaviinukurti) | [Commits](https://github.com/sarayu-pr11/flask_portfolio/commits?author=PranaviInukurti)
+| Name | GitHub ID and Profile | Tickets | Scrum Board | Commits |
+|:----:|:----------------------|:-----:|:-----------:|:-------:|
+| Sarayu Pochimireddy | [@sarayu-pr11](https://github.com/sarayu-pr11) | [Tickets](https://github.com/sarayu-pr11/flask_portfolio/issues/assigned/sarayu-pr11) |[Scrum Board](https://github.com/sarayu-pr11/flask_portfolio/projects/1?card_filter_query=assignee%3Asarayu-pr11) | [Commits](https://github.com/sarayu-pr11/flask_portfolio/commits?author=sarayu-pr11)
+| Saathvika Ajith | [@Saathvika-Ajith](https://github.com/Saathvika-Ajith) | [Tickets](https://github.com/sarayu-pr11/flask_portfolio/issues/assigned/Saathvika-Ajith) | [Scrum Board](https://github.com/sarayu-pr11/flask_portfolio/projects/1?card_filter_query=assignee%3Asaathvika-ajith) | [Commits](https://github.com/sarayu-pr11/flask_portfolio/commits?author=Saathvika-Ajith)
+| Pranavi Inukurti | [@PranaviInukurti](https://github.com/PranaviInukurti) | [Tickets](https://github.com/sarayu-pr11/flask_portfolio/issues/assigned/PranaviInukurti) |[Scrum Board](https://github.com/sarayu-pr11/flask_portfolio/projects/1?card_filter_query=assignee%3Apranaviinukurti) | [Commits](https://github.com/sarayu-pr11/flask_portfolio/commits?author=PranaviInukurti)
 ---
 ## Table of Contents
 1. [Sprint 5,6 - Prototyping](#Sprint3)
@@ -20,23 +20,27 @@
 ---
 
 ###   <h2 id="Sprint3">Sprint 5,6</h2>
-Week 5
+#### <h3> Week 5 </h3>
 - Walkthrough
-  - 
+  - :3
 - Scrum Board
   - https://github.com/sarayu-pr11/flask_portfolio/projects/1
+  
+- Team Scoring
 
 | Name | Requirement | Evidence | Grade |
-|:-----|:-----------:|:--------:|:-----:|
-| Saathvika Ajith |
-| Sarayu Pochimireddy |
-| Pranavi Inukurti |
+|:----:|:-----------:|:--------:|:-----:|
+| Saathvika Ajith | | | |
+| Sarayu Pochimireddy | | | |
+| Pranavi Inukurti | | | |
 
-| Name | Journal | TT & TPT Notes | Grade |
-|:-----|:-------:|:--------------:|:-----:|
-| Saathvika Ajith |
-| Sarayu Pochimireddy |
-| Pranavi Inukurti |
+- Individual Scoring
+
+| Name | Journal with TT & TPT Notes | Grade |
+|:----:|:---------------------------:|:-----:|
+| Saathvika Ajith | https://docs.google.com/document/d/1aB6TsPf0lRSEx4cQRl--_8EPWaObHeHZDB2GYMo9ias/edit?usp=sharing | 5/5 |
+| Sarayu Pochimireddy | https://docs.google.com/document/d/1aB6TsPf0lRSEx4cQRl--_8EPWaObHeHZDB2GYMo9ias/edit?usp=sharing | 5/5 |
+| Pranavi Inukurti | https://docs.google.com/document/d/1aB6TsPf0lRSEx4cQRl--_8EPWaObHeHZDB2GYMo9ias/edit?usp=sharing | 5/5 |
 
 ###   <h2 id="Sprint2">Sprint 3,4</h2>
 Week 4
