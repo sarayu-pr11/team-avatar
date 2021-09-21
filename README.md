@@ -22,16 +22,28 @@
 ###   <h2 id="Sprint3">Sprint 5,6</h2>
 Week 5
 - Walkthrough
-  - f
+  - 
 - Scrum Board
-  - f
+  - https://github.com/sarayu-pr11/flask_portfolio/projects/1
+
+| Name | Requirement | Evidence | Grade |
+|:-----|:-----------:|:--------:|:-----:|
+| Saathvika Ajith |
+| Sarayu Pochimireddy |
+| Pranavi Inukurti |
+
+| Name | Journal | TT & TPT Notes | Grade |
+|:-----|:-------:|:--------------:|:-----:|
+| Saathvika Ajith |
+| Sarayu Pochimireddy |
+| Pranavi Inukurti |
 
 ###   <h2 id="Sprint2">Sprint 3,4</h2>
 Week 4
 - Walkthrough
   - https://www.loom.com/share/cd3bc8468a1e47ec9f25f934484ef013
 - Scrum Board
-  - f
+  - https://github.com/sarayu-pr11/flask_portfolio/projects/1
 - wireframe concepts for webpage design
   - three or more ideas needed
   - https://github.com/sarayu-pr11/flask_portfolio/issues/6
@@ -42,7 +54,7 @@ Week 3
 - Walkthrough
   - https://www.loom.com/share/a9551328dc9c4ee78b4951f9c8c14095
 - Scrum Board
-  - f
+  - https://github.com/sarayu-pr11/flask_portfolio/projects/1
 - make a dropdown menu
   - each menu needs a stub code page 
   - https://github.com/sarayu-pr11/flask_portfolio/issues/11
