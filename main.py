@@ -33,7 +33,7 @@ def binary():
 
 @app.route('/rgb/')
 def rgb():
-    return render_template("rgb.html")
+    return render_template("rgb-sarayu.html")
 
 
 @app.route('//')
