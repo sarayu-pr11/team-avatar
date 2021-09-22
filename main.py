@@ -31,9 +31,10 @@ def hawkers():
 def binary():
     return render_template("binary.html")
 
-@app.route('/rgb/')
-def rgb():
-    return render_template("rgb-sarayu.html")
+
+@app.route('/rgbsarayu/')
+def rgbsarayu():
+    return render_template("rgb-sarayu.html", images=image_data())
 
 
 @app.route('//')
