@@ -35,7 +35,7 @@
                         </td>
                         <td>
                             <img class="img-responsive py-3" id=img{{loop.index}} alt="" width="256" height="Auto" src="{{image.base64}}" >
-                            <!-- Hack: create button (btn{{loop.index}} to  call java script function
+                            <!-- Hack: create button (btn{{loop.index}} to  call javascript function
                                pass index to allow you to toggle images with hidden id's
                                {{image.base64}}  original image
                                {{image.base64_GRAY}}  gray scale image
@@ -74,7 +74,6 @@
                 {% endfor %}
                 </tbody>
             </table>
-
         </div>
     </div>
 {% endblock %}
