@@ -31,6 +31,10 @@ def hawkers():
 def binary():
     return render_template("binary.html")
 
+@app.route('/rgb/')
+def rgb():
+    return render_template("rgb.html")
+
 
 @app.route('//')
 def home():
