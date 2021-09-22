@@ -30,9 +30,12 @@
 
 | Name | Requirement | Evidence | Grade |
 |:----:|:-----------:|:--------:|:-----:|
-| Saathvika Ajith | | | |
-| Sarayu Pochimireddy | | | |
-| Pranavi Inukurti | | | |
+| Saathvika Ajith |Integrate RGB Values with an Image into project|https://github.com/sarayu-pr11/flask_portfolio/issues/33|3/3|
+| Sarayu Pochimireddy |Integrate RGB Values with an Image into project|https://github.com/sarayu-pr11/flask_portfolio/issues/33|3/3|
+| Pranavi Inukurti |Integrate RGB Values with an Image into project|https://github.com/sarayu-pr11/flask_portfolio/issues/33|3/3|
+| Saathvika Ajith ||||
+| Sarayu Pochimireddy ||||
+| Pranavi Inukurti ||||
 
 - Individual Scoring
 
