@@ -24,18 +24,18 @@
 - Walkthrough
   - :3
 - Scrum Board
-  - https://github.com/sarayu-pr11/flask_portfolio/projects/1
+  - https://github.com/sarayu-pr11/flask_portfolio/projects/1?card_filter_query=milestone%3A%22sprint+5%2C6+week+5%22
   
 - Team Scoring
 
 | Name | Requirement | Evidence | Grade |
 |:----:|:-----------:|:--------:|:-----:|
-| Saathvika Ajith |Integrate RGB Values with an Image into project|https://github.com/sarayu-pr11/flask_portfolio/issues/33|3/3|
-| Sarayu Pochimireddy |Integrate RGB Values with an Image into project|https://github.com/sarayu-pr11/flask_portfolio/issues/33|3/3|
-| Pranavi Inukurti |Integrate RGB Values with an Image into project|https://github.com/sarayu-pr11/flask_portfolio/issues/33|3/3|
-| Saathvika Ajith ||||
-| Sarayu Pochimireddy ||||
-| Pranavi Inukurti ||||
+| Saathvika Ajith |Integrate RGB Values with an Image into project|https://github.com/sarayu-pr11/flask_portfolio/issues/33|-/3|
+| Sarayu Pochimireddy |Integrate RGB Values with an Image into project|https://github.com/sarayu-pr11/flask_portfolio/issues/33|-/3|
+| Pranavi Inukurti |Integrate RGB Values with an Image into project|https://github.com/sarayu-pr11/flask_portfolio/issues/33|-/3|
+| Saathvika Ajith |Work on Website and Add More|https://github.com/sarayu-pr11/flask_portfolio/issues/39|-/2|
+| Sarayu Pochimireddy |Work on Website and Add More|https://github.com/sarayu-pr11/flask_portfolio/issues/39|-/2|
+| Pranavi Inukurti |Work on Website and Add More|https://github.com/sarayu-pr11/flask_portfolio/issues/39|-/2|
 
 - Individual Scoring
 
@@ -50,13 +50,14 @@ Week 4
 - Walkthrough
   - https://www.loom.com/share/cd3bc8468a1e47ec9f25f934484ef013
 - Scrum Board
-  - https://github.com/sarayu-pr11/flask_portfolio/projects/1
+  - https://github.com/sarayu-pr11/flask_portfolio/projects/1?card_filter_query=milestone%3A%22sprint+3%2C+week+4%22
 - wireframe concepts for webpage design
   - three or more ideas needed
   - https://github.com/sarayu-pr11/flask_portfolio/issues/6
 - add css and desgin elements to website
   - make the website and code nicer to view
   - https://github.com/sarayu-pr11/flask_portfolio/issues/12
+
 Week 3
 - Walkthrough
   - https://www.loom.com/share/a9551328dc9c4ee78b4951f9c8c14095
