@@ -22,9 +22,6 @@ def kangaroos():
 def walruses():
     return render_template("walruses.html")
 
-app.route('/rgb/')
-def rgb():
-    return render_template("rgb_sarayu.html", images=image_data())
 
 @app.route('/hawkers/')
 def hawkers():
@@ -39,6 +36,11 @@ def binary():
 @app.route('/rgbsarayu/')
 def rgbsarayu():
     return render_template("rgb_sarayu.html", images=image_data())
+
+
+@app.route('/rgbsaathvika/')
+def rgbsaathvika():
+    return render_template("rgb_saathvika.html", images=image_data())
 
 
 @app.route('//')
