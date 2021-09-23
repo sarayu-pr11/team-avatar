@@ -1,5 +1,6 @@
 # import "packages" from flask
 from flask import Flask, render_template, request
+from images import image_data
 
 # create a Flask instance
 app = Flask(__name__)
@@ -21,6 +22,9 @@ def kangaroos():
 def walruses():
     return render_template("walruses.html")
 
+app.route('/rgb/')
+def rgb():
+    return render_template("rgb_sarayu.html", images=image_data())
 
 @app.route('/hawkers/')
 def hawkers():
@@ -34,7 +38,7 @@ def binary():
 
 @app.route('/rgbsarayu/')
 def rgbsarayu():
-    return render_template("rgb-sarayu.html", images=image_data())
+    return render_template("rgb_sarayu.html", images=image_data())
 
 
 @app.route('//')

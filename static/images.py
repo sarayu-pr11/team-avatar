@@ -17,16 +17,16 @@ def image_formatter(img, img_type):
 
 
 # color_data prepares a series of images for data analysis
-def image_data(path="static/assets/", img_list=None):  # path of static images is defaulted
+def image_data(path="static/img/", img_list=None):  # path of static images is defaulted
     if img_list is None:  # color_dict is defined with defaults
         img_list = [
-            {'source': "Peter Carolin", 'label': "Lassen Volcano", 'file': "red-square-16.png"},
-            #{'source': "iconsdb.com", 'label': "Black square", 'file': "black-square-16.png"},
-            #{'source': "iconsdb.com", 'label': "Red square", 'file': "red-square-16.png"},
-            #{'source': "iconsdb.com", 'label': "Green square", 'file': "green-square-16.png"},
-            #{'source': "iconsdb.com", 'label': "Blue square", 'file': "blue-square-16.png"},
-            #{'source': "iconsdb.com", 'label': "White square", 'file': "white-square-16.png"},
-            #{'source': "iconsdb.com", 'label': "Blue square", 'file': "blue-square-16.jpg"}
+            {'source': "Peter Carolin", 'label': "Lassen Volcano", 'file': "lassen-volcano-256.jpg"},
+            {'source': "iconsdb.com", 'label': "Black square", 'file': "black-square-16.png"},
+            {'source': "iconsdb.com", 'label': "Red square", 'file': "red-square-16.png"},
+            {'source': "iconsdb.com", 'label': "Green square", 'file': "green-square-16.png"},
+            {'source': "iconsdb.com", 'label': "Blue square", 'file': "blue-square-16.png"},
+            {'source': "iconsdb.com", 'label': "White square", 'file': "white-square-16.png"},
+            {'source': "iconsdb.com", 'label': "Blue square", 'file': "blue-square-16.jpg"}
         ]
     # gather analysis data and meta data for each image, adding attributes to each row in table
     for img_dict in img_list:
@@ -47,11 +47,11 @@ def image_data(path="static/assets/", img_list=None):  # path of static images i
         # 'data' is a list of RGB data, the list is traversed and hex and binary lists are calculated and formatted
         for pixel in img_dict['data']:
             # hexadecimal conversions
-            bin_value = bin(pixel[0])[2:].zfill(8) + " " + bin(pixel[1])[2:].zfill(8)
             hex_value = hex(pixel[0])[-2:] + hex(pixel[1])[-2:] + hex(pixel[2])[-2:]
             hex_value = hex_value.replace("x", "0")
             img_dict['hex_array'].append("#" + hex_value)
-            # binary conversions+ " " + bin(pixel[2])[2:].zfill(8)
+            # binary conversions
+            bin_value = bin(pixel[0])[2:].zfill(8) + " " + bin(pixel[1])[2:].zfill(8) + " " + bin(pixel[2])[2:].zfill(8)
             img_dict['binary_array'].append(bin_value)
         # create gray scale of image, ref: https://www.geeksforgeeks.org/convert-a-numpy-array-to-an-image/
         img_dict['gray_data'] = []
@@ -68,7 +68,7 @@ def image_data(path="static/assets/", img_list=None):  # path of static images i
 
 # run this as standalone tester to see data printed in terminal
 if __name__ == "__main__":
-    local_path = "/static/assets/"
+    local_path = "../static/img/"
     img_test = [
         {'source': "iconsdb.com", 'label': "Blue square", 'file': "blue-square-16.png"},
     ]
