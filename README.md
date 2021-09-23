@@ -61,7 +61,7 @@ Week 3
 - Walkthrough
   - https://www.loom.com/share/a9551328dc9c4ee78b4951f9c8c14095
 - Scrum Board
-  - https://github.com/sarayu-pr11/flask_portfolio/projects/1?card_filter_query=milestone%3A%22sprint+3%2C+week+4%22
+  - https://github.com/sarayu-pr11/flask_portfolio/projects/1
 - make a dropdown menu
   - each menu needs a stub code page 
   - https://github.com/sarayu-pr11/flask_portfolio/issues/11
