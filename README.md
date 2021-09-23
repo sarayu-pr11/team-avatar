@@ -24,7 +24,7 @@
 - Walkthrough
   - :3
 - Scrum Board
-  - https://github.com/sarayu-pr11/flask_portfolio/projects/1
+  - https://github.com/sarayu-pr11/flask_portfolio/projects/1?card_filter_query=milestone%3A%22sprint+5%2C6+week+5%22
   
 - Team Scoring
 
@@ -50,7 +50,7 @@ Week 4
 - Walkthrough
   - https://www.loom.com/share/cd3bc8468a1e47ec9f25f934484ef013
 - Scrum Board
-  - https://github.com/sarayu-pr11/flask_portfolio/projects/1
+  - https://github.com/sarayu-pr11/flask_portfolio/projects/1?card_filter_query=milestone%3A%22sprint+3%2C+week+4%22
 - wireframe concepts for webpage design
   - three or more ideas needed
   - https://github.com/sarayu-pr11/flask_portfolio/issues/6
@@ -61,7 +61,7 @@ Week 3
 - Walkthrough
   - https://www.loom.com/share/a9551328dc9c4ee78b4951f9c8c14095
 - Scrum Board
-  - https://github.com/sarayu-pr11/flask_portfolio/projects/1
+  - https://github.com/sarayu-pr11/flask_portfolio/projects/1?card_filter_query=milestone%3A%22sprint+3%2C+week+4%22
 - make a dropdown menu
   - each menu needs a stub code page 
   - https://github.com/sarayu-pr11/flask_portfolio/issues/11
