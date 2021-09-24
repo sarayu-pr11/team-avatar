@@ -22,7 +22,7 @@
 ###   <h2 id="Sprint3">Sprint 5,6</h2>
 #### <h3> Week 5 </h3>
 - Walkthrough
-  - :3
+  - not needed
 - Scrum Board
   - https://github.com/sarayu-pr11/flask_portfolio/projects/1?card_filter_query=milestone%3A%22sprint+5%2C6+week+5%22
   
@@ -30,12 +30,12 @@
 
 | Name | Requirement | Evidence | Grade |
 |:----:|:-----------:|:--------:|:-----:|
-| Saathvika Ajith |Integrate RGB Values with an Image into project|https://github.com/sarayu-pr11/flask_portfolio/issues/33|-/3|
-| Sarayu Pochimireddy |Integrate RGB Values with an Image into project|https://github.com/sarayu-pr11/flask_portfolio/issues/33|-/3|
-| Pranavi Inukurti |Integrate RGB Values with an Image into project|https://github.com/sarayu-pr11/flask_portfolio/issues/33|-/3|
-| Saathvika Ajith |Work on Website and Add More|https://github.com/sarayu-pr11/flask_portfolio/issues/39|-/2|
-| Sarayu Pochimireddy |Work on Website and Add More|https://github.com/sarayu-pr11/flask_portfolio/issues/39|-/2|
-| Pranavi Inukurti |Work on Website and Add More|https://github.com/sarayu-pr11/flask_portfolio/issues/39|-/2|
+| Saathvika Ajith |Integrate RGB Values with an Image into project|https://github.com/sarayu-pr11/flask_portfolio/issues/33|3/3|
+| Sarayu Pochimireddy |Integrate RGB Values with an Image into project|https://github.com/sarayu-pr11/flask_portfolio/issues/33|3/3|
+| Pranavi Inukurti |Integrate RGB Values with an Image into project|https://github.com/sarayu-pr11/flask_portfolio/issues/33|3/3|
+| Saathvika Ajith |Work on Website and Add More|https://github.com/sarayu-pr11/flask_portfolio/issues/39|2/2|
+| Sarayu Pochimireddy |Work on Website and Add More|https://github.com/sarayu-pr11/flask_portfolio/issues/39|2/2|
+| Pranavi Inukurti |Work on Website and Add More|https://github.com/sarayu-pr11/flask_portfolio/issues/39|2/2|
 
 - Individual Scoring
 
