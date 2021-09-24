@@ -23,6 +23,11 @@
 #### <h3> Week 5 </h3>
 - Walkthrough
   - not needed
+- OO and TO TPT Notes
+  - https://github.com/sarayu-pr11/flask_portfolio/issues/42
+
+- CB 3.1 and 3.2 Grading
+  - https://github.com/sarayu-pr11/flask_portfolio/issues/41
 - Scrum Board
   - https://github.com/sarayu-pr11/flask_portfolio/projects/1?card_filter_query=milestone%3A%22sprint+5%2C6+week+5%22
   
