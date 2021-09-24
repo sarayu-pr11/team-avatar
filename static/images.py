@@ -20,13 +20,13 @@ def image_formatter(img, img_type):
 def image_data(path="static/img/", img_list=None):  # path of static images is defaulted
     if img_list is None:  # color_dict is defined with defaults
         img_list = [
-            {'source': "Peter Carolin", 'label': "Lassen Volcano", 'file': "lassen-volcano-256.jpg"},
-            {'source': "iconsdb.com", 'label': "Black square", 'file': "black-square-16.png"},
-            {'source': "iconsdb.com", 'label': "Red square", 'file': "red-square-16.png"},
-            {'source': "iconsdb.com", 'label': "Green square", 'file': "green-square-16.png"},
-            {'source': "iconsdb.com", 'label': "Blue square", 'file': "blue-square-16.png"},
-            {'source': "iconsdb.com", 'label': "White square", 'file': "white-square-16.png"},
-            {'source': "iconsdb.com", 'label': "Blue square", 'file': "blue-square-16.jpg"}
+            {'source': "Peter Carolin", 'label': "Lassen Volcano", 'file': "/static/assets/lassen-volcano-256.jpg"},
+            {'source': "iconsdb.com", 'label': "Black square", 'file': "/static/assets/black-square-16.png"},
+            {'source': "iconsdb.com", 'label': "Red square", 'file': "/static/assets/red-square-16.png"},
+            {'source': "iconsdb.com", 'label': "Green square", 'file': "/static/assets/green-square-16.png"},
+            {'source': "iconsdb.com", 'label': "Blue square", 'file': "/static/assets/blue-square-16.png"},
+            {'source': "iconsdb.com", 'label': "White square", 'file': "/static/assets/white-square-16.png"},
+            {'source': "iconsdb.com", 'label': "Blue square", 'file': "/static/assets/blue-square-16.jpg"}
         ]
     # gather analysis data and meta data for each image, adding attributes to each row in table
     for img_dict in img_list:

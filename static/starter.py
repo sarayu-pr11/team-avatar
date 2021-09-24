@@ -7,7 +7,3 @@ starter_bp = Blueprint('starter', __name__,
                        static_folder='static',
                        static_url_path='assets')
 
-
-@app.route('/rgb2/')
-def rgb2():
-    return render_template('static/rgb_sarayu.html', images=image_data())
