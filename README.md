@@ -20,6 +20,31 @@
 ---
 
 ###   <h2 id="Sprint3">Sprint 5,6</h2>
+#### <h3> Week 6 </h3>
+- Walkthrough
+  - :3
+- Scrum Board
+  - https://github.com/sarayu-pr11/flask_portfolio/projects/1?card_filter_query=milestone%3A%22sprint+5%2C6+week+6+-+rgb%22
+  
+- Team Scoring
+
+| Name | Requirement | Evidence | Grade |
+|:----:|:-----------:|:--------:|:-----:|
+| Saathvika Ajith |:3|:3|3/3|
+| Sarayu Pochimireddy |:3|:3|3/3|
+| Pranavi Inukurti |:3|:3|3/3|
+| Saathvika Ajith |Work on Website|https://github.com/sarayu-pr11/flask_portfolio/issues/44|2/2|
+| Sarayu Pochimireddy |Work on Website|https://github.com/sarayu-pr11/flask_portfolio/issues/44|2/2|
+| Pranavi Inukurti |Work on Website|https://github.com/sarayu-pr11/flask_portfolio/issues/44|2/2|
+
+- Individual Scoring
+
+| Name | Journal with TT & TPT Notes | Grade |
+|:----:|:---------------------------:|:-----:|
+| Saathvika Ajith | https://docs.google.com/document/d/1aB6TsPf0lRSEx4cQRl--_8EPWaObHeHZDB2GYMo9ias/edit?usp=sharing | 5/5 |
+| Sarayu Pochimireddy | https://docs.google.com/document/d/1aB6TsPf0lRSEx4cQRl--_8EPWaObHeHZDB2GYMo9ias/edit?usp=sharing | 5/5 |
+| Pranavi Inukurti | https://docs.google.com/document/d/1aB6TsPf0lRSEx4cQRl--_8EPWaObHeHZDB2GYMo9ias/edit?usp=sharing | 5/5 |
+
 #### <h3> Week 5 </h3>
 - Walkthrough
   - not needed
