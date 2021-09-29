@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{% extends "layout.html" %}
+{% extends "layouts/base.html" %}
 
 {% block meta %}
 <script>
@@ -11,7 +11,24 @@
 <title>RGB starter</title>
 {% endblock %}
 
-{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Title of the document</title>
+    <style>
+        img {
+            -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+        }
+    </style>
+</head>
+<body>
+<h2>Convert an image into grayscale using HTML/CSS</h2>
+<img src="/uploads/media/default/0001/01/b408569013c0bb32b2afb0f0d45e93e982347951.jpeg" width="400" height="300" alt="tree" />
+</body>
+</html>
+
+{% block body %}
 <h1 class="text-center">RGB values within an Image</h1>
 <div class="container">
     <div class="row justify-content-md-center">
@@ -35,7 +52,7 @@
                 </td>
                 <td>
                     <img class="img-responsive py-3" id=img{{loop.index}} alt="" width="256" height="Auto" src="{{image.base64}}" >
-                    <!-- Hack: create button (btn{{loop.index}} to  call java script function
+                    <!-- Hack: create button (btn{{loop.index}} to  call javascript function
                        pass index to allow you to toggle images with hidden id's
                        {{image.base64}}  original image
                        {{image.base64_GRAY}}  gray scale image
@@ -74,7 +91,7 @@
             {% endfor %}
             </tbody>
         </table>
-
     </div>
 </div>
 {% endblock %}
+

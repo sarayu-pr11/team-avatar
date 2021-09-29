@@ -48,6 +48,11 @@ def home():
     return render_template("home.html")
 
 
+@app.route('/rgbpranavi/')
+def rgbpranavi():
+    return render_template("rgb_pranavi.html", images=image_data())
+
+
 @app.route('/sarayu/')
 def sarayu():
     return render_template("sarayu.html")
