@@ -20,12 +20,12 @@ def image_formatter(img, img_type):
 def image_data(path="static/assets/", img_list=None):  # path of static images is defaulted
     if img_list is None:  # color_dict is defined with defaults
         img_list = [
-         {'source': "Peter Carolin", 'label': "Lassen Volcano", 'file': "lassen-volcano-256.png"},
-         {'source': "iconsdb.com", 'label': "Black square", 'file': "black-square-16.png"},
-         {'source': "iconsdb.com", 'label': "Red square", 'file': "red-square-16.png"},
-         {'source': "iconsdb.com", 'label': "Green square", 'file': "green-square-16.png"},
-         {'source': "iconsdb.com", 'label': "Blue square", 'file': "blue-square-16.png"},
-         {'source': "iconsdb.com", 'label': "White square", 'file': "white-square-16.png"},
+            {'source': "Peter Carolin", 'label': "Lassen Volcano", 'file': "lassen-volcano-256.png"},
+            {'source': "iconsdb.com", 'label': "Black square", 'file': "black-square-16.png"},
+            {'source': "iconsdb.com", 'label': "Red square", 'file': "red-square-16.png"},
+            {'source': "iconsdb.com", 'label': "Green square", 'file': "green-square-16.png"},
+            {'source': "iconsdb.com", 'label': "Blue square", 'file': "blue-square-16.png"},
+            {'source': "iconsdb.com", 'label': "White square", 'file': "white-square-16.png"},
         ]
     # gather analysis data and meta data for each image, adding attributes to each row in table
     for img_dict in img_list:
@@ -63,6 +63,16 @@ def image_data(path="static/assets/", img_list=None):  # path of static images i
         img_reference.putdata(img_dict['gray_data'])
         img_dict['base64_GRAY'] = image_formatter(img_reference, img_dict['format'])
     return img_list  # list is returned with all the attributes for each image dictionary
+
+
+def draw_text_in_image(text):
+    # from PIL import Image, ImageFont, ImageDraw
+    #
+    img = Image.open("static/assets/lassen-volcano-256.png")
+    d1 = ImageDraw.Draw(img)
+    d1.text((0, 0), text)
+    # img.show()
+    img.save("static/assets/lassen-volcano-256.png")
 
 
 # run this as standalone tester to see data printed in terminal

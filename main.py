@@ -1,6 +1,6 @@
 # import "packages" from flask
 from flask import Flask, render_template, request
-from images import image_data
+from images import image_data, draw_text_in_image
 
 # create a Flask instance
 app = Flask(__name__)
@@ -50,6 +50,7 @@ def home():
 
 @app.route('/rgbpranavi/')
 def rgbpranavi():
+    draw_text_in_image("Team Color's Text")
     return render_template("rgb_pranavi.html", images=image_data())
 
 
