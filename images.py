@@ -2,6 +2,7 @@ from PIL import Image, ImageDraw
 import numpy
 import base64
 from io import BytesIO
+from pathlib import Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f
 
 
 # image (PNG, JPG) to base64 conversion (string), learn about base64 on wikipedia https://en.wikipedia.org/wiki/Base64
@@ -19,6 +20,7 @@ def image_formatter(img, img_type):
 # color_data prepares a series of images for data analysis
 def image_data(path="static/assets/", img_list=None):  # path of static images is defaulted
     if img_list is None:  # color_dict is defined with defaults
+
         img_list = [
             {'source': "Peter Carolin", 'label': "Lassen Volcano", 'file': "lassen-volcano-256.png"},
             {'source': "iconsdb.com", 'label': "Black square", 'file': "black-square-16.png"},
@@ -26,6 +28,7 @@ def image_data(path="static/assets/", img_list=None):  # path of static images i
             {'source': "iconsdb.com", 'label': "Green square", 'file': "green-square-16.png"},
             {'source': "iconsdb.com", 'label': "Blue square", 'file': "blue-square-16.png"},
             {'source': "iconsdb.com", 'label': "White square", 'file': "white-square-16.png"},
+            {'source': "iconsdb.com", 'label': "Multi square", 'file': "mergedimage.png"}
         ]
     # gather analysis data and meta data for each image, adding attributes to each row in table
     for img_dict in img_list:
@@ -63,6 +66,7 @@ def image_data(path="static/assets/", img_list=None):  # path of static images i
         img_reference.putdata(img_dict['gray_data'])
         img_dict['base64_GRAY'] = image_formatter(img_reference, img_dict['format'])
     return img_list  # list is returned with all the attributes for each image dictionary
+# O(f(N)*g(N)*h(N))
 
 
 def draw_text_in_image(text):
@@ -110,3 +114,25 @@ if __name__ == "__main__":
         draw.text((0, 0), "Size is {0} X {1}".format(*row['size']))  # draw in image
         image_ref.show()
 print()
+# O(f(N))
+
+# read the first image
+path = Path("C:\\Users\\18583\\IdeaProjects\\flask_portfolio\\") / "static" / "assets"
+image1 = Image.open(path / "black-square-16.png")
+image2 = Image.open(path / "red-square-16.png")
+image3 = Image.open(path / "green-square-16.png")
+image4 = Image.open(path / "blue-square-16.png")
+image1 = image1.resize((8, 8))
+image2 = image2.resize((8, 8))
+image3 = image3.resize((8, 8))
+image4 = image4.resize((8, 8))
+image1_size = image1.size
+image2_size = image2.size
+image3_size = image3.size
+image4_size = image4.size
+new_image = Image.new('RGB', (16, 16), (250, 250, 250))
+new_image.paste(image1, (0, 0))
+new_image.paste(image2, (8, 0))
+new_image.paste(image3, (0, 8))
+new_image.paste(image4, (8, 8))
+new_image.save("mergedimage.png", "png")

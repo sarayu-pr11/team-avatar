@@ -1,28 +1,56 @@
-<!DOCTYPE html>
-<!-- Extending the project layout, as this file will do minor customizations -->
-{% extends "layouts/base.html" %}
+<!-- Custom file for standardizing Project Data
+This HTML is set up as a Jinja2 layout, coders use layouts for:
+ ... standardization of style
+ ... setting expectations for data
+ ... code reuse
+-->
+<!DOCTYPE HTML>
+<html lang="en">
 
-<!-- Setting up variables to customize "project" details to be specific to index page -->
-{% set project = "Portfolio" %}
-{% set overview = "https://nighthawkcodingsociety.com/projectsearch/details/Flask%20Portfolio%20Starter" %}
-{% set repo = "https://github.com/nighthawkcoders/flask_portfolio/" %}
 
-{% set project = "minilabsmain" %}
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+
+        html, body{
+            margin: 0;
+            height: 100%;
+            background-color: black;
+            color: ghostwhite;
+        }
+
+        h1{
+            font-size: 5em;
+            font-family:'Monotype Corsiva';
+            color:ghostwhite;
+        }
+
+    </style>
+    {% block meta %}
+    {% endblock %}
+
+
+</head>
+
+<body>
+
+{% include "layouts/navbar.html" %}
 
 {% block body %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Mini Labs</title>
-    <div class="center-block" style="margin: 7% 10% 10%; text-align:center; font-family:monospace; color:ghostwhite;">
-<body style="background-color:olive;">
-<div class="col-12">
-    <p style="font-size: 42px; font-family: 'Monotype Corsiva';">Sarayu's, Saathvika's, and Pranavi's Mini Labs</p>
-    <p><a href="{{url_for('greet')}}" style="color: darkviolet;">- Greet Project -</a></p>
-    <p><a href="{{url_for('binary')}}" style="color: darkviolet;">- Binary Project -</a></p>
-    <p><a href="{{url_for('rgbsarayu')}}" style="color: darkviolet;">- RGB Project -</a></p>
-<p><a href="https://www.figma.com/file/09Q79Juu9EWrzc5aoAQBCB/Themes-Wireframe?node-id=0%3A1" style="color: darkviolet;">- Wireframes -</a></p>
-<p><a href="https://docs.google.com/document/d/1dGbP1QwYPmr9jza4v5N_Ax1O_SkZtLuT6h_Xa6NHENA/edit?usp=sharing" style="color: darkviolet;">- Brainwrites -</a></p>
+
+
+<div class="center block" style="margin: 7% 10% 10%; text-align:center; font-family:'Monotype Corsiva'; color:ghostwhite;">
+
+<div>
+    <h1>Team Colors Website</h1>
+</div>
+
+</div>
+
+{% endblock %}
 </body>
-</html>
+
+{% block background %}
+
 {% endblock %}

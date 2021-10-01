@@ -12,22 +12,6 @@ def index():
     return render_template("index.html")
 
 
-# connects /kangaroos path to render kangaroos.html
-@app.route('/kangaroos/')
-def kangaroos():
-    return render_template("kangaroos.html")
-
-
-@app.route('/walruses/')
-def walruses():
-    return render_template("walruses.html")
-
-
-@app.route('/hawkers/')
-def hawkers():
-    return render_template("hawkers.html")
-
-
 @app.route('/binary/')
 def binary():
     return render_template("binary.html")
@@ -43,7 +27,7 @@ def rgbsaathvika():
     return render_template("rgb_saathvika.html", images=image_data())
 
 
-@app.route('//')
+@app.route('/home/')
 def home():
     return render_template("home.html")
 

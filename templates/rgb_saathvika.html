@@ -26,16 +26,20 @@
 {% endblock %}
 
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Title of the document</title>
+<html lang="en" style="background-color: goldenrod">
+
+<div>
+    <title>RGB</title>
+
     <style>
         img {
             -webkit-filter: grayscale(100%);
             filter: grayscale(100%);
         }
     </style>
-</head>
+</div>
+
+
 <body>
 <h2>Convert an image into grayscale using HTML/CSS</h2>
 <img src="/uploads/media/default/0001/01/b408569013c0bb32b2afb0f0d45e93e982347951.jpeg" width="400" height="300" alt="tree" />
@@ -43,8 +47,9 @@
 </html>
 
 {% block body %}
-    <h1 class="text-center">RGB values within an Image</h1>
-    <div class="container">
+<body style="background-color:goldenrod;">
+    <h1 class="text-center" style="margin-top: 2%">RGB values within an Image</h1>
+    <div class="container" style="background-color: goldenrod">
         <div class="row justify-content-md-center">
             <table class="table">
                 <thead>
@@ -65,6 +70,7 @@
                             <div>{{image.source}}</div>
                         </td>
                         <td>
+
                             <img class="img-responsive py-3" id=img{{loop.index}} alt="" width="256" height="Auto" src="{{image.base64}}" >
 
                             <button onclick="myFunction()">Try it</button><br><br>
@@ -111,4 +117,5 @@
             </table>
         </div>
     </div>
+</body>
 {% endblock %}
