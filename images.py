@@ -73,11 +73,34 @@ def draw_text_in_image(text):
     # from PIL import Image, ImageFont, ImageDraw
     #
     img = Image.open("static/assets/lassen-volcano-256.png")
-    d1 = ImageDraw.Draw(img)
+    newImg = img.copy()
+    d1 = ImageDraw.Draw(newImg)
     d1.text((0, 0), text)
     # img.show()
-    img.save("static/assets/lassen-volcano-256.png")
+    newImg.save("static/assets/new-lassen-volcano-256.png")
 
+
+def rgb_saathvika():
+    # read the first image
+    path = Path("static/assets")
+    image1 = Image.open(path / "black-square-16.png")
+    image2 = Image.open(path / "red-square-16.png")
+    image3 = Image.open(path / "green-square-16.png")
+    image4 = Image.open(path / "blue-square-16.png")
+    image1 = image1.resize((8, 8))
+    image2 = image2.resize((8, 8))
+    image3 = image3.resize((8, 8))
+    image4 = image4.resize((8, 8))
+    image1_size = image1.size
+    image2_size = image2.size
+    image3_size = image3.size
+    image4_size = image4.size
+    new_image = Image.new('RGB', (16, 16), (250, 250, 250))
+    new_image.paste(image1, (0, 0))
+    new_image.paste(image2, (8, 0))
+    new_image.paste(image3, (0, 8))
+    new_image.paste(image4, (8, 8))
+    new_image.save("static/assets/mergedimage.png", "png")
 
 # run this as standalone tester to see data printed in terminal
 if __name__ == "__main__":
@@ -116,23 +139,4 @@ if __name__ == "__main__":
 print()
 # O(f(N))
 
-# read the first image
-path = Path("C:\\Users\\18583\\IdeaProjects\\flask_portfolio\\") / "static" / "assets"
-image1 = Image.open(path / "black-square-16.png")
-image2 = Image.open(path / "red-square-16.png")
-image3 = Image.open(path / "green-square-16.png")
-image4 = Image.open(path / "blue-square-16.png")
-image1 = image1.resize((8, 8))
-image2 = image2.resize((8, 8))
-image3 = image3.resize((8, 8))
-image4 = image4.resize((8, 8))
-image1_size = image1.size
-image2_size = image2.size
-image3_size = image3.size
-image4_size = image4.size
-new_image = Image.new('RGB', (16, 16), (250, 250, 250))
-new_image.paste(image1, (0, 0))
-new_image.paste(image2, (8, 0))
-new_image.paste(image3, (0, 8))
-new_image.paste(image4, (8, 8))
-new_image.save("mergedimage.png", "png")
+

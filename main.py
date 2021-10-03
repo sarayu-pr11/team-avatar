@@ -1,6 +1,6 @@
 # import "packages" from flask
 from flask import Flask, render_template, request
-from images import image_data, draw_text_in_image
+from images import image_data, draw_text_in_image,rgb_saathvika
 
 # create a Flask instance
 app = Flask(__name__)
@@ -24,6 +24,7 @@ def rgbsarayu():
 
 @app.route('/rgbsaathvika/')
 def rgbsaathvika():
+    rgb_saathvika()
     return render_template("rgb_saathvika.html", images=image_data())
 
 

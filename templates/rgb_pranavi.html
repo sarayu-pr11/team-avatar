@@ -44,7 +44,7 @@
 
 {% block body %}
     <h1 class="text-center">RGB values within an Image</h1>
-    <div class="container">
+    <div class="container" style="background-color: lightcoral">
         <div class="row justify-content-md-center">
             <table class="table">
                 <thead>
@@ -68,7 +68,7 @@
                             <img class="img-responsive py-3" id=img{{loop.index}} alt="" width="256" height="Auto" src="{{image.base64}}" >
                             <button onclick="myFunction()">Try it</button><br><br>
 
-                            <img id="myImg" src="/static/assets/lassen-volcano-256.png" alt="Pineapple" width="300" height="300">
+                            <img id="myImg" src="/static/assets/new-lassen-volcano-256.png" alt="Pineapple" width="300" height="300">
                             <!-- Hack: create button (btn{{loop.index}} to  call javascript function
                        pass index to allow you to toggle images with hidden id's
                        {{image.base64}}  original image
