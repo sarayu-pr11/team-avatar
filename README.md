@@ -22,7 +22,7 @@
 ###   <h2 id="Sprint3">Sprint 5,6</h2>
 #### <h3> Week 6 </h3>
 - Walkthrough
-  - :3
+  - not needed
 - Scrum Board
   - https://github.com/sarayu-pr11/flask_portfolio/projects/1?card_filter_query=milestone%3A%22sprint+5%2C6+week+6+-+rgb%22
   
@@ -30,9 +30,9 @@
 
 | Name | Requirement | Evidence | Grade |
 |:----:|:-----------:|:--------:|:-----:|
-| Saathvika Ajith |Big O and Manipulating Images Hack|:3|3/3|
-| Sarayu Pochimireddy |grayscale hack|:3|3/3|
-| Pranavi Inukurti |writing text on image|:3|3/3|
+| Saathvika Ajith |Big O and Manipulating Images Hack|https://github.com/sarayu-pr11/flask_portfolio/issues/49|3/3|
+| Sarayu Pochimireddy |grayscale hack|https://github.com/sarayu-pr11/flask_portfolio/issues/47|3/3|
+| Pranavi Inukurti |writing text on image|https://github.com/sarayu-pr11/flask_portfolio/issues/48|3/3|
 | Saathvika Ajith |Work on Website|https://github.com/sarayu-pr11/flask_portfolio/issues/44|2/2|
 | Sarayu Pochimireddy |Work on Website|https://github.com/sarayu-pr11/flask_portfolio/issues/44|2/2|
 | Pranavi Inukurti |Work on Website|https://github.com/sarayu-pr11/flask_portfolio/issues/44|2/2|
