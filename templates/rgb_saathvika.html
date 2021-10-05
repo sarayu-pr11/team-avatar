@@ -47,7 +47,7 @@
 </html>
 
 {% block body %}
-<body style="background-color:goldenrod;">
+<body">
     <h1 class="text-center" style="margin-top: 2%">RGB values within an Image</h1>
     <div class="container" style="background-color: goldenrod">
         <div class="row justify-content-md-center">
@@ -75,7 +75,6 @@
 
                             <button onclick="myFunction()">Try it</button><br><br>
 
-                            <img id="myImg" src="/static/assets/lassen-volcano-256.png" alt="Pineapple" width="300" height="300">
                             <!-- Hack: create button (btn{{loop.index}} to  call javascript function
                        pass index to allow you to toggle images with hidden id's
                        {{image.base64}}  original image
