@@ -1,16 +1,12 @@
 # Python3 program to illustrate
 # working of AND gate
 def AND(a, b):
-    if a == 1 and b == 1:
+    if "a" == 1 and "b" == 1:
         return True
     else:
         return False
 
-
-# Driver code
-if __name__ == 'logicgates':
     print(AND(1, 1))
-
     print("+---------------+----------------+")
     print(" | AND Truth Table | Result |")
     print(" A = False, B = False | A AND B =", AND(False, False), " | ")
@@ -22,7 +18,7 @@ if __name__ == 'logicgates':
 # Python3 program to illustrate
 # working of NAND gate
 def NAND(a, b):
-    if a == 1 and b == 1:
+    if "a" == 1 and "b" == 1:
         return False
     else:
         return True
@@ -43,7 +39,7 @@ if __name__ == '__main__':
 # Python3 program to illustrate
 # working of OR gate
 def OR(a, b):
-    if a == 1 or b == 1:
+    if "a" == 1 or "b" == 1:
         return True
     else:
         return False
@@ -64,7 +60,7 @@ if __name__ == '__main__':
 # Python3 program to illustrate
 # working of Xor gate
 def XOR(a, b):
-    if a != b:
+    if "a" != "b":
         return 1
     else:
         return 0
@@ -85,7 +81,7 @@ if __name__ == '__main__':
 # Python3 program to illustrate
 # working of Not gate
 def NOT(a):
-    return not a
+    return not "a"
 
 
 # Driver code
@@ -101,7 +97,7 @@ if __name__ == '__main__':
 # Python3 program to illustrate
 # working of NOR gate
 def NOR(a, b):
-    if (a == 0) and (b == 0):
+    if ("a" == 0) and ("b" == 0):
         return 1
     elif (a == 0) and (b == 1):
         return 0
@@ -127,7 +123,7 @@ if __name__ == '__main__':
 # working of Not gate
 
 def XNOR(a, b):
-    if a == b:
+    if "a" == "b":
         return 1
     else:
         return 0
