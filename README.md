@@ -31,12 +31,12 @@
 
 | Name | Requirement | Evidence | Grade |
 |:----:|:-----------:|:--------:|:-----:|
-| Saathvika Ajith |;-;|;-;|3/3|
-| Sarayu Pochimireddy |;-;|;-;|3/3|
-| Pranavi Inukurti |;-;|;-;|3/3|
-| Saathvika Ajith |;-;|;-;|3/3|
-| Sarayu Pochimireddy |;-;|;-;|3/3|
-| Pranavi Inukurti |;-;|;-;|3/3|
+| Saathvika Ajith |Logic Gates Hack|https://github.com/sarayu-pr11/flask_portfolio/issues/56|3/3|
+| Sarayu Pochimireddy |Color Codes Hack|https://github.com/sarayu-pr11/flask_portfolio/issues/53|3/3|
+| Pranavi Inukurti |Multiply and Divide by 2|https://github.com/sarayu-pr11/flask_portfolio/issues/52|3/3|
+| Saathvika Ajith |Unsigned Addition|https://github.com/sarayu-pr11/flask_portfolio/issues/54|3/3|
+| Sarayu Pochimireddy |Extend/Switch ASCII to Unicode|https://github.com/sarayu-pr11/flask_portfolio/issues/55|3/3|
+| Pranavi Inukurti |Signed Addition|https://github.com/sarayu-pr11/flask_portfolio/issues/57|3/3|
 | Saathvika Ajith |Work on Website|https://github.com/sarayu-pr11/flask_portfolio/issues/44|2/2|
 | Sarayu Pochimireddy |Work on Website|https://github.com/sarayu-pr11/flask_portfolio/issues/44|2/2|
 | Pranavi Inukurti |Work on Website|https://github.com/sarayu-pr11/flask_portfolio/issues/44|2/2|
