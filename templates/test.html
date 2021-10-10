@@ -1,0 +1,176 @@
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
+{% block body %}
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+
+        <!-- Common style for site -->
+        <style>
+            tgl-btn {
+                width: 50px;
+                height: 50px;
+                align-content: center;
+            }
+            tgl-btn3 {
+                width: 50px;
+                height: 50px;
+                align-content: center;
+            }
+            tgl-btn2 {
+                width: 50px;
+                height: 50px;
+                align-content: center;
+            }
+            :root{
+                --yellow: #f1d483;
+                --green: #9daf9b;
+                --purple: #a59aaf;
+                --lblue: #6084a3;
+                --dblue: #2b425b;
+                --gray: #363d47;
+                --white: whitesmoke;
+                --black: black;
+                --grey: grey;
+            }
+
+            html, body{
+                margin: 0;
+                height: 100%;
+                animation: fadein 2s;
+                -moz-animation: fadein 2s; /* Firefox */
+                -webkit-animation: fadein 2s; /* Safari and Chrome */
+                -o-animation: fadein 2s; /* Opera */
+                background-color: var(--purple);
+                color: var(--black);
+            }
+
+
+
+        </style>
+
+        <!-- Use this block for page specific meta data -->
+
+        <title>Color page</title>
+
+    <script>
+        $(document).ready(function() {
+            red();
+            green();
+            blue();
+
+            function red() {
+                var redLine = $('red-line')
+                var buttons = redLine.children("button")
+                var string = "";
+                for(var buttona of buttons) {
+                    string += button.innerHTML.trim();
+                }
+                var redhex = parseInt(string, 2)
+                $("red-binary").text(redhex)
+            }
+
+            $("tgl-btn").click("click", function () {
+                var num = parseInt(this.innerHTML, 10)
+                if (num == 0) {
+                    this.innerHTML = "1"
+                }
+                else if (num == 1) {
+                    this.innerHTML = "0"
+                }
+                red();
+            });
+            function green() {
+                var greenLine = $("#green-line")
+                var buttons = greenLine.children("button")
+                var string = "";
+                for(var button of buttons) {
+                    string += button.innerHTML.trim();
+                }
+                var redhex = parseInt(string, 2)
+                $("green-binary").text(redhex)
+            }
+
+            $("tgl-btn2").click("click", function () {
+                var num = parseInt(this.innerHTML, 10)
+                if (num == 0) {
+                    this.innerHTML = "1"
+                } else if (num == 1) {
+                    this.innerHTML = "0"
+                }
+                green();
+            });
+            function blue() {
+                var blueLine = $("#blue-line")
+                var buttons = blueLine.children("button")
+                var string = "";
+                for(var button of buttons) {
+                    string += button.innerHTML.trim();
+                }
+                var redhex = parseInt(string, 2)
+                $("blue-binary").text(redhex)
+            }
+
+            $("tgl-btn3").click("click", function () {
+                var num = parseInt(this.innerHTML, 10)
+                if (num == 0) {
+                    this.innerHTML = "1"
+                } else if (num == 1) {
+                    this.innerHTML = "0"
+                }
+                blue();
+            });
+        });
+
+    </script>
+    <div id="red-line">
+        <button class="tgl-btn" id="test"> 0</button>
+        <button class="tgl-btn" id="test"> 0</button>
+        <button class="tgl-btn" id="test"> 0</button>
+        <button class="tgl-btn" id="test"> 0</button>
+        <button class="tgl-btn" id="test"> 0</button>
+        <button class="tgl-btn" id="test"> 0</button>
+        <button class="tgl-btn" id="test"> 0</button>
+        <button class="tgl-btn" id="test"> 0</button>
+
+        <p> R: Decimal Value is <span id="red-binary"></span></p>
+
+    </div>
+        <div id="green-line">
+            <button class="tgl-btn2" id="test"> 0</button>
+            <button class="tgl-btn2" id="test"> 0</button>
+            <button class="tgl-btn2" id="test"> 0</button>
+            <button class="tgl-btn2" id="test"> 0</button>
+            <button class="tgl-btn2" id="test"> 0</button>
+            <button class="tgl-btn2" id="test"> 0</button>
+            <button class="tgl-btn2" id="test"> 0</button>
+            <button class="tgl-btn2" id="test"> 0</button>
+
+
+            <p> G: Decimal Value is <span id="green-binary"></span></p>
+
+        </div>
+
+        <div id="blue-line">
+            <button class="tgl-btn3" id="test"> 0</button>
+            <button class="tgl-btn3" id="test"> 0</button>
+            <button class="tgl-btn3" id="test"> 0</button>
+            <button class="tgl-btn3" id="test"> 0</button>
+            <button class="tgl-btn3" id="test"> 0</button>
+            <button class="tgl-btn3" id="test"> 0</button>
+            <button class="tgl-btn3" id="test"> 0</button>
+            <button class="tgl-btn3" id="test"> 0</button>
+
+            <p> B: Decimal Value is <span id="blue-binary"></span></p>
+
+        </div>
+
+    <div id="hexcode">
+
+    </div>
+    </body>
+
+{% endblock %}
