@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Extending the project layout, as this file will do minor customizations -->
+{% extends "layouts/base.html" %}
+{% block meta %}
+    <meta charset="UTF-8">
+    <title>Logic Gates</title>
+    <script>
+        function calculator() {
+            let aChecked = document.getElementById('a').checked;
+            let bChecked = document.getElementById('b').checked;
+            let gateResultAnd = andGate(aChecked , bChecked);
+            let gateResultNand = nandGate(aChecked , bChecked);
+            let gateResultOr = orGate(aChecked , bChecked);
+            let gateResultNor = norGate(aChecked , bChecked);
+            let gateResultXor = xorGate(aChecked , bChecked);
+            let gateResultXnor = xnorGate(aChecked , bChecked);
+            let gateResultNot = notGate(aChecked , bChecked);
+            let gateResultBuf = bufGate(aChecked , bChecked);
+            document.getElementById('andGate').innerHTML = gateResultAnd;
+            document.getElementById('nandGate').innerHTML = gateResultNand;
+            document.getElementById('orGate').innerHTML = gateResultOr;
+            document.getElementById('norGate').innerHTML = gateResultNor;
+            document.getElementById('xorGate').innerHTML = gateResultXor;
+            document.getElementById('xnorGate').innerHTML = gateResultXnor;
+            document.getElementById('notGate').innerHTML = gateResultNot;
+            document.getElementById('bufGate').innerHTML = gateResultBuf;
+
+        }
+        function andGate(a , b) {
+            return (a && b);
+        }
+        function nandGate(a , b) {
+            return !(a && b);
+        }
+        function orGate(a , b) {
+            return (a || b);
+        }
+        function norGate(a , b) {
+            return !(a || b);
+        }
+        function xorGate(a , b) {
+            return !!(a ^ b);
+        }
+        function xnorGate(a , b) {
+            // noinspection PointlessBooleanExpressionJS
+            return !!(a === b);
+        }
+        function notGate(a , b) {
+            return !(a === b);
+        }
+        function bufGate(a , b) {
+            // noinspection PointlessBooleanExpressionJS
+            return !!(a === b);
+        }
+    </script>
+{% endblock %}
+
+{% block body %}
+
+<body style="background-color: #E8D094; color: maroon; text-align: center;">
+<h1 style="margin-top: 3%; text-align: center; color: maroon;"> Logic Gates Lab </h1>
+<br>
+    <input type="checkbox" id="a" name="aValue" onclick="calculator()">
+    <label for="a"> a value </label><br>
+    <input type="checkbox" id="b" name="bValue" onclick="calculator()">
+    <label for="b"> b value </label><br>
+
+<br> <br>
+
+<style> table, th, td {
+    border: 1px solid maroon;
+    border-collapse: collapse;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #E8D094;}
+</style>
+
+<table style="width:75%; align-content: center; color: maroon;">
+    <tr>
+        <th>Logic Gate</th>
+        <th>Result</th>
+    </tr>
+    <tr>
+        <td><img id="and" src="/static/assets/and-gate.png" alt="and"></td>
+        <td id = "andGate"></td>
+    </tr>
+    <tr>
+        <td><img id="nand" src="/static/assets/nand-gate.png" alt="nand"></td>
+        <td id = "nandGate"></td>
+    </tr>
+    <tr>
+        <td><img id="or" src="/static/assets/or-gate.png" alt="or"></td>
+        <td id = "orGate"></td>
+    </tr>
+    <tr>
+        <td><img id="nor" src="/static/assets/nor-gate.png" alt="nor"></td>
+        <td id = "norGate"></td>
+    </tr>
+    <tr>
+        <td><img id="xor" src="/static/assets/xor-gate.png" alt="xor"></td>
+        <td id = "xorGate"></td>
+    </tr>
+    <tr>
+        <td><img id="xnor" src="/static/assets/xnor-gate.png" alt="xnor"></td>
+        <td id = "xnorGate"></td>
+    </tr>
+    <tr>
+        <td><img id="not" src="/static/assets/not-gate.png" alt="not"></td>
+        <td id = "notGate"></td>
+    </tr>
+    <tr>
+        <td><img id="buf" src="/static/assets/buf-gate.png" alt="buf"></td>
+        <td id = "bufGate"></td>
+    </tr>
+</table>
+
+</body>
+
+</html>
+
+{% endblock %}

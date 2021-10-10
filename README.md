@@ -13,11 +13,42 @@
 | Pranavi Inukurti | [@PranaviInukurti](https://github.com/PranaviInukurti) | [Tickets](https://github.com/sarayu-pr11/flask_portfolio/issues/assigned/PranaviInukurti) |[Scrum Board](https://github.com/sarayu-pr11/flask_portfolio/projects/1?card_filter_query=assignee%3Apranaviinukurti) | [Commits](https://github.com/sarayu-pr11/flask_portfolio/commits?author=PranaviInukurti)
 ---
 ## Table of Contents
-1. [Sprint 5,6 - Prototyping](#Sprint3)
-2. [Sprints 3,4 - Prototyping](#Sprint2)
-3. [Sprints 1,2 - Innovation](#Sprint1)
-4. [Sprint 0 - Introduction](#Sprint0)
+1. [Sprint 7,8 - Logic Gates](#Sprint3)
+2. [Sprint 5,6 - Prototyping](#Sprint3)
+3. [Sprints 3,4 - Prototyping](#Sprint2)
+4. [Sprints 1,2 - Innovation](#Sprint1)
+5. [Sprint 0 - Introduction](#Sprint0)
 ---
+
+###   <h2 id="Sprint4">Sprint 7,8</h2>
+#### <h3> Week 7 </h3>
+- Walkthrough
+  - not needed
+- Scrum Board
+  - https://github.com/sarayu-pr11/flask_portfolio/projects/1?card_filter_query=milestone%3A%22sprint+7%2C8+week+7+-+logic+gates%22
+  
+- Team Scoring
+
+| Name | Requirement | Evidence | Grade |
+|:----:|:-----------:|:--------:|:-----:|
+| Saathvika Ajith |Logic Gates Hack|https://github.com/sarayu-pr11/flask_portfolio/issues/56|3/3|
+| Sarayu Pochimireddy |Color Codes Hack|https://github.com/sarayu-pr11/flask_portfolio/issues/53|3/3|
+| Pranavi Inukurti |Multiply and Divide by 2|https://github.com/sarayu-pr11/flask_portfolio/issues/52|3/3|
+| Saathvika Ajith |Unsigned Addition|https://github.com/sarayu-pr11/flask_portfolio/issues/54|3/3|
+| Sarayu Pochimireddy |Extend/Switch ASCII to Unicode|https://github.com/sarayu-pr11/flask_portfolio/issues/55|3/3|
+| Pranavi Inukurti |Signed Addition|https://github.com/sarayu-pr11/flask_portfolio/issues/57|3/3|
+| Saathvika Ajith |Work on Website|https://github.com/sarayu-pr11/flask_portfolio/issues/44|2/2|
+| Sarayu Pochimireddy |Work on Website|https://github.com/sarayu-pr11/flask_portfolio/issues/44|2/2|
+| Pranavi Inukurti |Work on Website|https://github.com/sarayu-pr11/flask_portfolio/issues/44|2/2|
+
+- Individual Scoring
+
+| Name | Journal with TT & TPT Notes | Grade |
+|:----:|:---------------------------:|:-----:|
+| Saathvika Ajith | https://docs.google.com/document/d/1aB6TsPf0lRSEx4cQRl--_8EPWaObHeHZDB2GYMo9ias/edit?usp=sharing | 5/5 |
+| Sarayu Pochimireddy | https://docs.google.com/document/d/1aB6TsPf0lRSEx4cQRl--_8EPWaObHeHZDB2GYMo9ias/edit?usp=sharing | 5/5 |
+| Pranavi Inukurti | https://docs.google.com/document/d/1aB6TsPf0lRSEx4cQRl--_8EPWaObHeHZDB2GYMo9ias/edit?usp=sharing | 5/5 |
+
 
 ###   <h2 id="Sprint3">Sprint 5,6</h2>
 #### <h3> Week 6 </h3>

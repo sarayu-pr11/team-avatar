@@ -2,7 +2,8 @@ from PIL import Image, ImageDraw
 import numpy
 import base64
 from io import BytesIO
-from pathlib import Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f
+from pathlib import Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on
+# -windows-mac-and-linux-11a072b58d5f
 
 
 # image (PNG, JPG) to base64 conversion (string), learn about base64 on wikipedia https://en.wikipedia.org/wiki/Base64
@@ -36,6 +37,8 @@ def image_data(path="static/assets/", img_list=None):  # path of static images i
         file = path + img_dict['file']  # file with path for local access (backend)
         # Python Image Library operations
         img_reference = Image.open(file)  # PIL
+        d1 = ImageDraw.Draw(img_reference)
+        d1.text((0, 0), "Hello Team Colors")
         img_data = img_reference.getdata()  # Reference https://www.geeksforgeeks.org/python-pil-image-getdata/
         img_dict['format'] = img_reference.format
         img_dict['mode'] = img_reference.mode
@@ -47,6 +50,7 @@ def image_data(path="static/assets/", img_list=None):  # path of static images i
         img_dict['hex_array'] = []
         img_dict['binary_array'] = []
         # 'data' is a list of RGB data, the list is traversed and hex and binary lists are calculated and formatted
+        img_dict['gray_data'] = []
         for pixel in img_dict['data']:
             # hexadecimal conversions
             bin_value = bin(pixel[0])[2:].zfill(8) + " " + bin(pixel[1])[2:].zfill(8)
@@ -56,8 +60,6 @@ def image_data(path="static/assets/", img_list=None):  # path of static images i
             # binary conversions+ " " + bin(pixel[2])[2:].zfill(8)
             img_dict['binary_array'].append(bin_value)
         # create gray scale of image, ref: https://www.geeksforgeeks.org/convert-a-numpy-array-to-an-image/
-        img_dict['gray_data'] = []
-        for pixel in img_dict['data']:
             average = (pixel[0] + pixel[1] + pixel[2]) // 3
             if len(pixel) > 3:
                 img_dict['gray_data'].append((average, average, average, pixel[3]))
@@ -73,34 +75,11 @@ def draw_text_in_image(text):
     # from PIL import Image, ImageFont, ImageDraw
     #
     img = Image.open("static/assets/lassen-volcano-256.png")
-    newImg = img.copy()
-    d1 = ImageDraw.Draw(newImg)
+    d1 = ImageDraw.Draw(img)
     d1.text((0, 0), text)
     # img.show()
-    newImg.save("static/assets/new-lassen-volcano-256.png")
+    img.save("static/assets/lassen-volcano-256.png")
 
-
-def rgb_saathvika():
-    # read the first image
-    path = Path("static/assets")
-    image1 = Image.open(path / "black-square-16.png")
-    image2 = Image.open(path / "red-square-16.png")
-    image3 = Image.open(path / "green-square-16.png")
-    image4 = Image.open(path / "blue-square-16.png")
-    image1 = image1.resize((8, 8))
-    image2 = image2.resize((8, 8))
-    image3 = image3.resize((8, 8))
-    image4 = image4.resize((8, 8))
-    image1_size = image1.size
-    image2_size = image2.size
-    image3_size = image3.size
-    image4_size = image4.size
-    new_image = Image.new('RGB', (16, 16), (250, 250, 250))
-    new_image.paste(image1, (0, 0))
-    new_image.paste(image2, (8, 0))
-    new_image.paste(image3, (0, 8))
-    new_image.paste(image4, (8, 8))
-    new_image.save("static/assets/mergedimage.png", "png")
 
 # run this as standalone tester to see data printed in terminal
 if __name__ == "__main__":
@@ -139,4 +118,23 @@ if __name__ == "__main__":
 print()
 # O(f(N))
 
+# read the first image
+path = Path("C:\\Users\\18583\\IdeaProjects\\flask_portfolio\\") / "static" / "assets"
+image1 = Image.open(path / "black-square-16.png")
+image2 = Image.open(path / "red-square-16.png")
+image3 = Image.open(path / "green-square-16.png")
+image4 = Image.open(path / "blue-square-16.png")
+image1 = image1.resize((8, 8))
+image2 = image2.resize((8, 8))
+image3 = image3.resize((8, 8))
+image4 = image4.resize((8, 8))
+image1_size = image1.size
+image2_size = image2.size
+image3_size = image3.size
+image4_size = image4.size
+new_image = Image.new('RGB', (16, 16), (250, 250, 250))
+new_image.paste(image1, (0, 0))
+new_image.paste(image2, (8, 0))
+new_image.paste(image3, (0, 8))
+new_image.paste(image4, (8, 8))
 
