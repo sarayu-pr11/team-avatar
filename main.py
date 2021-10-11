@@ -37,6 +37,10 @@ def rgbpranavi():
 def home():
     return render_template("home.html")
 
+@app.route('/test/')
+def test():
+    return render_template("test.html")
+
 
 @app.route('/greet/')
 def greet():
