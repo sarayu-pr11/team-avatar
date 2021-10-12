@@ -2,6 +2,10 @@
 {% extends "layouts/base.html" %}
 {% block body %}
     <head>
+        <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+    </head>
+
+    <head>
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,17 +14,25 @@
 
         <!-- Common style for site -->
         <style>
-            tgl-btn {
+
+            .tgl-btn {
                 width: 50px;
                 height: 50px;
                 align-content: center;
             }
-            tgl-btn3 {
+            .rectangle {
+                height: 100px;
+                width: 200px;
+                background-color: #555;
+
+            }
+
+            .tgl-btn3 {
                 width: 50px;
                 height: 50px;
                 align-content: center;
             }
-            tgl-btn2 {
+            .tgl-btn2 {
                 width: 50px;
                 height: 50px;
                 align-content: center;
@@ -44,7 +56,7 @@
                 -moz-animation: fadein 2s; /* Firefox */
                 -webkit-animation: fadein 2s; /* Safari and Chrome */
                 -o-animation: fadein 2s; /* Opera */
-                background-color: var(--purple);
+                background-color: var(--white);
                 color: var(--black);
             }
 
@@ -57,23 +69,28 @@
         <title>Color page</title>
 
     <script>
+
+        var redhexhash, bluehexhash, greenhexhash,hexColorcode;
         $(document).ready(function() {
             red();
             green();
             blue();
 
             function red() {
-                var redLine = $('red-line')
+                var redLine = $("#red-line")
                 var buttons = redLine.children("button")
                 var string = "";
-                for(var buttona of buttons) {
+                for(var button of buttons) {
                     string += button.innerHTML.trim();
                 }
                 var redhex = parseInt(string, 2)
-                $("red-binary").text(redhex)
+                $("#red-binary").text(redhex)
+                redhexhash = parseInt(string, 2).toString(16);
+                $("#red-color").text(redhexhash)
+
             }
 
-            $("tgl-btn").click("click", function () {
+            $(".tgl-btn").click("click", function () {
                 var num = parseInt(this.innerHTML, 10)
                 if (num == 0) {
                     this.innerHTML = "1"
@@ -82,6 +99,11 @@
                     this.innerHTML = "0"
                 }
                 red();
+                hexColorcode = document.getElementById("red-color").innerHTML +
+                    document.getElementById("green-color").innerHTML +
+                    document.getElementById("blue-color").innerHTML ;
+                document.getElementById("hexbox").style.backgroundColor = "#" + hexColorcode;
+
             });
             function green() {
                 var greenLine = $("#green-line")
@@ -90,11 +112,13 @@
                 for(var button of buttons) {
                     string += button.innerHTML.trim();
                 }
-                var redhex = parseInt(string, 2)
-                $("green-binary").text(redhex)
+                 greenhex = parseInt(string, 2)
+                $("#green-binary").text(greenhex)
+                greenhexhash = parseInt(string, 2).toString(16);
+                $("#green-color").text(greenhexhash)
             }
 
-            $("tgl-btn2").click("click", function () {
+            $(".tgl-btn2").click("click", function () {
                 var num = parseInt(this.innerHTML, 10)
                 if (num == 0) {
                     this.innerHTML = "1"
@@ -102,6 +126,11 @@
                     this.innerHTML = "0"
                 }
                 green();
+                hexColorcode = document.getElementById("red-color").innerHTML +
+                    document.getElementById("green-color").innerHTML +
+                    document.getElementById("blue-color").innerHTML ;
+                document.getElementById("hexbox").style.backgroundColor = "#" + hexColorcode;
+
             });
             function blue() {
                 var blueLine = $("#blue-line")
@@ -110,11 +139,13 @@
                 for(var button of buttons) {
                     string += button.innerHTML.trim();
                 }
-                var redhex = parseInt(string, 2)
-                $("blue-binary").text(redhex)
+                bluehex = parseInt(string, 2)
+                $("#blue-binary").text(bluehex)
+                bluehexhash = parseInt(string, 2).toString(16);
+                $("#blue-color").text(bluehexhash)
             }
 
-            $("tgl-btn3").click("click", function () {
+            $(".tgl-btn3").click("click", function () {
                 var num = parseInt(this.innerHTML, 10)
                 if (num == 0) {
                     this.innerHTML = "1"
@@ -122,23 +153,35 @@
                     this.innerHTML = "0"
                 }
                 blue();
+                hexColorcode = document.getElementById("red-color").innerHTML +
+                    document.getElementById("green-color").innerHTML +
+                    document.getElementById("blue-color").innerHTML ;
+                document.getElementById("hexbox").style.backgroundColor = "#" + hexColorcode;
+
+
             });
+
         });
 
     </script>
-    <div id="red-line">
-        <button class="tgl-btn" id="test"> 0</button>
-        <button class="tgl-btn" id="test"> 0</button>
-        <button class="tgl-btn" id="test"> 0</button>
-        <button class="tgl-btn" id="test"> 0</button>
-        <button class="tgl-btn" id="test"> 0</button>
-        <button class="tgl-btn" id="test"> 0</button>
-        <button class="tgl-btn" id="test"> 0</button>
-        <button class="tgl-btn" id="test"> 0</button>
+        <div id="red-line">
+            <button class="tgl-btn" id="test"> 0</button>
+            <button class="tgl-btn" id="test"> 0</button>
+            <button class="tgl-btn" id="test"> 0</button>
+            <button class="tgl-btn" id="test"> 0</button>
+            <button class="tgl-btn" id="test"> 0</button>
+            <button class="tgl-btn" id="test"> 0</button>
+            <button class="tgl-btn" id="test"> 0</button>
+            <button class="tgl-btn" id="test"> 0</button>
 
-        <p> R: Decimal Value is <span id="red-binary"></span></p>
+            <p> R: Decimal Value is <span id="red-binary"></span></p>
+            <p> R: Hex Value is <span id="red-color"></span></p>
 
-    </div>
+
+
+
+        </div>
+
         <div id="green-line">
             <button class="tgl-btn2" id="test"> 0</button>
             <button class="tgl-btn2" id="test"> 0</button>
@@ -151,26 +194,38 @@
 
 
             <p> G: Decimal Value is <span id="green-binary"></span></p>
+            <p> G: Hex Value is <span id="green-color"></span></p>
+
+
+
 
         </div>
 
-        <div id="blue-line">
-            <button class="tgl-btn3" id="test"> 0</button>
-            <button class="tgl-btn3" id="test"> 0</button>
-            <button class="tgl-btn3" id="test"> 0</button>
-            <button class="tgl-btn3" id="test"> 0</button>
-            <button class="tgl-btn3" id="test"> 0</button>
-            <button class="tgl-btn3" id="test"> 0</button>
-            <button class="tgl-btn3" id="test"> 0</button>
-            <button class="tgl-btn3" id="test"> 0</button>
+            <div id="blue-line">
+                <button class="tgl-btn3" id="test"> 0</button>
+                <button class="tgl-btn3" id="test"> 0</button>
+                <button class="tgl-btn3" id="test"> 0</button>
+                <button class="tgl-btn3" id="test"> 0</button>
+                <button class="tgl-btn3" id="test"> 0</button>
+                <button class="tgl-btn3" id="test"> 0</button>
+                <button class="tgl-btn3" id="test"> 0</button>
+                <button class="tgl-btn3" id="test"> 0</button>
 
-            <p> B: Decimal Value is <span id="blue-binary"></span></p>
 
-        </div>
 
-    <div id="hexcode">
 
+
+                <p> B: Decimal Value is <span id="blue-binary"></span></p>
+                <p> B: Hex Value is <span id="blue-color"></span></p>
+
+
+            </div>
+
+
+        <div id="hexcode">
     </div>
+        <div class="rectangle" id="hexbox"> </div>
+
     </body>
 
 {% endblock %}
