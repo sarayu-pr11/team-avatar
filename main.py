@@ -39,7 +39,7 @@ def home():
 
 @app.route('/test/')
 def test():
-    return render_template("test.html")
+    return render_template("colorcodes.html")
 
 
 @app.route('/greet/')
