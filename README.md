@@ -51,6 +51,9 @@
   - not needed
 - Scrum Board
   - https://github.com/sarayu-pr11/flask_portfolio/projects/1?card_filter_query=milestone%3A%22sprint+7%2C8+week+7+-+logic+gates%22
+
+- Runtime Video
+-   https://drive.google.com/file/d/1TilPcGioTUNl75-maPw0gY3ty6dXGw7h/view?usp=sharing
   
 - Team Scoring
 
