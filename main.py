@@ -115,6 +115,9 @@ def logicgates():
 def unsignedaddition():
     return render_template("unsigned_addition.html")
 
+@app.route('/signedaddition/')
+def signedaddition():
+    return render_template("signed_addition.html")
 
 @app.route('/red/')
 def red():
