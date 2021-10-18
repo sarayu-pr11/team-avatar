@@ -23,7 +23,7 @@ def image_data(path="static/assets/", img_list=None):  # path of static images i
     if img_list is None:  # color_dict is defined with defaults
 
         img_list = [
-            #{'source': "Peter Carolin", 'label': "Lassen Volcano", 'file': "lassen-volcano-256.png"},
+            {'source': "Peter Carolin", 'label': "Lassen Volcano", 'file': "lassen-volcano-256.png"},
             {'source': "iconsdb.com", 'label': "Black square", 'file': "black-square-16.png"},
             {'source': "iconsdb.com", 'label': "Red square", 'file': "red-square-16.png"},
             {'source': "iconsdb.com", 'label': "Green square", 'file': "green-square-16.png"},
@@ -38,7 +38,7 @@ def image_data(path="static/assets/", img_list=None):  # path of static images i
         # Python Image Library operations
         img_reference = Image.open(file)  # PIL
         d1 = ImageDraw.Draw(img_reference)
-        d1.text((0, 0), "Hello Team Colors")
+        #d1.text((0, 0), "Hello Team Colors")
         img_data = img_reference.getdata()  # Reference https://www.geeksforgeeks.org/python-pil-image-getdata/
         img_dict['format'] = img_reference.format
         img_dict['mode'] = img_reference.mode
@@ -75,10 +75,12 @@ def draw_text_in_image(text):
     # from PIL import Image, ImageFont, ImageDraw
     #
     img = Image.open("static/assets/lassen-volcano-256.png")
-    d1 = ImageDraw.Draw(img)
+    newImg = img.copy()
+    d1 = ImageDraw.Draw(newImg)
     d1.text((0, 0), text)
     # img.show()
-    img.save("static/assets/lassen-volcano-256.png")
+    newImg.save("static/assets/new-lassen-volcano-256.png")
+
 
 
 # run this as standalone tester to see data printed in terminal
