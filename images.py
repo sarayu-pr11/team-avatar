@@ -1,4 +1,4 @@
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageFont
 import numpy
 import base64
 from io import BytesIO
@@ -81,7 +81,15 @@ def draw_text_in_image(text):
     # img.show()
     newImg.save("static/assets/new-lassen-volcano-256.png")
 
-
+def draw_text_in_pranavi_image(text):
+    # from PIL import Image, ImageFont, ImageDraw
+    #
+    myImg = Image.open("static/assets/pranavi.png").convert('RGBA')
+    myNewImg = myImg.copy()
+    d2 = ImageDraw.Draw(myNewImg)
+    font = ImageFont.truetype("static/assets/arial.ttf", 130)
+    d2.text((50, 2200), text, font=font, fill=(255,255,255,255))
+    myNewImg.save("static/assets/new-pranavi.png")
 
 # run this as standalone tester to see data printed in terminal
 if __name__ == "__main__":

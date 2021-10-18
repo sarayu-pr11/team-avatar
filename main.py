@@ -1,6 +1,6 @@
 # import "packages" from flask
 from flask import Flask, render_template, request
-from images import image_data, draw_text_in_image
+from images import image_data, draw_text_in_image, draw_text_in_pranavi_image
 
 # create a Flask instance
 app = Flask(__name__)
@@ -92,6 +92,7 @@ def saathvika2():
 
 @app.route('/pranavi/')
 def pranavi():
+    draw_text_in_pranavi_image("Hello! I am Pranavi")
     return render_template("pranavi.html")
 
 
