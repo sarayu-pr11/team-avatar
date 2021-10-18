@@ -2,7 +2,9 @@
 {% extends "layouts/base.html" %}
 
 {% block meta %}
+    <p id="demo"></p>
     <script>
+
         var count = 1;
 
         function myFunction() {
@@ -12,16 +14,20 @@
                 document.getElementById("myImg").style.filter = "grayscale(0)";
 
             } else {
-                document.getElementById("myImg").style.filter = "grayscale(100)";
+                document.getElementById("myImg").style.filter = "grayscale(100%)";
 
             }
             ++count;
         }
+
+
+
         // Hack: add java script function to toggle image from original to gray and back (toggle)
         //  document.getElementById("img<n>").src
         //  document.getElementID("img_gray<n>").innerHTML
         //  help: https://www.geeksforgeeks.org/how-to-change-the-src-attribute-of-an-img-element-in-javascript-jquery/
     </script>
+
     <title>RGB starter</title>
 {% endblock %}
 
@@ -38,13 +44,16 @@
 </head>
 <body>
 <h2>Convert an image into grayscale using HTML/CSS</h2>
+<canvas id="can"></canvas>
 <img src="/uploads/media/default/0001/01/b408569013c0bb32b2afb0f0d45e93e982347951.jpeg" width="400" height="300" alt="tree" />
+
+
 </body>
 </html>
 
 {% block body %}
     <h1 class="text-center">RGB values within an Image</h1>
-    <div class="container" style="background-color: lightcoral">
+    <div class="container" style="background-color: goldenrod">
         <div class="row justify-content-md-center">
             <table class="table">
                 <thead>
@@ -55,6 +64,7 @@
                 </tr>
                 </thead>
                 <tbody>
+
                 {% for image in images %}
                     <tr>
                         <td>
@@ -66,14 +76,13 @@
                         </td>
                         <td>
                             <img class="img-responsive py-3" id=img{{loop.index}} alt="" width="256" height="Auto" src="{{image.base64}}" >
-                            <button onclick="myFunction()">Try it</button><br><br>
-                            <img id="myImg" src="/static/assets/new-lassen-volcano-256.png" alt="Pineapple" width="300" height="300">
+
 
                             <!-- Hack: create button (btn{{loop.index}} to  call javascript function
-                       pass index to allow you to toggle images with hidden id's
-                       {{image.base64}}  original image
-                       {{image.base64_GRAY}}  gray scale image
-                    -->
+                                                  pass index to allow you to toggle images with hidden id's
+                                                  {{image.base64}}  original image
+                                                  {{image.base64_GRAY}}  gray scale image
+                                               -->
                             <p hidden id="img_orig{{loop.index}}">{{image.base64}}</p>
                             <p hidden id="img_gray{{loop.index}}">{{image.base64_GRAY}}</p>
                         </td>
@@ -105,7 +114,13 @@
                             </div>
                         </td>
                     </tr>
+
                 {% endfor %}
+                <tr>
+                    <button onclick="myFunction()" style="background-color: goldenrod">Grayscale</button><br><br>
+
+                    <img id="myImg" src="/static/assets/mergedimage.png" alt="Pineapple" width="300" height="300">
+                </tr>
                 </tbody>
             </table>
         </div>

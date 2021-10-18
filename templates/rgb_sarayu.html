@@ -5,20 +5,20 @@
 <p id="demo"></p>
     <script>
 
-            var count = 1;
+        var count = 1;
 
-            function myFunction() {
+        function myFunction() {
 
 
-                if (count % 2 == 0) {
-                    document.getElementById("img").style.filter = "grayscale(0)";
+            if (count % 2 == 0) {
+                document.getElementById("myImg").style.filter = "grayscale(0)";
 
-                } else {
-                    document.getElementById("img}").style.filter = "grayscale(100%)";
+            } else {
+                document.getElementById("myImg").style.filter = "grayscale(100%)";
 
-                }
-                ++count;
             }
+            ++count;
+        }
 
 
 
@@ -46,6 +46,8 @@
 <h2>Convert an image into grayscale using HTML/CSS</h2>
 <canvas id="can"></canvas>
 <img src="/uploads/media/default/0001/01/b408569013c0bb32b2afb0f0d45e93e982347951.jpeg" width="400" height="300" alt="tree" />
+
+
 </body>
 </html>
 
@@ -74,11 +76,7 @@
                         </td>
                         <td>
                             <img class="img-responsive py-3" id=img{{loop.index}} alt="" width="256" height="Auto" src="{{image.base64}}" >
-                            <button onclick="myFunction()">Try it</button><br><br>
 
-
-
-                            >
 
                             <!-- Hack: create button (btn{{loop.index}} to  call javascript function
                                                   pass index to allow you to toggle images with hidden id's
@@ -116,7 +114,13 @@
                             </div>
                         </td>
                     </tr>
+
                 {% endfor %}
+                <tr>
+                    <button onclick="myFunction()" style="background-color: goldenrod">Grayscale</button><br><br>
+
+                    <img id="myImg" src="/static/assets/mergedimage.png" alt="Pineapple" width="300" height="300">
+                </tr>
                 </tbody>
             </table>
         </div>
