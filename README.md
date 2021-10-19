@@ -13,12 +13,37 @@
 | Pranavi Inukurti | [@PranaviInukurti](https://github.com/PranaviInukurti) | [Tickets](https://github.com/sarayu-pr11/flask_portfolio/issues/assigned/PranaviInukurti) |[Scrum Board](https://github.com/sarayu-pr11/flask_portfolio/projects/1?card_filter_query=assignee%3Apranaviinukurti) | [Commits](https://github.com/sarayu-pr11/flask_portfolio/commits?author=PranaviInukurti)
 ---
 ## Table of Contents
-1. [Sprint 7,8 - Logic Gates](#Sprint3)
-2. [Sprint 5,6 - Prototyping](#Sprint3)
-3. [Sprints 3,4 - Prototyping](#Sprint2)
-4. [Sprints 1,2 - Innovation](#Sprint1)
-5. [Sprint 0 - Introduction](#Sprint0)
+1. [Sprint 9,10 - Individual Finals](#Sprint5)
+2. [Sprint 7,8 - Logic Gates](#Sprint4)
+3. [Sprint 5,6 - Prototyping](#Sprint3)
+4. [Sprints 3,4 - Prototyping](#Sprint2)
+5. [Sprints 1,2 - Innovation](#Sprint1)
+6. [Sprint 0 - Introduction](#Sprint0)
 ---
+
+###   <h2 id="Sprint5">Sprint 9,10</h2>
+#### <h3> Week 9 </h3>
+- Walkthrough
+  - not needed yet
+- Scrum Board
+  - https://github.com/sarayu-pr11/Team-Colors/projects/1?card_filter_query=milestone%3A%22sprint+9%2C10+week+9+-+individual+final+video+%28part+1%29%22
+  
+- Team Scoring
+
+| Name | Requirement | Evidence | Grade |
+|:----:|:-----------:|:--------:|:-----:|
+| Saathvika Ajith |Work on Website|https://github.com/sarayu-pr11/flask_portfolio/issues/44|2/2|
+| Sarayu Pochimireddy |Work on Website|https://github.com/sarayu-pr11/flask_portfolio/issues/44|2/2|
+| Pranavi Inukurti |Work on Website|https://github.com/sarayu-pr11/flask_portfolio/issues/44|2/2|
+
+- Individual Scoring
+
+| Name | Journal with TT & TPT Notes | Grade |
+|:----:|:---------------------------:|:-----:|
+| Saathvika Ajith | https://docs.google.com/document/d/1aB6TsPf0lRSEx4cQRl--_8EPWaObHeHZDB2GYMo9ias/edit?usp=sharing | 5/5 |
+| Sarayu Pochimireddy | https://docs.google.com/document/d/1aB6TsPf0lRSEx4cQRl--_8EPWaObHeHZDB2GYMo9ias/edit?usp=sharing | 5/5 |
+| Pranavi Inukurti | https://docs.google.com/document/d/1aB6TsPf0lRSEx4cQRl--_8EPWaObHeHZDB2GYMo9ias/edit?usp=sharing | 5/5 |
+
 
 ###   <h2 id="Sprint4">Sprint 7,8</h2>
 #### <h3> Week 8 </h3>
