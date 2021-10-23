@@ -30,9 +30,9 @@
 
 | Name | Requirement | Evidence | Grade |
 |:----:|:-----------:|:--------:|:-----:|
-| Saathvika Ajith |Individual Presentation|https://www.loom.com/share/9e31fb02a7ff44b2a66b1fc6c24a020d|3/3|
-| Sarayu Pochimireddy |Individual Presentation|https://github.com/sarayu-pr11/Team-Colors/issues/67|3/3|
-| Pranavi Inukurti |Individual Presentation|https://github.com/sarayu-pr11/Team-Colors/issues/67|3/3|
+| Saathvika Ajith |Individual Presentation|-|3/3|
+| Sarayu Pochimireddy |Individual Presentation|-|3/3|
+| Pranavi Inukurti |Individual Presentation|-|3/3|
 | Saathvika Ajith |Work on Website|https://github.com/sarayu-pr11/flask_portfolio/issues/44|2/2|
 | Sarayu Pochimireddy |Work on Website|https://github.com/sarayu-pr11/flask_portfolio/issues/44|2/2|
 | Pranavi Inukurti |Work on Website|https://github.com/sarayu-pr11/flask_portfolio/issues/44|2/2|
