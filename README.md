@@ -23,8 +23,6 @@
 
 ###   <h2 id="Sprint5">Sprint 9,10</h2>
 #### <h3> Week 9 </h3>
-- Walkthrough
-  - not needed yet
 - Scrum Board
   - https://github.com/sarayu-pr11/Team-Colors/projects/1?card_filter_query=milestone%3A%22sprint+9%2C10+week+9+-+individual+final+video+%28part+1%29%22
   
@@ -32,6 +30,9 @@
 
 | Name | Requirement | Evidence | Grade |
 |:----:|:-----------:|:--------:|:-----:|
+| Saathvika Ajith |[Individual Presentation]()|https://github.com/sarayu-pr11/Team-Colors/issues/67|3/3|
+| Sarayu Pochimireddy |[Individual Presentation]()|https://github.com/sarayu-pr11/Team-Colors/issues/67|3/3|
+| Pranavi Inukurti |[Individual Presentation]()|https://github.com/sarayu-pr11/Team-Colors/issues/67|3/3|
 | Saathvika Ajith |Work on Website|https://github.com/sarayu-pr11/flask_portfolio/issues/44|2/2|
 | Sarayu Pochimireddy |Work on Website|https://github.com/sarayu-pr11/flask_portfolio/issues/44|2/2|
 | Pranavi Inukurti |Work on Website|https://github.com/sarayu-pr11/flask_portfolio/issues/44|2/2|
