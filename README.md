@@ -30,7 +30,7 @@
 
 | Name | Requirement | Evidence | Grade |
 |:----:|:-----------:|:--------:|:-----:|
-| Saathvika Ajith |Individual Presentation|-|3/3|
+| Saathvika Ajith |Individual Presentation|https://www.loom.com/share/14e8266918c24facab1f8d8c9a5a3e82|3/3|
 | Sarayu Pochimireddy |Individual Presentation|-|3/3|
 | Pranavi Inukurti |Individual Presentation|-|3/3|
 | Saathvika Ajith |Work on Website|https://github.com/sarayu-pr11/flask_portfolio/issues/44|2/2|
