@@ -19,12 +19,23 @@
                 width: 50px;
                 height: 50px;
                 align-content: center;
+                margin-left: 2%;
             }
             .rectangle {
-                height: 100px;
+                height: 400px;
                 width: 200px;
                 background-color: #555;
-                border: 5px solid #555
+                border: 5px solid #555;
+                position:relative; left:1250px; bottom:480px;
+
+            }
+
+            .rectangle2 {
+                height: 400px;
+                width: 200px;
+                background-color: #555;
+                border: 5px solid #555;
+                position:relative; left:175px; bottom:880px;
 
             }
 
@@ -32,11 +43,13 @@
                 width: 50px;
                 height: 50px;
                 align-content: center;
+                margin-left: 2%;
             }
             .tgl-btn2 {
                 width: 50px;
                 height: 50px;
                 align-content: center;
+                margin-left: 2%;
             }
             :root{
                 --yellow: #f1d483;
@@ -53,6 +66,8 @@
             html, body{
                 margin: 0;
                 height: 100%;
+                text-align: center;
+                font-family: monospace;
                 animation: fadein 2s;
                 -moz-animation: fadein 2s; /* Firefox */
                 -webkit-animation: fadein 2s; /* Safari and Chrome */
@@ -104,6 +119,7 @@
                     document.getElementById("green-color").innerHTML +
                     document.getElementById("blue-color").innerHTML ;
                 document.getElementById("hexbox").style.backgroundColor = "#" + hexColorcode;
+                document.getElementById("hexbox2").style.backgroundColor = "#" + hexColorcode;
 
             });
             function green() {
@@ -131,6 +147,7 @@
                     document.getElementById("green-color").innerHTML +
                     document.getElementById("blue-color").innerHTML ;
                 document.getElementById("hexbox").style.backgroundColor = "#" + hexColorcode;
+                document.getElementById("hexbox2").style.backgroundColor = "#" + hexColorcode;
 
             });
             function blue() {
@@ -158,6 +175,7 @@
                     document.getElementById("green-color").innerHTML +
                     document.getElementById("blue-color").innerHTML ;
                 document.getElementById("hexbox").style.backgroundColor = "#" + hexColorcode;
+                document.getElementById("hexbox2").style.backgroundColor = "#" + hexColorcode;
 
 
             });
@@ -165,7 +183,11 @@
         });
 
     </script>
-        <div id="red-line">
+
+<body style="background-color: #9EC1FF; align-content: center">
+<h1 class="text-center" style="margin-top: 3%;color: black;">Color Codes</h1>
+<br>
+<div style="align-content: center" id="red-line">
             <button class="tgl-btn" id="test"> 0</button>
             <button class="tgl-btn" id="test"> 0</button>
             <button class="tgl-btn" id="test"> 0</button>
@@ -177,11 +199,10 @@
 
             <p> R: Decimal Value is <span id="red-binary"></span></p>
             <p> R: Hex Value is <span id="red-color"></span></p>
+    <br><br>
 
 
 
-
-        </div>
 
         <div id="green-line">
             <button class="tgl-btn2" id="test"> 0</button>
@@ -196,6 +217,7 @@
 
             <p> G: Decimal Value is <span id="green-binary"></span></p>
             <p> G: Hex Value is <span id="green-color"></span></p>
+            <br><br>
 
 
 
@@ -212,21 +234,15 @@
                 <button class="tgl-btn3" id="test"> 0</button>
                 <button class="tgl-btn3" id="test"> 0</button>
 
-
-
-
-
                 <p> B: Decimal Value is <span id="blue-binary"></span></p>
                 <p> B: Hex Value is <span id="blue-color"></span></p>
-
+<br><br>
 
             </div>
-
-
-        <div id="hexcode">
-    </div>
+        <div id="hexcode"></div>
         <div class="rectangle" id="hexbox"> </div>
-
-    </body>
+         <div class="rectangle2" id="hexbox2"> </div>
+</div>
+</body>
 
 {% endblock %}
