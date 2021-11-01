@@ -31,9 +31,9 @@
 
 | Name | Requirement | Evidence | Grade |
 |:----:|:-----------:|:--------:|:-----:|
-| Saathvika Ajith |Integrate API|https://www.loom.com/share/14e8266918c24facab1f8d8c9a5a3e82|3/3|
-| Sarayu Pochimireddy |Interactive Course Calculator|https://www.loom.com/share/6237c9ccba8043fbbe1c0db38c6406c4|3/3|
-| Pranavi Inukurti |Interactive School Map|https://www.loom.com/share/5800d13288a64344b839874eef885d3e|3/3|
+| Saathvika Ajith |Integrate API|https://github.com/sarayu-pr11/Team-Colors/issues/64|3/3|
+| Sarayu Pochimireddy |Interactive Course Calculator|https://github.com/sarayu-pr11/Team-Colors/issues/70|3/3|
+| Pranavi Inukurti |Interactive School Map|https://github.com/sarayu-pr11/Team-Colors/issues/71|3/3|
 | Saathvika Ajith |Work on Website|https://github.com/sarayu-pr11/flask_portfolio/issues/44|2/2|
 | Sarayu Pochimireddy |Work on Website|https://github.com/sarayu-pr11/flask_portfolio/issues/44|2/2|
 | Pranavi Inukurti |Work on Website|https://github.com/sarayu-pr11/flask_portfolio/issues/44|2/2|
@@ -56,9 +56,9 @@
 
 | Name | Requirement | Evidence | Grade |
 |:----:|:-----------:|:--------:|:-----:|
-| Saathvika Ajith |Integrate API|https://www.loom.com/share/14e8266918c24facab1f8d8c9a5a3e82|3/3|
-| Sarayu Pochimireddy |Interactive Course Calculator|https://www.loom.com/share/6237c9ccba8043fbbe1c0db38c6406c4|3/3|
-| Pranavi Inukurti |Interactive School Map|https://www.loom.com/share/5800d13288a64344b839874eef885d3e|3/3|
+| Saathvika Ajith |Integrate API|https://github.com/sarayu-pr11/Team-Colors/issues/64|3/3|
+| Sarayu Pochimireddy |Interactive Course Calculator|https://github.com/sarayu-pr11/Team-Colors/issues/70|3/3|
+| Pranavi Inukurti |Interactive School Map|https://github.com/sarayu-pr11/Team-Colors/issues/71|3/3|
 | Saathvika Ajith |Work on Website|https://github.com/sarayu-pr11/flask_portfolio/issues/44|2/2|
 | Sarayu Pochimireddy |Work on Website|https://github.com/sarayu-pr11/flask_portfolio/issues/44|2/2|
 | Pranavi Inukurti |Work on Website|https://github.com/sarayu-pr11/flask_portfolio/issues/44|2/2|
