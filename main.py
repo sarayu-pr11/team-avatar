@@ -1,6 +1,7 @@
 # import "packages" from flask
 from flask import Flask, render_template, request
 from images import image_data, draw_text_in_image, draw_text_in_pranavi_image
+from clubsapi import get_club
 
 # create a Flask instance
 app = Flask(__name__)
@@ -36,6 +37,7 @@ def rgbpranavi():
 @app.route('/home/')
 def home():
     return render_template("home.html")
+
 
 @app.route('/test/')
 def test():
@@ -111,9 +113,11 @@ def logicgates():
 def unsignedaddition():
     return render_template("unsigned_addition.html")
 
+
 @app.route('/signedaddition/')
 def signedaddition():
     return render_template("signed_addition.html")
+
 
 @app.route('/red/')
 def red():
@@ -127,7 +131,7 @@ def orange():
 
 @app.route('/yellow/')
 def yellow():
-    return render_template("yellow.html")
+    return render_template("yellow.html", club=get_club())
 
 
 @app.route('/green/')
@@ -143,7 +147,6 @@ def blue():
 @app.route('/purple/')
 def purple():
     return render_template("purple.html")
-
 
 
 # runs the application on the development server
