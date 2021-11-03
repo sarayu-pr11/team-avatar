@@ -144,6 +144,19 @@ def blue():
     return render_template("blue.html")
 
 
+@app.route('/blue/', methods=['GET', 'POST'])
+def blue2():
+    # submit button has been pushed
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("blue.html", name=name)
+    if request.form:
+        name1 = request.form.get("name1")
+        if len(name1) != 0:  # input field has content
+            return render_template("blue.html", name1=name1)
+
+
 @app.route('/purple/')
 def purple():
     return render_template("purple.html")
