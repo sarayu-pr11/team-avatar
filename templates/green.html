@@ -9,9 +9,257 @@
 
 {% block body %}
 
-<body style="background-color: #9EE09E; align-content: center">
+    <style>
+        .site { overflow-x: visible; }
+        .test {
+            font-family: Arial, Helvetica, sans-serif;
+            display: grid;
+            width: 50px;
+            height: 50px;
+            margin-left: 2%;
+            grid-template-columns: repeat(7, 1fr);
+        }
+
+        #countit {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 30%;
+            margin-left: 65%;
+            margin-top: 0%;
+        }
+
+        #countit td, #countit th {
+            border: 1px solid #ddd;
+            padding: 5px;
+        }
+
+
+        #countit th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #04AA6D;
+            color: white;
+
+    </style>
+
+<body class="site" style="background-color: #9EE09E; align-content: center">
 <h1 class="text-center" style="margin-top: 3%;color: black;">Course and Tutoring Information</h1>
 
+<div class="test">
+    <button onclick="americanlit()" style="color: white; background-color: #04AA6D">American Literature</button>
+    <button onclick="ethniclit()" style="color: white; background-color: #04AA6D">Ethnic Literature</button>
+    <button onclick="honorshum()" style="color: white; background-color: #04AA6D">Honors Humanities</button>
+    <button onclick="worldlit()" style="color: white; background-color: #04AA6D">World Literature</button>
+    <button onclick="biomed()" style="color: white; background-color: #04AA6D">Principles of Biomedical Science</button>
+    <button onclick="mi()" style="color: white; background-color: #04AA6D">Honors Medical Intervention</button>
+    <button onclick="apmusic()" style="color: white; background-color: #04AA6D">AP Music Theory</button>
+    <button onclick="concert()" style="color: white; background-color: #04AA6D">Concert Band</button>
+    <button onclick="apart()" style="color: white; background-color: #04AA6D">AP Studio Art</button>
+    <button onclick="drama()" style="color: white; background-color: #04AA6D">Drama</button>
+    <button onclick="draw()" style="color: white; background-color: #04AA6D">Drawing and Painting</button>
+    <button onclick="photo()" style="color: white; background-color: #04AA6D">Photography</button>
+    <button onclick="symph()" style="color: white; background-color: #04AA6D">Symphonic Band</button>
+    <button onclick="apcomp()" style="color: white; background-color: #04AA6D">AP Computer Science</button>
+    <button onclick="appysch()" style="color: white; background-color: #04AA6D">AP Psychology</button>
+    <button onclick="child()" style="color: white; background-color: #04AA6D">Child Development</button>
+    <button onclick="engine()" style="color: white; background-color: #04AA6D">Engineering</button>
+    <button onclick="film()" style="color: white; background-color: #04AA6D">Film Studies</button>
+    <button onclick="yearbk()" style="color: white; background-color: #04AA6D">Yearbook</button>
+    <button onclick="march()" style="color: white; background-color: #04AA6D">Marching Band</button>
+    <button onclick="choir()" style="color: white; background-color: #04AA6D">Concert Choir</button>
+    <button onclick="finish()" style="color: white; background-color: #04AA6D">Finish</button>
+
+</div>
+
+<div>
+    <table id="countit">
+        <tr>
+            <th class="count-me">Course</th>
+            <th>Number of Trimesters</th>
+        </tr>
+        <tr>
+            <th class="count-me">American Literature</th>
+            <th><p id="2"></p></th>
+        </tr>
+        <tr>
+            <th class="count-me">Ethnic Literature</th>
+            <th><p id="3"></p></th>
+        </tr>
+        <tr>
+            <th class="count-me">Honors Humanities</th>
+            <th><p id="4"></p></th>
+        </tr>
+        <tr>
+            <th class="count-me">World Literature</th>
+            <th><p id="5"></p></th>
+        </tr>
+        <tr>
+            <th class="count-me">Principles of Biomedical Science</th>
+            <th><p id="6"></p></th>
+        </tr>
+        <tr>
+            <th class="count-me">Medical Intervention</th>
+            <th><p id="7"></p></th>
+        </tr>
+        <tr>
+            <th class="count-me">AP Music Theory</th>
+            <th><p id="8"></p></th>
+        </tr>
+        <tr>
+            <th class="count-me">Concert Band</th>
+            <th><p id="9"></p></th>
+        </tr>
+        <tr>
+            <th class="count-me">AP Studio Art</th>
+            <th><p id="10"></p></th>
+        </tr>
+        <tr>
+            <th class="count-me">Drama</th>
+            <th><p id="11"></p></th>
+        </tr>
+        <tr>
+            <th class="count-me">Drawing and Painting</th>
+            <th><p id="12"></p></th>
+        </tr>
+        <tr>
+            <th class="count-me">Photography</th>
+            <th><p id="13"></p></th>
+        </tr>
+        <tr>
+            <th class="count-me">Symphonic Band</th>
+            <th><p id="14"></p></th>
+        </tr>
+        <tr>
+            <th class="count-me">AP Computer Science</th>
+            <th><p id="15"></p></th>
+        </tr>
+        <tr>
+            <th class="count-me">AP Psychology</th>
+            <th><p id="16"></p></th>
+        </tr>
+        <tr>
+            <th class="count-me">Child Development</th>
+            <th><p id="17"></p></th>
+        </tr>
+        <tr>
+             <th class="count-me">Engineering</th>
+             <th><p id="18"></p></th>
+        </tr>
+        <tr>
+            <th class="count-me">Film Studies</th>
+            <th><p id="19"></p></th>
+        </tr>
+        <tr>
+            <th class="count-me">Yearbook</th>
+            <th><p id="20"></p></th>
+        </tr>
+        <tr>
+            <th class="count-me">Marching Band</th>
+            <th><p id="21"></p></th>
+        </tr>
+        <tr>
+            <th class="count-me">Concert Choir</th>
+            <th><p id="22"></p></th>
+        </tr>
+        <tr>
+            <th >Total</th>
+            <th><p id="val"></p></th>
+        </tr>
+
+
+        <script>
+            function finish() {
+                var table = document.getElementById("countit"), sumVal = 0;
+
+                for(var i = 1; i < table.rows.length; i++)
+                {
+                    sumVal = sumVal + parseInt(table.rows[i].cells[2].innerHTML);
+                }
+
+                document.getElementById("val").innerHTML = "Sum Value = " + sumVal;
+            }
+
+
+        </script>
+
+
+
+
+
+
+</div>
+
+
+
+
+<script>
+
+    function americanlit() {
+        document.getElementById("2").innerHTML = "2";
+    }
+    function ethniclit() {
+        document.getElementById("3").innerHTML = "2";
+    }
+    function honorshum() {
+        document.getElementById("4").innerHTML = "2";
+    }
+    function worldlit() {
+        document.getElementById("5").innerHTML = "2";
+    }
+    function biomed() {
+        document.getElementById("6").innerHTML = "2";
+    }
+    function mi() {
+        document.getElementById("7").innerHTML = "2";
+    }
+    function apmusic() {
+        document.getElementById("8").innerHTML = "3";
+    }
+    function concert() {
+        document.getElementById("9").innerHTML = "2";
+    }
+    function apart() {
+        document.getElementById("10").innerHTML = "3";
+    }
+    function drama() {
+        document.getElementById("11").innerHTML = "2";
+    }
+    function draw() {
+        document.getElementById("12").innerHTML = "2";
+    }
+    function photo() {
+        document.getElementById("13").innerHTML = "2";
+    }
+    function symph() {
+        document.getElementById("14").innerHTML = "2";
+    }
+    function apcomp() {
+        document.getElementById("15").innerHTML = "3";
+    }
+    function appysch() {
+        document.getElementById("16").innerHTML = "3";
+    }
+    function child() {
+        document.getElementById("17").innerHTML = "2";
+    }
+    function engine() {
+        document.getElementById("18").innerHTML = "2";
+    }
+    function film() {
+        document.getElementById("19").innerHTML = "2";
+    }
+    function yearbk() {
+        document.getElementById("20").innerHTML = "2";
+    }
+    function march() {
+        document.getElementById("21").innerHTML = "2";
+    }
+    function choir() {
+        document.getElementById("22").innerHTML = "3";
+    }
+
+</script>
 
 </body>
 
