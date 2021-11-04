@@ -16,15 +16,15 @@
             display: grid;
             width: 50px;
             height: 50px;
-            margin-left: 9%;
+            margin-left: 39%;
             grid-template-columns: repeat(7, 1fr);
         }
 
-        #countit {
+        #countit  td,{
             font-family: monospace;
             border-collapse: collapse;
             width: 30%;
-            margin-left: 59%;
+            margin-left: 70%;
             margin-top: -3.3%;
         }
 
@@ -166,9 +166,10 @@
             <th >Total</th>
             <th><p id="val"></p></th>
         </tr>
-
+        <span id="val"></span>
 
         <script>
+
             function finish() {
                 var table = document.getElementById("countit"), sumVal = 0;
 
@@ -178,8 +179,8 @@
                 }
 
                 document.getElementById("val").innerHTML = "Sum Value = " + sumVal;
+                console.log(sumVal);
             }
-
 
         </script>
 
