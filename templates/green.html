@@ -3,47 +3,45 @@
 <!-- Extending the project layout, as this file will do minor customizations -->
 {% extends "layouts/base.html" %}
 <head>
-  <meta charset="UTF-8">
-  <title>Green</title>
+    <meta charset="UTF-8">
+
+    <title>Green</title>
 </head>
 
 {% block body %}
 
-    <style>
-        .site { overflow-x: visible; }
-        .test {
-            font-family: monospace;
-            display: grid;
-            width: 50px;
-            height: 50px;
-            margin-left: 39%;
-            grid-template-columns: repeat(7, 1fr);
-        }
+<style>
 
-        #countit  td,{
-            font-family: monospace;
-            border-collapse: collapse;
-            width: 30%;
-            margin-left: 70%;
-            margin-top: -3.3%;
-        }
+    .test {
+        font-family: monospace;
+        display: grid;
+        width: 50px;
+        height: 50px;
+        margin-left: 9%;
+        grid-template-columns: repeat(7, 1fr);
+    }
 
-        #countit td, #countit th {
-            border: 1px solid #ddd;
-            padding: 5px;
-        }
+    #countit {
+        font-family: monospace;
+        border-collapse: collapse;
+        width: 30%;
+        margin-left: 59%;
+        margin-top: -3.3%;
+    }
 
+    #countit td, #countit th {
+        border: 1px solid #ddd;
+        padding: 5px;
+    }
+    #countit th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #04AA6D;
+        color: white;
+</style>
 
-        #countit th {
-            padding-top: 12px;
-            padding-bottom: 12px;
-            text-align: left;
-            background-color: #04AA6D;
-            color: white;
-
-    </style>
-
-<body class="site" style="background-color: #9EE09E; align-content: center">
+<body class="site" style="background-color: #9EE09E; align-content: center"; width>
 <h1 class="text-center" style="margin-top: 3%;color: black;">Course and Tutoring Information</h1>
 
 <div class="test">
@@ -68,9 +66,12 @@
     <button onclick="yearbk()" style="color: white; background-color: #04AA6D">Yearbook</button>
     <button onclick="march()" style="color: white; background-color: #04AA6D">Marching Band</button>
     <button onclick="choir()" style="color: white; background-color: #04AA6D">Concert Choir</button>
-    <button onclick="finish()" style="color: white; background-color: #04AA6D">Finish</button>
+    <button onclick="simple()" style="color: white; background-color: #04AA6D">Total</button>
+
+
 
 </div>
+
 
 <div>
     <table id="countit">
@@ -143,8 +144,8 @@
             <th><p id="17"></p></th>
         </tr>
         <tr>
-             <th class="count-me">Engineering</th>
-             <th><p id="18"></p></th>
+            <th class="count-me">Engineering</th>
+            <th><p id="18"></p></th>
         </tr>
         <tr>
             <th class="count-me">Film Studies</th>
@@ -163,26 +164,9 @@
             <th><p id="22"></p></th>
         </tr>
         <tr>
-            <th >Total</th>
-            <th><p id="val"></p></th>
+            <th class="count-me">total</th>
+            <th><p id="total"></p></th>
         </tr>
-        <span id="val"></span>
-
-        <script>
-
-            function finish() {
-                var table = document.getElementById("countit"), sumVal = 0;
-
-                for(var i = 1; i < table.rows.length; i++)
-                {
-                    sumVal = sumVal + parseInt(table.rows[i].cells[2].innerHTML);
-                }
-
-                document.getElementById("val").innerHTML = "Sum Value = " + sumVal;
-                console.log(sumVal);
-            }
-
-        </script>
 
 
 
@@ -195,71 +179,115 @@
 
 
 <script>
+    var total = 0
 
     function americanlit() {
         document.getElementById("2").innerHTML = "2";
+        total += 2
     }
     function ethniclit() {
         document.getElementById("3").innerHTML = "2";
+        total += 2
+
     }
     function honorshum() {
         document.getElementById("4").innerHTML = "2";
+        total += 2
+
     }
     function worldlit() {
         document.getElementById("5").innerHTML = "2";
+        total += 2
+
     }
     function biomed() {
         document.getElementById("6").innerHTML = "2";
+        total += 2
+
     }
     function mi() {
         document.getElementById("7").innerHTML = "2";
+        total += 2
+
     }
     function apmusic() {
         document.getElementById("8").innerHTML = "3";
+        total += 3
+
     }
     function concert() {
         document.getElementById("9").innerHTML = "2";
+        total += 2
+
     }
     function apart() {
         document.getElementById("10").innerHTML = "3";
+        total += 3
+
     }
     function drama() {
         document.getElementById("11").innerHTML = "2";
+        total += 2
+
     }
     function draw() {
         document.getElementById("12").innerHTML = "2";
+        total += 2
+
     }
     function photo() {
         document.getElementById("13").innerHTML = "2";
+        total += 2
+
     }
     function symph() {
         document.getElementById("14").innerHTML = "2";
+        total += 2
+
     }
     function apcomp() {
         document.getElementById("15").innerHTML = "3";
+        total += 3
+
     }
     function appysch() {
         document.getElementById("16").innerHTML = "3";
+        total += 3
+
     }
     function child() {
         document.getElementById("17").innerHTML = "2";
+        total += 2
+
     }
     function engine() {
         document.getElementById("18").innerHTML = "2";
+        total += 2
+
     }
     function film() {
         document.getElementById("19").innerHTML = "2";
+        total += 2
+
     }
     function yearbk() {
         document.getElementById("20").innerHTML = "2";
+        total += 2
+
     }
     function march() {
         document.getElementById("21").innerHTML = "2";
+        total += 2
+
     }
     function choir() {
         document.getElementById("22").innerHTML = "3";
-    }
+        total += 3
 
+    }
+    function simple() {
+        document.getElementById("total").innerHTML = total;
+    }
 </script>
 
 </body>
