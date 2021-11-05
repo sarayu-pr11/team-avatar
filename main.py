@@ -59,6 +59,7 @@ def greet2():
     # starting and empty input default
     return render_template("greet.html", name="World")
 
+
 @app.route('/green/', methods=['GET', 'POST'])
 def greet3():
     # submit button has been pushed
@@ -68,6 +69,7 @@ def greet3():
             return render_template("green.html", name=name)
     # starting and empty input default
     return render_template("green.html", name="World")
+
 
 @app.route('/sarayu/')
 def sarayu():
@@ -157,13 +159,10 @@ def blue():
 def blue2():
     # submit button has been pushed
     if request.form:
-        name = request.form.get("name")
-        if len(name) != 0:  # input field has content
-            return render_template("blue.html", name=name)
-    if request.form:
-        name1 = request.form.get("name1")
-        if len(name1) != 0:  # input field has content
-            return render_template("blue.html", name1=name1)
+        server = request.form.get("server")
+        link = request.form.get("link")
+        return render_template("blue.html", server=server, link=link)
+    return render_template("blue.html", server="hi", link="world")
 
 
 @app.route('/purple/')
