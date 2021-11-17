@@ -1,7 +1,5 @@
 # import "packages" from flask
-from flask import Flask, render_template, request
-from images import image_data, draw_text_in_image, draw_text_in_pranavi_image
-from clubsapi import get_club
+from flask import Flask, render_template
 
 # create a Flask instance
 app = Flask(__name__)
@@ -13,161 +11,25 @@ def index():
     return render_template("index.html")
 
 
-@app.route('/binary/')
-def binary():
-    return render_template("binary.html")
+# connects /kangaroos path to render kangaroos.html
+@app.route('/kangaroos/')
+def kangaroos():
+    return render_template("kangaroos.html")
 
 
-@app.route('/rgbsarayu/')
-def rgbsarayu():
-    return render_template("rgb_sarayu.html", images=image_data())
+@app.route('/walruses/')
+def walruses():
+    return render_template("walruses.html")
 
 
-@app.route('/rgbsaathvika/')
-def rgbsaathvika():
-    return render_template("rgb_saathvika.html", images=image_data())
+@app.route('/hawkers/')
+def hawkers():
+    return render_template("hawkers.html")
 
 
-@app.route('/rgbpranavi/')
-def rgbpranavi():
-    draw_text_in_image("Team Color's Text")
-    return render_template("rgb_pranavi.html", images=image_data())
-
-
-@app.route('/home/')
-def home():
-    return render_template("home.html")
-
-
-@app.route('/test/')
-def test():
-    return render_template("colorcodes.html")
-
-
-@app.route('/greet/')
-def greet():
-    return render_template("greet.html")
-
-
-@app.route('/greet/', methods=['GET', 'POST'])
-def greet2():
-    # submit button has been pushed
-    if request.form:
-        name = request.form.get("name")
-        if len(name) != 0:  # input field has content
-            return render_template("greet.html", name=name)
-    # starting and empty input default
-    return render_template("greet.html", name="World")
-
-
-@app.route('/green/', methods=['GET', 'POST'])
-def greet3():
-    # submit button has been pushed
-    if request.form:
-        name = request.form.get("name")
-        if len(name) != 0:  # input field has content
-            return render_template("green.html", name=name)
-    # starting and empty input default
-    return render_template("green.html", name="World")
-
-
-@app.route('/sarayu/')
-def sarayu():
-    return render_template("sarayu.html")
-
-
-@app.route('/sarayu/', methods=['GET', 'POST'])
-def sarayu2():
-    # submit button has been pushed
-    if request.form:
-        name = request.form.get("name")
-        if len(name) != 0:  # input field has content
-            return render_template("sarayu.html", name=name)
-    # starting and empty input default
-    return render_template("sarayu.html", name="World")
-
-
-@app.route('/saathvika/')
-def saathvika():
-    return render_template("saathvika.html")
-
-
-@app.route('/saathvika/', methods=['GET', 'POST'])
-def saathvika2():
-    # submit button has been pushed
-    if request.form:
-        name = request.form.get("name")
-        if len(name) != 0:  # input field has content
-            return render_template("saathvika.html", name=name)
-    # starting and empty input default
-    return render_template("saathvika.html", name="World")
-
-
-@app.route('/pranavi/', methods=['GET', 'POST'])
-def pranavi():
-    draw_text_in_pranavi_image("Hello! I am Pranavi")
-    # submit button has been pushed
-    if request.form:
-        name = request.form.get("name")
-        if len(name) != 0:  # input field has content
-            return render_template("pranavi.html", name=name)
-    # starting and empty input default
-    return render_template("pranavi.html", name="Hello")
-
-
-@app.route('/logicgates/')
-def logicgates():
-    return render_template("logic_gates.html")
-
-
-@app.route('/unsignedaddition/')
-def unsignedaddition():
-    return render_template("unsigned_addition.html")
-
-
-@app.route('/signedaddition/')
-def signedaddition():
-    return render_template("signed_addition.html")
-
-
-@app.route('/red/')
-def red():
-    return render_template("red.html")
-
-
-@app.route('/orange/')
-def orange():
-    return render_template("orange.html")
-
-
-@app.route('/yellow/')
-def yellow():
-    return render_template("yellow.html", club=get_club())
-
-
-@app.route('/green/')
-def green():
-    return render_template("green.html")
-
-
-@app.route('/blue/')
-def blue():
-    return render_template("blue.html")
-
-
-@app.route('/blue/', methods=['GET', 'POST'])
-def blue2():
-    # submit button has been pushed
-    if request.form:
-        server = request.form.get("server")
-        link = request.form.get("link")
-        return render_template("blue.html", server=server, link=link)
-    return render_template("blue.html", server="hi", link="world")
-
-
-@app.route('/purple/')
-def purple():
-    return render_template("purple.html")
+@app.route('/stub/')
+def stub():
+    return render_template("stub.html")
 
 
 # runs the application on the development server
