@@ -35,9 +35,13 @@ def stub():
 def kamryn_abt():
     return render_template("kamryn_abt.html")
 
-@app.route('/kamryn_abt/')
+@app.route('/riya_abt/')
 def riya_abt():
     return render_template("riya_abt.html")
+
+@app.route('/aboutus/')
+def aboutus():
+    return render_template("aboutus.html")
 
 # runs the application on the development server
 if __name__ == "__main__":
