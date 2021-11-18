@@ -7,7 +7,7 @@ This HTML is set up as a Jinja2 layout, coders use layouts for:
 <!DOCTYPE HTML>
 <html lang="en">
 
-
+{%  set basename = "NARKS" %}
 
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -19,7 +19,7 @@ This HTML is set up as a Jinja2 layout, coders use layouts for:
             height: 100%;
             background-color: white;
             background-image:url('https://wallpapercave.com/wp/wp4288404.jpg');
-            color: ghostwhite;
+            color: lightpink;
             background-repeat:no-repeat;
             background-attachment:fixed;
             background-position:100% 100%;
@@ -48,6 +48,7 @@ This HTML is set up as a Jinja2 layout, coders use layouts for:
     {% block meta %}
     {% endblock %}
 
+    <title>{{ basename }} | {{ project }} </title>
 
 </head>
 
@@ -72,5 +73,10 @@ This HTML is set up as a Jinja2 layout, coders use layouts for:
 </body>
 
 {% block background %}
+
+    </div>
+    <img src="https://c.tenor.com/4otr5S3l1agAAAAj/dancing-duckdancing.gif" width="82" height="100">
+
+    </div>
 
 {% endblock %}
