@@ -31,6 +31,10 @@ def hawkers():
 def stub():
     return render_template("stub.html")
 
+@app.route('/kamryn_abt/')
+def kamryn_abt():
+    return render_template("kamryn_abt.html")
+
 
 # runs the application on the development server
 if __name__ == "__main__":
