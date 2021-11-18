@@ -1,34 +1,73 @@
 {% extends "layouts/base.html" %}
 
-{% set project = "Riya" %}
+{% set project = "Kamryn" %}
 
+<!- This is a replacement block for Body in base.html -->
 {% block body %}
-    <div class="w3-container">
-        <h1 class="w3-center w3-animate-top">hi i'm Riya!</h1>
+    <!- Try building a new body here ->
+    <h2 id="abt_header"> About Me </h2>
+    <h1 id="abt_name"> Kamryn </h1>
+    <img id="abt_img" src="" alt=" My Picture">
+    <div style="text-align:center;font-size:xx-large";>
     </div>
-    <title>W3.CSS</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <body>
-    <div class="w3-container w3-sand">
-        <h2>a little about me</h2>
-        <p> hello! I'm Riya and I am a junior! Some of my favorite things to do are hang out with my friends, watch movies and play board games! One of the most random things I love to do is to solve an escape room - in real life or on a game :) I love marvel, harry potter and disney :) In the future, I would love to travel to Thailand, or Africa : those are the places I want to go the most! Here is a piture of me and my friend Aleezay at Disneyland! I'm on the right :) </p>
-    </div>
-    <img src="/static/assets/riya%20pic.jpg" class="w3-round" alt="Norway">
-
-    <head>
-        <meta charset="UTF-8">
-        <title>Title</title>
+    <p id="abt_para"> This is about me. </p>
 
 
-    </head>
-    <body>
+    <style>
+        #abt_header {
+            width: 800px;
+            height: 100px;
+            background: #A56ABD;
+            transition: width 2s;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
+        #abt_header:hover {
+            width: 400px;
+        }
+    </style>
 
-    </body>
-    </html>
-    </body>
+    <style>
+        body{
+            background: #36223D;
+        }
+        #abt_header {
+            text-align: center;
+            padding: 15px;
+            font-size: 5em;
+            color: #BFABC7;
+        }
+
+        #abt_name {
+            text-align: center;
+            padding: 15px;
+            font-size: 4em;
+            color: white;
+        }
+
+        #abt_para {
+            text-align: center;
+            padding: 10px;
+            font-size: 1.5em;
+            color: white;
+            border-style: solid;
+            border-width:6px;
+            margin:300px;
+
+        }
+
+        #abt_img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width:5%;
+        }
+
+    </style>
 {% endblock %}
 
+<!- This is turning off birds background from base.html -->
 {% block background %}
+
 {% endblock %}
