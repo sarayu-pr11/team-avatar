@@ -1,7 +1,13 @@
 <!-- Navigation Bar from bootstrap
 This HTML is setup as a fragment allowing it to be "included" by other HTML files via Jinja2
 -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<html>
+<head>
+    <link href="http://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="styesheet">
+    <script src="http://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+</head>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="https://csp.nighthawkcodingsociety.com/">{{basename}}</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -15,6 +21,20 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
             <a class="nav-link" href={{ url_for('hawkers') }}>Hawkers</a>
             <!-- stub is shown using the name of the route -->
             <a class="nav-link" href="/stub">Stub</a>
+
+            <li class="nav-item dropdown">
+
+                <a class="nav-link dropdown-toggle" href={{ url_for('aboutus') }} data-bs-toggle="dropdown" aria-expanded="false" id="dropdownMenuButton1" type="button">
+                    About us!
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <a class="dropdown-item" href="/kamryn_abt">Kamryn</a>
+                    <a class="dropdown-item" href="/riya_abt">Riya</a>
+                    <a class="dropdown-item" href="/">Abby</a>
+                    <a class="dropdown-item" href="/">Natalie</a>
+                    <a class="dropdown-item" href="/">Sarayu</a>
+                </div>
+
         </div>
     </div>
 </nav>
