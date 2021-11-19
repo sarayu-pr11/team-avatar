@@ -39,6 +39,18 @@ def kamryn_abt():
 def riya_abt():
     return render_template("riya_abt.html")
 
+@app.route('/natalie_abt/')
+def natalie_abt():
+    return render_template("natalie_abt.html")
+
+@app.route('/abby_abt/')
+def abby_abt():
+    return render_template("abby_abt.html")
+
+@app.route('/sarayu_abt/')
+def sarayu_abt():
+    return render_template("sarayu_abt.html")
+
 @app.route('/aboutus/')
 def aboutus():
     return render_template("aboutus.html")

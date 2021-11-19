@@ -1,0 +1,29 @@
+
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
+
+<!- This variable sets name of browser tab  -->
+{% set project = "Natalie" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+    <!- Try building a new body here ->
+
+    <!-- this is the title and the name bar code -->
+    <!--suppress CssUnknownTarget -->
+    <body>
+
+    <!--  <div class="col-12"> -->
+    <!--</div> -->
+
+        <!--#faf9e3 -->
+        <h2 style="margin: 2% 5% 7%; text-align:left; color: #999f8c;
+                             ">Welcome to Natalie's Page!</h2>
+
+    </body>
+
+{% endblock %}
+
+<!- This is turning off birds background from base.html -->
+{% block background %}
+{% endblock %}
