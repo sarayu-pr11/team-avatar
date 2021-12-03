@@ -1,5 +1,5 @@
 # import "packages" from flask
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 # create a Flask instance
 app = Flask(__name__)
@@ -38,6 +38,7 @@ def kamryn_abt():
 @app.route('/riya_abt/')
 def riya_abt():
     return render_template("riya_abt.html")
+
 
 @app.route('/natalie_abt/')
 def natalie_abt():
