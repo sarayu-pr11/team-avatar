@@ -1,6 +1,7 @@
 # import "packages" from flask
-from flask import Flask, render_template, request
+from flask import Flask, render_template,
 import requests
+import json
 
 # create a Flask instance
 app = Flask(__name__)
@@ -34,6 +35,20 @@ def stub():
 
 @app.route('/kamryn_abt/')
 def kamryn_abt():
+     url = "https://magic-8-ball.p.rapidapi.com/8-ball"
+
+    payload = "{
+    \"question\": \"Will betty white live forever?\"
+    }"
+    headers = {
+    'content-type': "application/json",
+    'x-rapidapi-host': "magic-8-ball.p.rapidapi.com",
+    'x-rapidapi-key': "55ab579673msh7f1d19f3c954b1ep19fc77jsn27583d661f5c"
+    }
+
+response = requests.request("POST", url, data=payload, headers=headers)
+
+print(response.text)
     return render_template("kamryn_abt.html")
 
 @app.route('/riya_abt/')
