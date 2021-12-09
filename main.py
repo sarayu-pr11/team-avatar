@@ -1,5 +1,6 @@
 # import "packages" from flask
 from flask import Flask, render_template, request
+import requests
 
 # create a Flask instance
 app = Flask(__name__)
@@ -39,9 +40,22 @@ def kamryn_abt():
 def riya_abt():
     return render_template("riya_abt.html")
 
-
 @app.route('/natalie_abt/')
 def natalie_abt():
+    #url = "https://numbersapi.p.rapidapi.com/1492/year"
+    #querystring = {"fragment":"true","json":"true"}
+    #headers = {
+    #    'x-rapidapi-host': "numbersapi.p.rapidapi.com",
+     #   'x-rapidapi-key': "57a15be86bmsh8ab5c9d255b7689p1346f0jsnb3b6bfbfaba4"
+    #}
+    #response = requests.request("GET", url, headers=headers, params=querystring)
+    #results = json.loads(response.content.decode("utf-8"))['results']
+    #year = []
+    #for result in results:
+    #        # result['year']
+    #        year.append(result['year'])
+    #    # tournament = json.loads(response.content.decode("utf-8"))['results'][0]['year']
+
     return render_template("natalie_abt.html")
 
 @app.route('/abby_abt/')
