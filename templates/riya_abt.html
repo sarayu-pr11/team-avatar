@@ -9,25 +9,39 @@
     <title>W3.CSS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <body>
+
     <div class="w3-container w3-sand">
         <h2>a little about me</h2>
         <p> hello! I'm Riya and I am a junior! Some of my favorite things to do are hang out with my friends, watch movies and play board games! One of the most random things I love to do is to solve an escape room - in real life or on a game :) I love marvel, harry potter and disney :) In the future, I would love to travel to Thailand, or Africa : those are the places I want to go the most! Here is a piture of me and my friend Aleezay at Disneyland! I'm on the right :) </p>
     </div>
-    <img src="/static/assets/riyapic.png" class="w3-round" alt="Norway">
-
+    <html>
     <head>
         <meta charset="UTF-8">
-        <title>Title</title>
-
-
+        <title>Toggle the Pictures</title>
     </head>
+
     <body>
+    <!-- Set up default picture and the button to toggle -->
+    <img id="oldImage" src="/static/assets/riyamask.png/">
+    <p><input type="button" id="theButton" value="Click me!" onclick="swapPicture()"></p>
 
+    <script>
+        function swapPicture(){
+            //get the file path of current image
+            let img = document.getElementById("oldImage") ;
+            // check if the path matches path of the current page image matches
+            // with image to swap, if not matched - swap
+            if (img.getAttribute('src') == "/static/assets/Riya Drawing.png/"){
+                img.src = "/static/assets/riyamask.png/";
+            } else {
+                img.src = "/static/assets/Riya Drawing.png/";
+            }
+        }
 
+    </script>
     </body>
     </html>
-    </body>
+
 {% endblock %}
 
 {% block background %}
