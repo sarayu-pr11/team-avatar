@@ -1,8 +1,8 @@
 # import "packages" from flask
-from flask import Flask, render_template,
+from flask import Flask, render_template, request, jsonify
 import requests
-import json
 
+import json
 # create a Flask instance
 app = Flask(__name__)
 
@@ -35,25 +35,50 @@ def stub():
 
 @app.route('/kamryn_abt/')
 def kamryn_abt():
-     url = "https://magic-8-ball.p.rapidapi.com/8-ball"
-
-    payload = "{
-    \"question\": \"Will betty white live forever?\"
-    }"
-    headers = {
-    'content-type': "application/json",
-    'x-rapidapi-host': "magic-8-ball.p.rapidapi.com",
-    'x-rapidapi-key': "55ab579673msh7f1d19f3c954b1ep19fc77jsn27583d661f5c"
-    }
-
-response = requests.request("POST", url, data=payload, headers=headers)
-
-print(response.text)
-    return render_template("kamryn_abt.html")
+    return render_template("kamryn_abt.html", stats=response.json())
 
 @app.route('/riya_abt/')
 def riya_abt():
-    return render_template("riya_abt.html")
+    url = "https://motivational-quotes1.p.rapidapi.com/motivation"
+
+    payload = "{ \"key1\": \"value\",\"key2\": \"value\"}"
+    headers = {
+    'content-type': "application/json",
+    'x-rapidapi-host': "motivational-quotes1.p.rapidapi.com",
+    'x-rapidapi-key': "066e279e11mshd6855dd2ac40d0dp19761ajsn088d1e5fbc92"
+    }
+
+    response = requests.request("POST", url, data=payload, headers=headers)
+
+    text = response.text
+    return render_template("riya_abt.html", results=text)
+        #url = "https://covid-19-data.p.rapidapi.com/report/totals"
+       # querystring = {"date":"2020-07-21"}
+       # headers = {
+          #  'x-rapidapi-host': "covid-19-data.p.rapidapi.com",
+        #    'x-rapidapi-key': "066e279e11mshd6855dd2ac40d0dp19761ajsn088d1e5fbc92"
+      #  }
+       # response = requests.request("GET", url, headers=headers, params=querystring)
+        #stats=[
+        #{
+       # 'name':'Audrin',
+       # 'place': 'kaka',
+       # 'mob': '7736'
+       # },
+     #   {
+      #  'name': 'Stuvard',
+       # 'place': 'Goa',
+       # 'mob' : '546464'
+      #  }
+      #  ]
+        #return(response.text)
+       # results = response.text
+
+        #return render_template("riya_abt.html", data=stats)
+
+
+
+
 
 @app.route('/natalie_abt/')
 def natalie_abt():
