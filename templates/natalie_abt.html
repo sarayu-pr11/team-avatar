@@ -27,16 +27,19 @@
     </body>
     <!--this is the first paragraph code -->
     <div class="center-block" style="margin: 2%; text-align: left; font-family: arial; color: #ffffff; background-color: #00000066;" >
-            <h4 style="font-family: Courier New; color: #ffffff; margin: 2% ">Hello!</h4>
+            <h3 style="font-family: Courier New; color: #ffffff; margin: 2% ">Hello!</h3>
             <p style="font-family: arial; color: #ffffff; margin: 2%">I'm a junior at Del Norte. Some of my hobbies are softball and field hockey!</p>
 
-    <p style="margin: 2%">Check out our wireframes!</p>
-    <iframe class="center-block" style="border: 1px solid rgba(0, 0, 0, 0.1);" width="400" height="225" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FKCFc2evNde191ffmnJlwK0%2FTheme-Ideas%3Fnode-id%3D0%253A1" allowfullscreen></iframe> <br>
+    <p style="margin: 2%">Check out our wireframes:</p>
 
-        <p>Click on the image to toggle mask and no mask!</p>
+        <iframe class="center-block" style="border: 1px solid rgba(0, 0, 0, 0.1); margin: 2%" width="400" height="225" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FKCFc2evNde191ffmnJlwK0%2FTheme-Ideas%3Fnode-id%3D0%253A1" allowfullscreen></iframe> <br>
+
+        <p style="margin: 2%">Click on the image to toggle mask and no mask:</p>
 
         <img src="/static/assets/nataliemask.jpg" style="margin: 2%" width="281.25" height="375" id="imgClickAndChange" onclick="changeImage()"/>
 
+        <p > {{ date }} {{ year }} </p>
+        <p > {{ quote }}  </p>
 
     </div>
 
@@ -56,18 +59,6 @@
 
 
     <br>
-
-
-
-
-
-
-
-
-
-
-
-
 
 {% endblock %}
 

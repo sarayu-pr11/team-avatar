@@ -1,5 +1,5 @@
 # import "packages" from flask
-from flask import Flask, render_template,
+from flask import Flask, render_template
 import requests
 import json
 
@@ -57,21 +57,35 @@ def riya_abt():
 
 @app.route('/natalie_abt/')
 def natalie_abt():
-    #url = "https://numbersapi.p.rapidapi.com/1492/year"
-    #querystring = {"fragment":"true","json":"true"}
-    #headers = {
-    #    'x-rapidapi-host': "numbersapi.p.rapidapi.com",
-     #   'x-rapidapi-key': "57a15be86bmsh8ab5c9d255b7689p1346f0jsnb3b6bfbfaba4"
-    #}
-    #response = requests.request("GET", url, headers=headers, params=querystring)
-    #results = json.loads(response.content.decode("utf-8"))['results']
-    #year = []
-    #for result in results:
-    #        # result['year']
-    #        year.append(result['year'])
-    #    # tournament = json.loads(response.content.decode("utf-8"))['results'][0]['year']
 
-    return render_template("natalie_abt.html")
+    url = "https://numbersapi.p.rapidapi.com/1492/year"
+    querystring = {"fragment":"true","json":"true"}
+    headers = {
+        'x-rapidapi-host': "numbersapi.p.rapidapi.com",
+        'x-rapidapi-key': "57a15be86bmsh8ab5c9d255b7689p1346f0jsnb3b6bfbfaba4"
+    }
+    response = requests.request("GET", url, headers=headers, params=querystring)
+    print(response.text)
+
+    quote = ""
+    date = ""
+    year = ""
+    try:
+        quote = json.loads(response.content.decode("utf-8"))['text']
+        date = json.loads(response.content.decode("utf-8"))['date']
+        year = json.loads(response.content.decode("utf-8"))['number']
+    except:
+        print ("No date from URL")
+
+    print ("quote  = ", quote)
+    print ("date  = ", date)
+    print ("year  = ", year)
+
+    r = json.dumps(response.text)
+    loaded_r = json.loads(r)
+
+    return render_template("natalie_abt.html", quote=quote, year=year, date=date,
+                           r=loaded_r)
 
 @app.route('/abby_abt/')
 def abby_abt():
