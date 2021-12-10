@@ -119,7 +119,7 @@ We want to have a study hall themed website. Users can find a variety of study t
 ####Below we have tables that provide a complete timeline of our work and commits over the past few weeks. They are divided into tables by sprints:
 
 ****
-##Week 1/2
+## Week 1/2
 <table>
 <tr>
 <td>Scrum Master</td>
@@ -167,6 +167,8 @@ We want to have a study hall themed website. Users can find a variety of study t
 </td>
 </tr>
 </table>
+
+This week we worked on API and mask toggle integration!
 
 
 ****
