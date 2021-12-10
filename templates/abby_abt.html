@@ -1,3 +1,12 @@
+{% extends "layouts/base.html" %}
+
+<!- This variable sets name of browser tab  -->
+{% set project = "Abby" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+<!- Try building a new body here ->
+
 
     <div class="w3-container">
         <h1 class="w3-center w3-animate-top">Hey, I'm Abby. Welcome to my About Me page!</h1>
@@ -17,3 +26,10 @@
     </body>
     </html>
     </body>
+
+
+{% endblock %}
+
+<!- This is turning off birds background from base.html -->
+{% block background %}
+{% endblock %}
