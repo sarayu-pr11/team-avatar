@@ -41,12 +41,18 @@ def kamryn_abt():
     global nextAnswerString
     answerString = nextAnswerString
 
-    arrayOfAnswers = ['Yes, you are correct!',
-                      'No, you are wrong!',
-                      'Maybe...call me baby',
-                      'Thought you knew!',
-                      'Dunno, ask Kammy',
-                      'Ask the other 8-ball']
+    arrayOfAnswers = ['Yes, definitely!',
+                      'No, absolutely not.',
+                      'Maybe...',
+                      'Concentrate and ask',
+                      'Unlikely',
+                      'Certainly',
+                      'Do not count on it',
+                      'As I see it, yes',
+                      'Ask again later',
+                      'I am not sure',
+                      'Most likely',
+                      'You may rely on it']
 
     randIdx = int(math.floor(random.random()*len(arrayOfAnswers)))
     nextAnswerString = arrayOfAnswers[randIdx]
@@ -90,10 +96,6 @@ def riya_abt():
        # results = response.text
 
        # return render_template("riya_abt.html", data=stats)
-
-
-
-
 
 @app.route('/natalie_abt/')
 def natalie_abt():
