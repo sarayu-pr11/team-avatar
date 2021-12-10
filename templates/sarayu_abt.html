@@ -15,7 +15,7 @@
     </div>
 
     <div id="create-task" style="background-color: #c5c5e0; margin-top: 10px; margin-left: 20px; height:300px; width:300px; font-family: monospace; font-size: 16px">
-      <h3>My Create Task!</h3>
+        <h3>My Create Task!</h3>
         <p>My create task will be mainly centered around space. I will incorporate facts about space, information about the studied comets and asteroids, the planets, and many more. The main premise of the website will be to teach people things that they wouldn't have known if they hadn't looked at my website.</p>
     </div>
 
@@ -25,9 +25,9 @@
     </div>
 
 
-   <div>
-    <img id="img" src="/static/assets/mask.PNG" class="w3-round" alt="Norway">
-   </div>
+    <div>
+        <img id="img" src="/static/assets/mask.PNG" class="w3-round" alt="Norway">
+    </div>
 
     <div>
         <button id="button" onclick="picture()">Change the Picture!</button><br><br>
@@ -39,17 +39,17 @@
 
     <script>
         var count = 2
-    function picture() {
-       if(count % 2 ==0){
-           document.getElementById("img").src="/static/assets/IMG_1424.JPG";
-       }
-        else{
-            document.getElementById("img").src="/static/assets/mask.PNG";
-       }
-        ++count;
-    }
+        function picture() {
+            if(count % 2 ==0){
+                document.getElementById("img").src="/static/assets/IMG_1424.JPG";
+            }
+            else{
+                document.getElementById("img").src="/static/assets/mask.PNG";
+            }
+            ++count;
+        }
 
-</script>
+    </script>
 
     <style>
         img {
