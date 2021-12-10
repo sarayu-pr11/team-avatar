@@ -9,8 +9,11 @@
     <p>
         <img src="/static/assets/kamrynmask.png" style="height: 350px; width: auto;" id="imgClickAndChange" onclick="changeImage()"/>
     </p>
-    <div class="w3-container w3-sand">
-    <h2> <a href="https://docs.google.com/document/d/1pdjnMfCjmD8dSawsB4ij6OV4Vp2Igl_obz6Qeb1nFg0/edit?usp=sharing">Click here to visit my journal!</h2>
+    <div>
+        <a href="https://docs.google.com/document/d/1pdjnMfCjmD8dSawsB4ij6OV4Vp2Igl_obz6Qeb1nFg0/edit?usp=sharing/">Visit my Journal!</a>
+    </div>
+
+
     <p id="create_task"> Create Task Notes:
     Website to help people find their style/fashion inspiration
     -locate charity shops where people can donate clothes
@@ -24,7 +27,7 @@
 
 <form action="/kamryn_abt"  id="8ball_form" method="GET" >
     <textarea id="question" rows="1" cols="32" form="8ball_form" placeholder="Ask the 8 Ball!"></textarea>
-    <button id="8ball"><img src="/static/assets/magic8ball.jpeg" type="submit" form="8ball_form"></button>
+    <button id="8ball"><img id=ball src="/static/assets/magic8ball.jpeg" type="submit" form="8ball_form"></button>
     <textarea readonly id="answer" rows="1" cols="32" form="8ball_form">{{currentAnswer}}</textarea>
 </form>
         <style>
@@ -40,24 +43,47 @@
             #abt_header:hover {
                 width: 250px;
             }
+
             h2 {
                 text-align: center;
                 font-size: 30px;
             }
+
             img {
                 width: 300px;
                 height: auto;
                 border: 4px solid #a1a1a1;
             }
+
             div {
                 text-align: center;
             }
+
             #create_task{
             text-align: center;
             font-size: 1.5em;
             color: white;
             border-style: solid;
             border-width:6px;
+            margin: 100px;
+            }
+
+            #question{
+            position: absolute;
+            top: 35%;
+            left: 25%
+            }
+
+            #ball{
+                position: absolute;
+                top: 20%;
+                left: 50%;
+            }
+
+            #answer{
+                position: absolute;
+                top: 35%;
+                left: 75%;
             }
         </style>
     </head>
