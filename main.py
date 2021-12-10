@@ -2,10 +2,13 @@
 from flask import Flask, render_template, request, jsonify
 import requests
 
+import random
+import math
 import json
+
 # create a Flask instance
 app = Flask(__name__)
-
+nextAnswerString = ""
 
 # connects default URL to render index.html
 @app.route('/')
@@ -33,9 +36,21 @@ def hawkers():
 def stub():
     return render_template("stub.html")
 
-@app.route('/kamryn_abt/')
+@app.route('/kamryn_abt/', methods=['GET'])
 def kamryn_abt():
-    return render_template("kamryn_abt.html", stats=response.json())
+    global nextAnswerString
+    answerString = nextAnswerString
+
+    arrayOfAnswers = ['Yes, you are correct!',
+                      'No, you are wrong!',
+                      'Maybe...call me baby',
+                      'Thought you knew!',
+                      'Dunno, ask Kammy',
+                      'Ask the other 8-ball']
+
+    randIdx = int(math.floor(random.random()*len(arrayOfAnswers)))
+    nextAnswerString = arrayOfAnswers[randIdx]
+    return render_template("kamryn_abt.html", currentAnswer=answerString)
 
 @app.route('/riya_abt/')
 def riya_abt():
@@ -74,7 +89,7 @@ def riya_abt():
         #return(response.text)
        # results = response.text
 
-        #return render_template("riya_abt.html", data=stats)
+       # return render_template("riya_abt.html", data=stats)
 
 
 
