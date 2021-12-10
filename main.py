@@ -120,7 +120,17 @@ def abby_abt():
 
 @app.route('/sarayu_abt/')
 def sarayu_abt():
-    return render_template("sarayu_abt.html")
+    url = "https://random-facts2.p.rapidapi.com/getfact"
+
+    headers = {
+        'x-rapidapi-host': "random-facts2.p.rapidapi.com",
+        'x-rapidapi-key': "cb6c4ae0c0mshf7c680cd7f9687bp1c11edjsnd948864f5be3"
+    }
+
+    response = requests.request("GET", url, headers=headers)
+
+     #response.text
+    return render_template("sarayu_abt.html", stats=response.json())
 
 @app.route('/aboutus/')
 def aboutus():
