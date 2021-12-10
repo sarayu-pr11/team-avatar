@@ -3,36 +3,68 @@
 {% set project = "Sarayu" %}
 
 {% block body %}
-    <div style="background-color: darkcyan">
-    </div>
+    <title>W3.CSS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <body>
-    <div class="title">
+    {% set fact = stats.Fact %}
+    <div class="w3-container w3-sand">
         <h2>About Me: Sarayu Pochimireddy</h2>
         <p> Hi, I'm Sarayu, I'm 16 years old, and a junior at Del Norte. Some of my hobbies include watching movies, specifically Marvel, dance (bharatanatyam), and singing. </p>
-    </div>
-    <style>
-        title {
-            height: 14px;
-            width: 28px;
-            color: #999f8c;
 
+    </div>
+
+    <div id="create-task" style="background-color: #c5c5e0; margin-top: 10px; margin-left: 20px; height:300px; width:300px; font-family: monospace; font-size: 16px">
+        <h3>My Create Task!</h3>
+        <p>My create task will be mainly centered around space. I will incorporate facts about space, information about the studied comets and asteroids, the planets, and many more. The main premise of the website will be to teach people things that they wouldn't have known if they hadn't looked at my website.</p>
+    </div>
+
+    <div style="background-color: #c5c5e0; margin-top: -310px; margin-left: 1200px; height: 300px; width: 300px; font-family: monospace; font-size: 16px">
+        <h3>Random Fact Generator!</h3>
+        <p>{{ fact }}</p>
+    </div>
+
+
+    <div>
+        <img id="img" src="/static/assets/mask.PNG" class="w3-round" alt="Norway">
+    </div>
+
+    <div>
+        <button id="button" onclick="picture()">Change the Picture!</button><br><br>
+    </div>
+
+    <embed src="https://docs.google.com/document/d/1S97_rP7HPPTj5MZeCIcP4AtwwZ15FzRRUY2SwV650ME/edit" style="margin-left: 250px; margin-top: 100px; width: 1000px; height: 400px ">
+
+
+
+    <script>
+        var count = 2
+        function picture() {
+            if(count % 2 ==0){
+                document.getElementById("img").src="/static/assets/IMG_1424.JPG";
+            }
+            else{
+                document.getElementById("img").src="/static/assets/mask.PNG";
+            }
+            ++count;
+        }
+
+    </script>
+
+    <style>
+        img {
+            height: 300px;
+            margin-left: 650px;
+            margin-top: -340px;
+        }
+
+        button {
+            margin-top: -400px;
+            margin-left: 660px;
         }
     </style>
-    <img src="/static/assets/sarayu.jpg" class="w3-round" alt="Norway">
-
-    <head>
-        <meta charset="UTF-8">
-        <title>Title</title>
 
 
-
-    </head>
-    <body>
-
-
-    </body>
-    </html>
     </body>
 {% endblock %}
 

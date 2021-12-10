@@ -8,11 +8,13 @@
     </div>
     <title>W3.CSS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
 
     <div class="w3-container w3-sand">
         <h2>a little about me</h2>
-        <p> hello! I'm Riya and I am a junior! Some of my favorite things to do are hang out with my friends, watch movies and play board games! One of the most random things I love to do is to solve an escape room - in real life or on a game :) I love marvel, harry potter and disney :) In the future, I would love to travel to Thailand, or Africa : those are the places I want to go the most! Here is a piture of me and my friend Aleezay at Disneyland! I'm on the right :) </p>
+        <p> hello! I'm Riya and I am a junior! Some of my favorite things to do are hang out with my friends, watch movies and play board games! One of the most random things I love to do is to solve an escape room - in real life or on a game :) I love marvel, harry potter and disney :) In the future, I would love to travel to Thailand, or Africa : those are the places I want to go the most! Here is a picture of me and my friend Aleezay at Disneyland! I'm on the left :)
+        </p>
+        <p style="color:blue;font-size: 30px; font-style: italic;"><strong>{{  results  }}</strong></p>
     </div>
     <html>
     <head>
@@ -24,8 +26,31 @@
     <!-- Set up default picture and the button to toggle -->
     <img id="oldImage" src="/static/assets/riyamask.png/">
     <p><input type="button" id="theButton" value="Click me!" onclick="swapPicture()"></p>
+    <div class="w3-container w3-sand">
+        <h2>my journal/progress!</h2>
+        <p>  Here is my create task ideas and notes: -- Want to do something with Dog Charities/homeless animals in our community, and how to give back
+            -- site that gives nearest shelter
+            -- what shelters are overcapacity right now
+            -- best shelters
+            -- some great overseas adoption sites too
+            -- benefits to adopting and not shopping
+            -- tips for owning an adopted animal
+            -- bad animal products/shops (petco, etc.)
+            -- local html storage process, where people can post reminders for dog (dog vet appt, feed dog, etc.)
+            Link to my journal (with TPT progress): https://docs.google.com/document/d/1S97_rP7HPPTj5MZeCIcP4AtwwZ15FzRRUY2SwV650ME/edit
 
+        </p></div>
+    <!--<p>Hello, <span id = 'demo'></span>'</p>
+
+
+    <p><input type="button" id="covidBtn" value="getCovidData!" onclick="getCovidData()"></p>
+    <ul>
+
+    </ul>
+   -->
     <script>
+
+      // document.getElementById(demo).innerHTML = data;
         function swapPicture(){
             //get the file path of current image
             let img = document.getElementById("oldImage") ;
@@ -37,12 +62,12 @@
                 img.src = "/static/assets/Riya Drawing.png/";
             }
         }
+     //   function getCovidData() {
 
+             //   alert("Got Data ")
+     //   }
     </script>
+
     </body>
     </html>
-
-{% endblock %}
-
-{% block background %}
 {% endblock %}

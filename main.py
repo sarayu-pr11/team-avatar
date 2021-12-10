@@ -1,11 +1,14 @@
 # import "packages" from flask
-from flask import Flask, render_template
+from flask import Flask, render_template, request, jsonify
 import requests
+
+import random
+import math
 import json
 
 # create a Flask instance
 app = Flask(__name__)
-
+nextAnswerString = ""
 
 # connects default URL to render index.html
 @app.route('/')
@@ -33,27 +36,64 @@ def hawkers():
 def stub():
     return render_template("stub.html")
 
-@app.route('/kamryn_abt/')
+@app.route('/kamryn_abt/', methods=['GET'])
 def kamryn_abt():
-     url = "https://magic-8-ball.p.rapidapi.com/8-ball"
+    global nextAnswerString
+    answerString = nextAnswerString
 
-    payload = "{
-    \"question\": \"Will betty white live forever?\"
-    }"
-    headers = {
-    'content-type': "application/json",
-    'x-rapidapi-host': "magic-8-ball.p.rapidapi.com",
-    'x-rapidapi-key': "55ab579673msh7f1d19f3c954b1ep19fc77jsn27583d661f5c"
-    }
+    arrayOfAnswers = ['Yes, you are correct!',
+                      'No, you are wrong!',
+                      'Maybe...call me baby',
+                      'Thought you knew!',
+                      'Dunno, ask Kammy',
+                      'Ask the other 8-ball']
 
-response = requests.request("POST", url, data=payload, headers=headers)
-
-print(response.text)
-    return render_template("kamryn_abt.html")
+    randIdx = int(math.floor(random.random()*len(arrayOfAnswers)))
+    nextAnswerString = arrayOfAnswers[randIdx]
+    return render_template("kamryn_abt.html", currentAnswer=answerString)
 
 @app.route('/riya_abt/')
 def riya_abt():
-    return render_template("riya_abt.html")
+    url = "https://motivational-quotes1.p.rapidapi.com/motivation"
+
+    payload = "{ \"key1\": \"value\",\"key2\": \"value\"}"
+    headers = {
+    'content-type': "application/json",
+    'x-rapidapi-host': "motivational-quotes1.p.rapidapi.com",
+    'x-rapidapi-key': "066e279e11mshd6855dd2ac40d0dp19761ajsn088d1e5fbc92"
+    }
+
+    response = requests.request("POST", url, data=payload, headers=headers)
+
+    text = response.text
+    return render_template("riya_abt.html", results=text)
+        #url = "https://covid-19-data.p.rapidapi.com/report/totals"
+       # querystring = {"date":"2020-07-21"}
+       # headers = {
+          #  'x-rapidapi-host': "covid-19-data.p.rapidapi.com",
+        #    'x-rapidapi-key': "066e279e11mshd6855dd2ac40d0dp19761ajsn088d1e5fbc92"
+      #  }
+       # response = requests.request("GET", url, headers=headers, params=querystring)
+        #stats=[
+        #{
+       # 'name':'Audrin',
+       # 'place': 'kaka',
+       # 'mob': '7736'
+       # },
+     #   {
+      #  'name': 'Stuvard',
+       # 'place': 'Goa',
+       # 'mob' : '546464'
+      #  }
+      #  ]
+        #return(response.text)
+       # results = response.text
+
+       # return render_template("riya_abt.html", data=stats)
+
+
+
+
 
 @app.route('/natalie_abt/')
 def natalie_abt():
@@ -94,7 +134,17 @@ def abby_abt():
 
 @app.route('/sarayu_abt/')
 def sarayu_abt():
-    return render_template("sarayu_abt.html")
+    url = "https://random-facts2.p.rapidapi.com/getfact"
+
+    headers = {
+        'x-rapidapi-host': "random-facts2.p.rapidapi.com",
+        'x-rapidapi-key': "cb6c4ae0c0mshf7c680cd7f9687bp1c11edjsnd948864f5be3"
+    }
+
+    response = requests.request("GET", url, headers=headers)
+
+     #response.text
+    return render_template("sarayu_abt.html", stats=response.json())
 
 @app.route('/aboutus/')
 def aboutus():
