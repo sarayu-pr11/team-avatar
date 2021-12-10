@@ -118,8 +118,57 @@ We want to have a study hall themed website. Users can find a variety of study t
 
 ####Below we have tables that provide a complete timeline of our work and commits over the past few weeks. They are divided into tables by sprints:
 
-
 ****
+##Week 1/2
+<table>
+<tr>
+<td>Scrum Master</td>
+<td>Riya</td>
+<td>
+<a href="https://github.com/sarayu-pr11/team-narks/issues/62" target="_blank">Ticket</a><br>
+<a href="https://github.com/sarayu-pr11/team-narks/issues/59" target="_blank">Ticket</a><br>
+</td>
+</tr>
+
+<tr>
+<td>Designer</td>
+<td>Natalie</td>
+<td>
+<a href="https://github.com/sarayu-pr11/team-narks/issues/63" target="_blank">Tickete</a><br>
+<a href="https://github.com/sarayu-pr11/team-narks/issues/57" target="_blank">Ticket </a><br>
+</td>
+</tr>
+
+<tr>
+<td>TO</td>
+<td>Abigail</td>
+<td>
+<a href="" target="_blank">Ticket/a><br>
+<a href="" target="_blank">Ticket</a><br>
+</td>
+</tr>
+
+<tr>
+<td>Github Admin</td>
+<td>Sarayu</td>
+<td>
+<a href="https://github.com/sarayu-pr11/team-narks/issues/60" target="_blank">Ticket/a><br>
+<a href="https://github.com/sarayu-pr11/team-narks/issues/56" target="_blank">Ticket/a><br>
+</td>
+</tr>
+
+<tr>
+<td>Deployment Manager</td>
+<td>Kamryn</td>
+<td>
+<a href="https://github.com/sarayu-pr11/team-narks/issues/64" target="_blank">Ticket/a><br>****
+<a href="https://github.com/sarayu-pr11/team-narks/issues/55" target="_blank">Ticket</a><br>
+
+</td>
+</tr>
+</table>
+****
+
 ## Week 0
 <table id="sprint1">
 <tr>
