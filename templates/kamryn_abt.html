@@ -9,7 +9,18 @@
     <p>
         <img src="/static/assets/kamrynmask.png" style="height: 350px; width: auto;" id="imgClickAndChange" onclick="changeImage()"/>
     </p>
-    <a id="journal" href="https://docs.google.com/document/d/1pdjnMfCjmD8dSawsB4ij6OV4Vp2Igl_obz6Qeb1nFg0/edit?usp=sharing">Journal</a>
+    <div class="w3-container w3-sand">
+    <h2> <a href="https://docs.google.com/document/d/1pdjnMfCjmD8dSawsB4ij6OV4Vp2Igl_obz6Qeb1nFg0/edit?usp=sharing">Click here to visit my journal!</h2>
+    <p id="create_task"> Create Task Notes:
+    Website to help people find their style/fashion inspiration
+    -locate charity shops where people can donate clothes
+    -people can share photos of their style
+    -inform people about careers or schools with fashion.
+    Website to help people share their music taste with their friends
+    -people can get music recommendations
+    -find music for different activities.
+    </p></div>
+
 
 <form action="/kamryn_abt"  id="8ball_form" method="GET" >
     <textarea id="question" rows="1" cols="32" form="8ball_form" placeholder="Ask the 8 Ball!"></textarea>
@@ -17,6 +28,18 @@
     <textarea readonly id="answer" rows="1" cols="32" form="8ball_form">{{currentAnswer}}</textarea>
 </form>
         <style>
+            #abt_header {
+                width: 400px;
+                height: 70px;
+                background: #c0846b;
+                transition: width 2s;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            #abt_header:hover {
+                width: 250px;
+            }
             h2 {
                 text-align: center;
                 font-size: 30px;
@@ -28,6 +51,13 @@
             }
             div {
                 text-align: center;
+            }
+            #create_task{
+            text-align: center;
+            font-size: 1.5em;
+            color: white;
+            border-style: solid;
+            border-width:6px;
             }
         </style>
     </head>
