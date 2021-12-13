@@ -1,0 +1,43 @@
+{% extends "layouts/base.html" %}
+
+<!- This variable sets name of browser tab  -->
+{% set project = "Natalie" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Layout 1</title>
+</head>
+
+<style>
+    html, body {
+        background-image:url('https://cdn.shopify.com/s/files/1/0011/6005/2795/articles/1d2c9dc7a5b64353a7c66a7c06749a47.jpg?v=1616063879')
+    }
+    #header {
+        background-color: rgba(0,0,0,0.4);
+        margin: 2%;
+        text-align: center;
+        color: white;
+    }
+
+
+</style>
+
+<body>
+
+    <div id="header">
+        <h2>Hello!</h2>
+    </div>
+
+</body>
+</html>
+
+{% endblock %}
+
+<!- This is turning off birds background from base.html -->
+{% block background %}
+{% endblock %}
