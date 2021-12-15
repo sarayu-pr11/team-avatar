@@ -160,9 +160,9 @@ def page1():
 def hwtimer():
     return render_template("hwtimer.html")
 
-@app.route('/page3/')
-def page3():
-    return render_template("page3.html")
+@app.route('/reminders/')
+def reminders():
+    return render_template("reminders.html")
 
 # runs the application on the development server
 if __name__ == "__main__":
