@@ -1,10 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Layout 3</title>
-</head>
-<body>
+{% extends "layouts/base.html" %}
 
-</body>
-</html>
+<!- This variable sets name of browser tab  -->
+{% set project = "Page 3" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Layout 1</title>
+    </head>
+
+    <style>
+        html, body {
+            background-image:url('')
+        }
+        #header {
+            background-color: rgba(0,0,0,0.4);
+            margin: 2%;
+            text-align: center;
+            color: white;
+        }
+
+
+    </style>
+
+    <body>
+
+    <div id="header">
+        <h2>Hello!</h2>
+    </div>
+
+    </body>
+    </html>
+
+{% endblock %}
+
+<!- This is turning off birds background from base.html -->
+{% block background %}
+{% endblock %}

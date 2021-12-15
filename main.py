@@ -152,13 +152,13 @@ def sarayu_abt():
 def aboutus():
     return render_template("aboutus.html")
 
-@app.route('/page1/')
+@app.route('/music/')
 def page1():
     return render_template("music.html")
 
-@app.route('/page2/')
-def page2():
-    return render_template("page2.html")
+@app.route('/hwtimer/')
+def hwtimer():
+    return render_template("hwtimer.html")
 
 @app.route('/page3/')
 def page3():

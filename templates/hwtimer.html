@@ -1,0 +1,70 @@
+{% extends "layouts/base.html" %}
+
+<!- This variable sets name of browser tab  -->
+{% set project = "Homework Timer" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Layout 1</title>
+    </head>
+
+    <!-- dark mode: https://i.kym-cdn.com/entries/icons/facebook/000/032/965/making-of-a-2d-animation-for-chilledcow-20180706052709.jpg -->
+    <style>
+        html, body {
+            background-image:url('https://dazedimg-dazedgroup.netdna-ssl.com/1280/azure/dazed-prod/1280/8/1288188.jpg');
+            background-color: #f9ecd9;
+        }
+
+        h3{
+            background-color: rgba(0, 0, 0, 0.4);
+            margin: 2%;
+            text-align: center;
+        }
+
+        button{
+            cursor: pointer;
+            border: 1px solid #555;
+            text-align: center;
+            padding: 5px;
+            margin: 2%;
+        }
+        .dark{
+            background-image:url('https://i.kym-cdn.com/entries/icons/facebook/000/032/965/making-of-a-2d-animation-for-chilledcow-20180706052709.jpg');
+            background-color: rgb(86, 71, 71);
+            color: #e6e6e6;
+        }
+
+    </style>
+    </html>
+
+    <body>
+
+    <h3>Hello!</h3>
+    <button onclick="myFunction()">Switch mode</button>
+
+    <script>
+        function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark");
+        }
+    </script>
+    </body>
+
+
+
+
+
+
+
+
+
+{% endblock %}
+
+<!- This is turning off birds background from base.html -->
+{% block background %}
+{% endblock %}
