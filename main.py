@@ -1,5 +1,4 @@
 # import "packages" from flask
-import app as app
 from flask import Flask, render_template, request, jsonify
 import requests
 
