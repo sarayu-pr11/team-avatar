@@ -26,13 +26,68 @@
 
 
 </style>
+<style>
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto;
+        padding: 10px;
+    }
+    .grid-item {
+        padding: 20px;
+        font-size: 30px;
+        text-align: center;
+    }
+    body {
+        text-align: center;
+
+    }
+    h5,form{
+        text-align: center;
+    }
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+    .flex-parent{
+        display: flex;
+    }
+    .flex-child{
+        flex: 1;
+    }
+</style>
+
+<br>
+<br>
 
 <body>
 
     <div id="header">
         <h2>Hello!</h2>
     </div>
+    <h3 style="text-align: center">Here is some great study time music!</h3>
+    <div class="grid-container">
+        <div class="grid-item">
+            <img src="/static/assets/gold.png" id="img1" onclick="play1()" height="270" width="480">
+            <audio id="audio" src="/static/audio/" typeof="mpeg"></audio>
+        </div>
 
+        <div class="grid-item">
+            <img src="/static/assets/gold.png" id="img2" onclick="play2()" height="270" width="480">
+            <audio id="audi" src="/static/audio/" typeof="mpeg"></audio>
+        </div>
+
+        <div class="grid-item">
+            <img src="/static/assets/gold.png" id="img3" onclick="play3()" height="270" width="480">
+            <audio id="aud" src="/static/audio/" typeof="mpeg"></audio>
+        </div>
+
+        <div class="grid-item">
+            <img src="/static/assets/gold.png" id="img4" onclick="play4()" height="270" width="480">
+            <audio id="au" src="/static/audio/" typeof="mpeg"></audio>
+        </div>
+    </div>
 </body>
 </html>
 

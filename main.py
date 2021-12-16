@@ -1,5 +1,4 @@
 # import "packages" from flask
-import app as app
 from flask import Flask, render_template, request, jsonify
 import requests
 
@@ -29,7 +28,15 @@ def walruses():
 @app.route('/hawkers/')
 def hawkers():
     return render_template("hawkers.html")
-
+@app.route('/music/')
+def music():
+    return render_template("music.html")
+@app.route('/reminders/')
+def reminders():
+    return render_template("reminders.html")
+@app.route('/hwtimer/')
+def hwtimer():
+    return render_template("hwtimer.html")
 
 @app.route('/stub/')
 def stub():
@@ -45,38 +52,38 @@ def riya_abt():
 
     payload = "{ \"key1\": \"value\",\"key2\": \"value\"}"
     headers = {
-    'content-type': "application/json",
-    'x-rapidapi-host': "motivational-quotes1.p.rapidapi.com",
-    'x-rapidapi-key': "066e279e11mshd6855dd2ac40d0dp19761ajsn088d1e5fbc92"
+        'content-type': "application/json",
+        'x-rapidapi-host': "motivational-quotes1.p.rapidapi.com",
+        'x-rapidapi-key': "066e279e11mshd6855dd2ac40d0dp19761ajsn088d1e5fbc92"
     }
 
     response = requests.request("POST", url, data=payload, headers=headers)
 
     text = response.text
     return render_template("riya_abt.html", results=text)
-        #url = "https://covid-19-data.p.rapidapi.com/report/totals"
-       # querystring = {"date":"2020-07-21"}
-       # headers = {
-          #  'x-rapidapi-host': "covid-19-data.p.rapidapi.com",
-        #    'x-rapidapi-key': "066e279e11mshd6855dd2ac40d0dp19761ajsn088d1e5fbc92"
-      #  }
-       # response = requests.request("GET", url, headers=headers, params=querystring)
-        #stats=[
-        #{
-       # 'name':'Audrin',
-       # 'place': 'kaka',
-       # 'mob': '7736'
-       # },
-     #   {
-      #  'name': 'Stuvard',
-       # 'place': 'Goa',
-       # 'mob' : '546464'
-      #  }
-      #  ]
-        #return(response.text)
-       # results = response.text
+    #url = "https://covid-19-data.p.rapidapi.com/report/totals"
+    # querystring = {"date":"2020-07-21"}
+    # headers = {
+    #  'x-rapidapi-host': "covid-19-data.p.rapidapi.com",
+    #    'x-rapidapi-key': "066e279e11mshd6855dd2ac40d0dp19761ajsn088d1e5fbc92"
+    #  }
+    # response = requests.request("GET", url, headers=headers, params=querystring)
+    #stats=[
+    #{
+    # 'name':'Audrin',
+    # 'place': 'kaka',
+    # 'mob': '7736'
+    # },
+    #   {
+    #  'name': 'Stuvard',
+    # 'place': 'Goa',
+    # 'mob' : '546464'
+    #  }
+    #  ]
+    #return(response.text)
+    # results = response.text
 
-        #return render_template("riya_abt.html", data=stats)
+    #return render_template("riya_abt.html", data=stats)
 
 
 
@@ -88,7 +95,7 @@ def natalie_abt():
     #querystring = {"fragment":"true","json":"true"}
     #headers = {
     #    'x-rapidapi-host': "numbersapi.p.rapidapi.com",
-     #   'x-rapidapi-key': "57a15be86bmsh8ab5c9d255b7689p1346f0jsnb3b6bfbfaba4"
+    #   'x-rapidapi-key': "57a15be86bmsh8ab5c9d255b7689p1346f0jsnb3b6bfbfaba4"
     #}
     #response = requests.request("GET", url, headers=headers, params=querystring)
     #results = json.loads(response.content.decode("utf-8"))['results']
@@ -116,7 +123,7 @@ def sarayu_abt():
 
     response = requests.request("GET", url, headers=headers)
 
-     #response.text
+    #response.text
     return render_template("sarayu_abt.html", stats=response.json())
 
 @app.route('/aboutus/')
