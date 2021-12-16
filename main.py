@@ -13,6 +13,11 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
+@app.route('/reminders')
+def reminders():
+    return render_template("reminders.html")
+
+
 
 # connects /kangaroos path to render kangaroos.html
 @app.route('/kangaroos/')
@@ -53,29 +58,6 @@ def riya_abt():
 
     text = response.text
     return render_template("riya_abt.html", results=text)
-        #url = "https://covid-19-data.p.rapidapi.com/report/totals"
-       # querystring = {"date":"2020-07-21"}
-       # headers = {
-          #  'x-rapidapi-host': "covid-19-data.p.rapidapi.com",
-        #    'x-rapidapi-key': "066e279e11mshd6855dd2ac40d0dp19761ajsn088d1e5fbc92"
-      #  }
-       # response = requests.request("GET", url, headers=headers, params=querystring)
-        #stats=[
-        #{
-       # 'name':'Audrin',
-       # 'place': 'kaka',
-       # 'mob': '7736'
-       # },
-     #   {
-      #  'name': 'Stuvard',
-       # 'place': 'Goa',
-       # 'mob' : '546464'
-      #  }
-      #  ]
-        #return(response.text)
-       # results = response.text
-
-        #return render_template("riya_abt.html", data=stats)
 
 
 
@@ -83,19 +65,7 @@ def riya_abt():
 
 @app.route('/natalie_abt/')
 def natalie_abt():
-    #url = "https://numbersapi.p.rapidapi.com/1492/year"
-    #querystring = {"fragment":"true","json":"true"}
-    #headers = {
-    #    'x-rapidapi-host': "numbersapi.p.rapidapi.com",
-     #   'x-rapidapi-key': "57a15be86bmsh8ab5c9d255b7689p1346f0jsnb3b6bfbfaba4"
-    #}
-    #response = requests.request("GET", url, headers=headers, params=querystring)
-    #results = json.loads(response.content.decode("utf-8"))['results']
-    #year = []
-    #for result in results:
-    #        # result['year']
-    #        year.append(result['year'])
-    #    # tournament = json.loads(response.content.decode("utf-8"))['results'][0]['year']
+
 
     return render_template("natalie_abt.html")
 
