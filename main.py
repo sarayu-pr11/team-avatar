@@ -44,7 +44,7 @@ def stub():
 
 @app.route('/kamryn_abt/')
 def kamryn_abt():
-    return render_template("kamryn_abt.html", stats=response.json())
+    return render_template("kamryn_abt.html")
 
 @app.route('/riya_abt/')
 def riya_abt():
