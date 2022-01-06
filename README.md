@@ -116,9 +116,63 @@
 We want to have a study hall themed website. Users can find a variety of study themed essentials, such as a word of the day study tool, relaxing music to listen to while working, brain teasers, and advice for best exam performance.
 ***
 
+<a href="https://github.com/sarayu-pr11/team-narks/wiki/Deployment-Plan" target="_blank">Link to running website</a><br>
+
 ####Below we have tables that provide a complete timeline of our work and commits over the past few weeks. They are divided into tables by sprints:
 ****
-## Week 3/4
+## Week 4
+<table>
+<tr>
+<td>Scrum Master</td>
+<td>Riya</td>
+<td>
+<a href="" target="_blank">Ticket</a><br>
+<a href="" target="_blank">Ticket</a><br>
+</td>
+</tr>
+
+<tr>
+<td>Designer</td>
+<td>Natalie</td>
+<td>
+<a href="" target="_blank">Ticket</a><br>
+<a href="" target="_blank">Ticket </a><br>
+</td>
+</tr>
+
+<tr>
+<td>TO</td>
+<td>Abigail</td>
+<td>
+<a href="" target="_blank">Ticket</a><br>
+<a href="" target="_blank">Ticket</a><br>
+</td>
+</tr>
+
+<tr>
+<td>Github Admin</td>
+<td>Sarayu</td>
+<td>
+<a href="" target="_blank">Ticket</a><br>
+</td>
+</tr>
+
+<tr>
+<td>Deployment Manager</td>
+<td>Kamryn</td>
+<td>
+<a href="">Ticket</a><br>
+<a href="" target="_blank">Domain</a><br>
+
+</td>
+</tr>
+</table>
+
+This week we worked on adding more techicals and developing our about pages
+
+****
+****
+## Week 3
 <table>
 <tr>
 <td>Scrum Master</td>
