@@ -48,13 +48,6 @@
     <h3>Hello!</h3>
     <button onclick="myFunction()">Switch mode</button>
 
-    <div style="background-color: rgba(100, 100, 100, 0.5); margin: 10%">
-        <br> <br>
-        <h4 style="text-align: center;">Days Until January 5:</h4>
-        <p style="text-align: center;" id="demo"></p>
-        <br> <br>
-    </div>
-
     <script>
         function myFunction() {
             var element = document.body;
@@ -63,40 +56,196 @@
     </script>
     </body>
 
+    <br> <br>
 
 
+<style>
+    /* (A) SHARED */
+    #ctime *, #tpick * {
+        font-family: "Courier New", sans-serif;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    #ctime, #tpick, .square { padding: 10px; }
+    #ctime, #tpick {
+        margin: 0 auto;
+        max-width: 350px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .header {
+        font-weight: normal;
+        width: 100%;
+        margin: 10px 0;
+    }
+    .square, #tpick-h, #tpick-m, #tpick-s { width: 33%; }
+    .text, #tset, #treset { margin-top:10px; }
+    .digits, .square select {
+        font-size: 24px;
+        background: #fff;
+        color: #454e54;
+        border: 0;
+        border-radius: 5px;
+        width: 100%;
+        padding: 10px 0;
+    }
 
+    /* (B) CURRENT TIME */
+    #ctime { background: rgb(62, 96, 68); }
+    #ctime .header { color: #c27370; }
+    #ctime .text { color: #f9ecd9; }
 
-    <script>
-        // Set the date we're counting down to
-        var countDownDate = new Date("Jan 5, 2022 15:37:25").getTime();
+    /* (C) TIME PICKER */
+    #tpick { background: #f2f2f2; }
+    #tset, #treset {
+        width: 50%;
+        background: #c27370;
+        color: #fff;
+        border: 0;
+        padding: 15px 0;
+        cursor: pointer;
+        font-size: 18px;
+    }
+    #tset:disabled, #treset:disabled {
+        background: #aaa;
+        color: #888;
+    }
+</style>
 
-        // Update the count down every 1 second
-        var x = setInterval(function() {
+    <!-- (A) CURRENT TIME -->
+    <div id="ctime">
+        <h1 class="header">THE CURRENT TIME</h1>
+        <div class="square">
+            <div class="digits" id="chr">00</div>
+            <div class="text">HR</div>
+        </div>
+        <div class="square">
+            <div class="digits" id="cmin">00</div>
+            <div class="text">MIN</div>
+        </div>
+        <div class="square">
+            <div class="digits" id="csec">00</div>
+            <div class="text">SEC</div>
+        </div>
+    </div>
 
-            // Get today's date and time
-            var now = new Date().getTime();
+    <!-- (B) SET ALARM -->
+    <div id="tpick">
+        <h1 style="color: #454e54" class="header">SET ALARM</h1>
+        <div id="tpick-h"></div>
+        <div id="tpick-m"></div>
+        <div id="tpick-s"></div>
+        <input type="button" value="Set" id="tset"/>
+        <input type="button" value="Reset" id="treset" disabled/>
+    </div>
 
-            // Find the distance between now and the count down date
-            var distance = countDownDate - now;
+<script>
+    var ac = {
+    // (A) HTML ELEMENTS & PROPERTIES
+    // (A1) CLOCK HOUR, MIN, SEC
+    chr : null, cmin : null, csec : null,
 
-            // Time calculations for days, hours, minutes and seconds
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    // (A2) TIME PICKER HOUR, MIN, SEC, SET, RESET
+    thr : null, thm : null, ths : null,
+    tset : null, treset : null,
 
-            // Output the result in an element with id="demo"
-            document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-                + minutes + "m " + seconds + "s ";
+    // (A3) ALARM TIME & SOUND
+    alarm : null, sound : null,
 
-            // If the count down is over, write some text
-            if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("demo").innerHTML = "EXPIRED";
-            }
-        }, 1000);
-    </script>
+    // (B) INITIALIZE ALARM CLOCK
+    init : () => {
+        // (B1) GET HTML CURRENT TIME - HOUR, MIN, SECONDS
+        ac.chr = document.getElementById("chr");
+        ac.cmin = document.getElementById("cmin");
+        ac.csec = document.getElementById("csec");
+
+        // (B2) CREATE HTML TIME PICKER - HR, MIN, SEC
+        ac.thr = ac.createSel(23);
+        ac.thm = ac.createSel(59);
+        ac.ths = ac.createSel(59);
+        document.getElementById("tpick-h").appendChild(ac.thr);
+        document.getElementById("tpick-m").appendChild(ac.thm);
+        document.getElementById("tpick-s").appendChild(ac.ths);
+
+        // (B3) CREATE HTML TIME PICKER - SET, RESET
+        ac.tset = document.getElementById("tset");
+        ac.treset = document.getElementById("treset");
+        ac.tset.onclick = ac.set;
+        ac.treset.onclick = ac.reset;
+
+        // (B4) ALARM SOUND
+        ac.sound = new Audio("wake-up-sound.mp3");
+
+        // (B5) START THE CLOCK
+        ac.alarm = null;
+        setInterval(ac.tick, 1000);
+    },
+
+    // (C) SUPPORT FUNCTION - CREATE SELECTOR FOR HR, MIN, SEC
+    createSel : (max) => {
+        let selector = document.createElement("select"), opt;
+        for (let i=0; i<=max; i++) {
+            opt = document.createElement("option");
+            i = ac.padzero(i);
+            opt.value = i;
+            opt.innerHTML = i;
+            selector.appendChild(opt);
+        }
+        return selector;
+    },
+
+    // (D) SUPPORT FUNCTION - PREPEND HR, MIN, SEC WITH 0 (IF < 10)
+    padzero : (num) => {
+        if (num < 10) { num = "0" + num; }
+        else { num = num.toString(); }
+        return num;
+    },
+
+    // (E) UPDATE CURRENT TIME
+    tick : () => {
+        // (E1) CURRENT TIME
+        let now = new Date(),
+            hr = ac.padzero(now.getHours()),
+            min = ac.padzero(now.getMinutes()),
+            sec = ac.padzero(now.getSeconds());
+
+        // (E2) UPDATE HTML CLOCK
+        ac.chr.innerHTML = hr;
+        ac.cmin.innerHTML = min;
+        ac.csec.innerHTML = sec;
+
+        // (E3) CHECK AND SOUND ALARM
+        if (ac.alarm != null) {
+            now = hr + min + sec;
+            if (now == ac.alarm && ac.sound.paused) { ac.sound.play(); }
+        }
+    },
+
+    // (F) SET ALARM
+    set : () => {
+        ac.alarm = ac.thr.value + ac.thm.value + ac.ths.value;
+        ac.thr.disabled = true;
+        ac.thm.disabled = true;
+        ac.ths.disabled = true;
+        ac.tset.disabled = true;
+        ac.treset.disabled = false;
+    },
+
+    // (G) RESET ALARM
+    reset : () => {
+        if (!ac.sound.paused) { ac.sound.pause(); }
+        ac.alarm = null;
+        ac.thr.disabled = false;
+        ac.thm.disabled = false;
+        ac.ths.disabled = false;
+        ac.tset.disabled = false;
+        ac.treset.disabled = true;
+    }
+};
+
+// (H) START CLOCK ON PAGE LOAD
+window.addEventListener("load", ac.init);
+</script>
 
 
 
