@@ -20,6 +20,10 @@
     <head>
         <meta charset="UTF-8">
         <title>Toggle the Pictures</title>
+        <meta charset="utf-8">
+        <title>Random Dog</title>
+        <script src="index.js"></script>
+
     </head>
 
     <body>
@@ -48,6 +52,7 @@
 
     </ul>
    -->
+
     <script>
 
       // document.getElementById(demo).innerHTML = data;
@@ -62,13 +67,70 @@
                 img.src = "/static/assets/Riya Drawing.png/";
             }
         }
-     //   function getCovidData() {
 
-             //   alert("Got Data ")
-     //   }
+      function get_random_dog_image(){
+
+          url = "https://dog.ceo/api/breeds/image/random";
+
+          fetch(url)
+              .then(function(response){
+                  return response.json();
+              })
+              .then(function(data){
+                  display_image(data.message);
+              })
+              .catch(function(error){
+                  console.log("Error: " + error);
+              });
+
+
+      }
+
+      function display_image(image_url){
+          document.getElementById("image").src = image_url;
+      }
+
+
+      /* let array = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,20,24,25,28,29,30,39,400000,5000000]
+
+       function binary_search(arr,value){
+           let high = arr.length -1;
+           let low = 0;
+           let mid = 0;
+
+           while (low <= high){
+               mid = Math.floor ((high + low)/2)
+               //middle == value being searched
+               if(arr[mid]==value) {
+                   //return value
+                   return arr [mid];
+               }else if(value>arr[mid]) {
+                   //move the low up one
+                   low = mid + 1;
+               }else{
+                   //move the high down one
+                   high = mid -1;
+
+               }
+           }
+           return -1;
+       }
+let sorted = array.sort(function(a,b) {return a-b})
+     console.log(sorted);
+       let wasItFound = binary_search(sorted, 83);
+     console.log(wasItFound);
+
+       */
+
     </script>
+    <div id="container">
+        <img id="image"/>
+        <button id="button" onclick="get_random_dog_image()"> Random </button>
+    </div>
 
     </body>
+
+
     </html>
 {% endblock %}
 {% block background %}
