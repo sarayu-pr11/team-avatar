@@ -92,12 +92,27 @@ This HTML is set up as a Jinja2 layout, coders use layouts for:
 
         </div>
 
+<br><br>
+
+        <div class="col-md-12 text-center" style="font-family: Trebuchet MS">
+            <a class="button button1" href={{ url_for('music') }}>Calming Music</a>
+            <a class="button button2" href={{ url_for('hwtimer') }}>Homework timer</a>
+            <a class="button button3" href={{ url_for('reminders') }}>Homework Reminders</a>
+            <a class="button button4" href={{ url_for('wheel') }}>Healthy food options</a>
+        </div>
+        <h3 style="color: white; background-color: rgba(0,0,0,0.5); margin: 2%; text-align: center">Welcome to Study.Calm's website! Fifi the flamingo animation will take you to anywhere you want on the website, and give study tips and information about each page! </h3>
+        <div class="grid-container">
+            <div class="grid-item">
+                <img src="/static/assets/flamingo.gif"  height="600" width="600">
+                <img src="/static/assets/speech.png"  height="550" width="580">
+            </div>
+        </div>
+
 
 
     <!-- <img src="https://c.tenor.com/4otr5S3l1agAAAAj/dancing-duckdancing.gif" width="82" height="100"> -->
 
-
-    <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+        <br> <br> <br> <br> <br> <br>
     </div>
 
     <div style="background-color: white">
@@ -153,7 +168,7 @@ This HTML is set up as a Jinja2 layout, coders use layouts for:
 
     <style>
         *{
-            font-family: Ebrima sans-serif;
+            font-family: Trebuchet MS;
         }
         .button {
             background-color: rosybrown; /* Green */
@@ -166,6 +181,7 @@ This HTML is set up as a Jinja2 layout, coders use layouts for:
             margin: 4px 2px;
             cursor: pointer;
             transition-duration: 0.2s;
+            font-family: Trebuchet MS
         }
 
         .button1 {padding: 14px 40px; width: 23%}
@@ -179,32 +195,17 @@ This HTML is set up as a Jinja2 layout, coders use layouts for:
         }
 
     </style>
-    <div class="col-md-12 text-center">
-        <a class="button button1" href={{ url_for('music') }}>Calming Music</a>
-        <a class="button button2" href={{ url_for('hwtimer') }}>Homework timer</a>
-        <a class="button button3" href={{ url_for('reminders') }}>Homework Reminders</a>
-        <a class="button button4" href={{ url_for('wheel') }}>Healthy food options</a>
-    </div>
-    <h3>Welcome to Study.Calm's website! Fifi the flamingo animation will take you to anywhere you want on the website, and give study tips and information about each page! </h3>
-    <div class="grid-container">
-    <div class="grid-item">
-        <img src="/static/assets/flamingo.gif"  height="600" width="600">
-        <img src="/static/assets/speech.png"  height="550" width="580">
-    </div>
+
     </body>
     <style>
 
 
 
+    <!-- super fun link that is a pretty cool background :) https://i.pinimg.com/originals/d7/41/1f/d7411f4345380a690ed0f359b35f8106.png
+
+    4am study wallpaper:
+     https://cdn.shopify.com/s/files/1/0011/6005/2795/articles/169_2.png?v=1621260321
+    -->
 
 
 {% endblock %}
-
-
-
-<!-- super fun link that is a pretty cool background :) https://i.pinimg.com/originals/d7/41/1f/d7411f4345380a690ed0f359b35f8106.png
-
-4am study wallpaper:
-https://cdn.shopify.com/s/files/1/0011/6005/2795/articles/169_2.png?v=1621260321
--->
-
