@@ -29,7 +29,7 @@
     <body>
 
     <div id="header">
-        <h2>Hello!</h2>
+        <h2>Write on the sticky notes!</h2>
     </div>
 <!--   <div class="textpanel">
         <textarea id="box1" style="margin: 2%" rows="9" cols="32" placeholder="remind me..."></textarea>
@@ -53,7 +53,7 @@
                 //  This code borrowed from:
                 // https://stackoverflow.com/questions/6396101/pure-javascript-send-post-data-without-a-form
                 var xhr = new XMLHttpRequest();
-                xhr.open("POST", 'http://127.0.0.1:5000/reminders/', true);
+                xhr.open("POST", 'https://studycalm.ddns.net:5000', true);
                 //xhr.setRequestHeader('Content-Type', 'text/plain');
                 xhr.setRequestHeader('Content-Type', 'application/json');
                 xhr.send(JSON.stringify({
