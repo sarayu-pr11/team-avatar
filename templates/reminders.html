@@ -31,20 +31,47 @@
     <div id="header">
         <h2>Hello!</h2>
     </div>
-
+<!--   <div class="textpanel">
+        <textarea id="box1" style="margin: 2%" rows="9" cols="32" placeholder="remind me..."></textarea>
+        <textarea id="box2" style="margin: 2%" rows="9" cols="32" placeholder="remind me..."></textarea>
+        <textarea id="box3" style="margin: 2%" rows="9" cols="32" placeholder="remind me..."></textarea>
+        <textarea id="box4" style="margin: 2%" rows="9" cols="32" placeholder="remind me..."></textarea>
+        <textarea id="box5" style="margin: 2%" rows="9" cols="32" placeholder="remind me..."></textarea>
+        <textarea id="box6" style="margin: 2%" rows="9" cols="32" placeholder="remind me..."></textarea>
+        <textarea id="box7" style="margin: 2%" rows="9" cols="32" placeholder="remind me..."></textarea>
+        <textarea id="box8" style="margin: 2%" rows="9" cols="32" placeholder="remind me..."></textarea>
+    </div>-->
+    <script>
+        function onSubmit()
+        {
+            const MAX_NOTES = 8;
+            for (var i = 1; i < MAX_NOTES + 1; i++) {
+                idName = `box${i}`;
+                //idName = "box1";
+                //alert(idName);
+                var tmpNote = document.getElementById(idName).value;
+                //  This code borrowed from:
+                // https://stackoverflow.com/questions/6396101/pure-javascript-send-post-data-without-a-form
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", 'http://127.0.0.1:5000/reminders/', true);
+                //xhr.setRequestHeader('Content-Type', 'text/plain');
+                xhr.setRequestHeader('Content-Type', 'application/json');
+                xhr.send(JSON.stringify({
+                    idName, tmpNote
+                }));
+            }
+        }
+    </script>
 
     <div class="textpanel">
-        <textarea style="margin: 2%" rows="9" cols="32" placeholder="remind me..."></textarea>
-        <textarea style="margin: 2%" rows="9" cols="32" placeholder="remind me..."></textarea>
-        <textarea style="margin: 2%" rows="9" cols="32" placeholder="remind me..."></textarea>
-        <textarea style="margin: 2%" rows="9" cols="32" placeholder="remind me..."></textarea>
-        <textarea style="margin: 2%" rows="9" cols="32" placeholder="remind me..."></textarea>
-        <textarea style="margin: 2%" rows="9" cols="32" placeholder="remind me..."></textarea>
-        <textarea style="margin: 2%" rows="9" cols="32" placeholder="remind me..."></textarea>
-        <textarea style="margin: 2%" rows="9" cols="32" placeholder="remind me..."></textarea>
-
-
+        {% for ii in range(numUpdates) %}
+            <!--<textarea id={{attrib_names[ii].idName}} style={{attrib_names[ii].style}} rows={{attrib_names[ii].rows}} cols={{attrib_names[ii].cols}} placeholder={{attrib_names[ii].placeholder}}>{{persistentNotes[ii]}}</textarea>-->
+            <textarea id={{attrib_names[ii].idName}} style="margin: 2%; background-color:yellow" rows="11" cols="40" placeholder="remind me...">{{persistentNotes[ii]}}</textarea>
+        {% endfor %}
     </div>
+
+    <input type="button" value="Post" onclick="onSubmit()">
+
     </body>
     </html>
 {% endblock %}

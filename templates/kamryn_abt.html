@@ -1,11 +1,12 @@
+<!-- Extending the predefined project layout -->
 {% extends "layouts/base.html" %}
 
+<!- This variable sets name of browser tab  -->
 {% set project = "Kamryn" %}
 
-<!- This is a replacement block for Body in base.html -->
 {% block body %}
-    <!- Try building a new body here ->
     <h2 id="abt_header"> About Kamryn </h2>
+    <button class="closing" onClick="pause()"><img height=100px width=100px id="pauseButton" src="/static/assets/pause.png" /></button>
     <p>
         <img src="/static/assets/kamrynmask.png" style="height: 350px; width: auto;" id="imgClickAndChange" onclick="changeImage()"/>
     </p>
@@ -14,87 +15,88 @@
     </div>
 
 
+    <div id="audio_file">
+            <audio id="evermore" autoplay loop runat="server" >
+                <source src="/static/assets/backgroundmusic.mp3" type="audio/mpeg">
+            </audio>
+
+<script>
+    function pause() {
+        var x = document.getElementById("evermore");
+        x.pause();
+        setTimeout(function () {
+            x.play();
+
+        }, 5000);   // wait 5 second
+    }
+</script>
+
     <p id="create_task"> Create Task Notes:
-    Website to help people find their style/fashion inspiration
-    -locate charity shops where people can donate clothes
-    -people can share photos of their style
-    -inform people about careers or schools with fashion.
-    Website to help people share their music taste with their friends
-    -people can get music recommendations
-    -find music for different activities.
+        Website to help people find their style/fashion inspiration
+        -locate charity shops where people can donate clothes
+        -people can share photos of their style
+        -inform people about careers or schools with fashion.
+        Website to help people share their music taste with their friends
+        -people can get music recommendations
+        -find music for different activities.
     </p></div>
+    <form action="/kamryn_abt"  id="8ball_form" method="GET" >
+        <textarea id="question" rows="1" cols="32" form="8ball_form" placeholder="Ask the 8 Ball!"></textarea>
+        <button id="8ball"><img id=ball src="/static/assets/magic8ball.jpeg" type="submit" form="8ball_form"></button>
+        <textarea readonly id="answer" rows="1" cols="32" form="8ball_form">{{currentAnswer}}</textarea>
+    </form>
+    <style>
+        #abt_header {
+            width: 450px;
+            height: 70px;
+            background: #0d360e;
+            transition: width 2s;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            font-family: cursive;
+            color: #c0846b;
+        }
+
+        #abt_header:hover {
+            width: 300px;
+        }
 
 
-<form action="/kamryn_abt"  id="8ball_form" method="GET" >
-    <textarea id="question" rows="1" cols="32" form="8ball_form" placeholder="Ask the 8 Ball!"></textarea>
-    <button id="8ball"><img id=ball src="/static/assets/magic8ball.jpeg" type="submit" form="8ball_form"></button>
-    <textarea readonly id="answer" rows="1" cols="32" form="8ball_form">{{currentAnswer}}</textarea>
-</form>
-        <style>
-            #abt_header {
-                width: 400px;
-                height: 70px;
-                background: #c0846b;
-                transition: width 2s;
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            #abt_header:hover {
-                width: 250px;
-            }
-
-            h2 {
-                text-align: center;
-                font-size: 30px;
-            }
-
-            img {
-                width: 300px;
-                height: auto;
-                border: 4px solid #a1a1a1;
-            }
-
-            div {
-                text-align: center;
-            }
-
-            #create_task{
+        #create_task{
             text-align: center;
             font-size: 1.5em;
             color: white;
             border-style: solid;
             border-width:6px;
             margin: 100px;
-            }
+        }
 
-            #question{
+        #imgClickAndChange{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #question{
             position: absolute;
             top: 35%;
             left: 25%
-            }
+        }
 
-            #ball{
-                position: absolute;
-                top: 20%;
-                left: 50%;
-            }
+        #ball{
+            position: absolute;
+            top: 20%;
+            left: 50%;
+        }
 
-            #answer{
-                position: absolute;
-                top: 35%;
-                left: 75%;
-            }
-        </style>
-    </head>
-    <body>
-    <p>
-    </p>
-    <div>
-    </div>
+        #answer{
+            position: absolute;
+            top: 35%;
+            left: 75%;
+        }
+    </style>
 
-    </body>
-    </html>
 
 
     <script>
@@ -109,11 +111,9 @@
             }
         }
     </script>
-
 {% endblock %}
 
 <!- This is turning off birds background from base.html -->
 {% block background %}
-
 {% endblock %}
 
