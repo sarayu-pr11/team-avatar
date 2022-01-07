@@ -76,18 +76,23 @@ This HTML is set up as a Jinja2 layout, coders use layouts for:
 
 
 
+
+
     <div class="product" style="margin-top: 2%;">
         <div class="row" style="padding: 10%; padding-top: 0%; padding-bottom: 5%;">
 
             <div class="w3-container">
                 <h1 class="w3-animate-top" style="font-size: 100px; font-family: Trebuchet MS;">Welcome to Study.Calm!</h1>
             </div>
+
             <title>W3.CSS</title>
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
             <div class="w3-container w3-sand"> </div>
 
         </div>
+
+
 
     <!-- <img src="https://c.tenor.com/4otr5S3l1agAAAAj/dancing-duckdancing.gif" width="82" height="100"> -->
 
@@ -144,6 +149,52 @@ This HTML is set up as a Jinja2 layout, coders use layouts for:
 
         <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
     </div>
+
+
+    <style>
+        *{
+            font-family: Ebrima sans-serif;
+        }
+        .button {
+            background-color: rosybrown; /* Green */
+            border: none;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            transition-duration: 0.2s;
+        }
+
+        .button1 {padding: 14px 40px; width: 23%}
+        .button2 {padding: 14px 40px; width: 23%}
+        .button3 {padding: 14px 40px; width: 23%}
+        .button4 {padding: 14px 40px; width: 23%}
+
+        .button:hover {
+            background-color: #f9ece7;
+            color: #44312b;
+        }
+
+    </style>
+    <div class="col-md-12 text-center">
+        <a class="button button1" href={{ url_for('music') }}>Calming Music</a>
+        <a class="button button2" href={{ url_for('hwtimer') }}>Homework timer</a>
+        <a class="button button3" href={{ url_for('reminders') }}>Homework Reminders</a>
+        <a class="button button4" href={{ url_for('wheel') }}>Healthy food options</a>
+    </div>
+    <h3>Welcome to Study.Calm's website! Fifi the flamingo animation will take you to anywhere you want on the website, and give study tips and information about each page! </h3>
+    <div class="grid-container">
+    <div class="grid-item">
+        <img src="/static/assets/flamingo.gif"  height="600" width="600">
+        <img src="/static/assets/speech.png"  height="550" width="580">
+    </div>
+    </body>
+    <style>
+
+
 
 
 
