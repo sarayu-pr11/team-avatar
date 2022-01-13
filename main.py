@@ -8,18 +8,24 @@ import random
 
 
 import json
-
+from templates.crud.app_crud import app_crud
 nextAnswerString=""
 
 # create a Flask instance
 app = Flask(__name__)
 
 
+app.register_blueprint(app_crud)
+
 
 # connects default URL to render index.html
 @app.route('/')
 def index():
     return render_template("index.html")
+
+@app.route('/')
+def pali():
+    return render_template("palindrome.html")
 
 
 # connects /kangaroos path to render kangaroos.html
@@ -220,6 +226,10 @@ def aboutus():
 @app.route('/wheel/')
 def wheel():
     return render_template("wheel.html")
+
+@app.route('/draw/')
+def draw():
+    return render_template("draw.html")
 
 
 
