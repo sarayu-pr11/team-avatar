@@ -9,12 +9,28 @@
 
     <button class="closing" onClick="pause()"><img height=100px width=100px id="pauseButton" src="/static/assets/pause.png" /></button>
 
+    <script>
+        function pause() {
+            var x = document.getElementById("evermore");
+            x.pause();
+            setTimeout(function () {
+                x.play();
+
+            }, 5000);   // wait 5 second
+        }
+    </script>
+
+    <script>
+        var audio = document.getElementById("evermore");
+        audio.volume = 0.3;
+    </script>
 
     <form action="/kamryn_abt"  id="8ball_form" method="GET" >
         <textarea id="question" rows="1" cols="32" form="8ball_form" placeholder="Ask the 8 Ball!"></textarea>
         <button id="8ball"><img height="250px" width="250px" id=ball src="/static/assets/magic8ball.jpeg" type="submit" form="8ball_form"></button>
         <textarea readonly id="answer" rows="1" cols="32" form="8ball_form">{{currentAnswer}}</textarea>
     </form>
+
     <style>
         #ball:hover {
             animation: shake 0.5s;
@@ -51,23 +67,7 @@
             <audio id="evermore" autoplay loop runat="server" >
                 <source src="/static/assets/backgroundmusic.mp3" type="audio/mpeg">
             </audio>
-
-<script>
-    var audio = document.getElementById("evermore");
-    audio.volume = 0.2;
-</script>
-
-<script>
-    function pause() {
-        var x = document.getElementById("evermore");
-        x.pause();
-        setTimeout(function () {
-            x.play();
-
-        }, 5000);   // wait 5 second
-    }
-</script>
-    <!--<div id="wrapper">
+<!--    <div id="wrapper">
         <audio loop controls autoplay>
             <source src="/static/assets/backgroundmusic.mp3" type="audio/mpeg">
         </audio>

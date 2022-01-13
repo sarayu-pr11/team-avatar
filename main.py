@@ -5,8 +5,6 @@ import os
 import pickle
 import math
 import random
-
-
 import json
 
 nextAnswerString=""
@@ -19,7 +17,6 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     return render_template("index.html")
-
 
 # connects /kangaroos path to render kangaroos.html
 @app.route('/kangaroos/')
@@ -49,7 +46,7 @@ def reminders():
     tmpNotes = ['' for i in range(MAX_NUM_NOTES)]
     #kdf.writelines('in reminders: \n')
     for ii in range(MAX_NUM_NOTES):
-        # create file if it doesnt exist.
+        # create file if it doesnt exist
         try:
             fileInfoReminder[ii] = open('/tmp/fileInfo%d.bin'%ii, 'rb')
         except:
@@ -63,7 +60,7 @@ def reminders():
         except:
             tmpNotes[ii] = ""
             #kdf.writelines('Error Deleting All Notes')
-        #<textarea id="box7" style="margin: 2%" rows="9" cols="32" placeholder="remind me..."></textarea>
+
         attribNames[ii] = {'idName': "box%d"%(ii+1), 'style': "margin: 50%", 'rows': "9", 'cols':"32", "placeholder":"remind me..."}
 
     #kdf.close()
@@ -212,6 +209,10 @@ def sarayu_abt():
 def aboutus():
     return render_template("aboutus.html")
 
+@app.route('/flashcards/')
+def flashcards():
+    return render_template("flashcards.html")
+
 @app.route('/wheel/')
 def wheel():
     return render_template("wheel.html")
@@ -220,3 +221,4 @@ def wheel():
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
+
