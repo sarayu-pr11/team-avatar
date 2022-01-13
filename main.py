@@ -95,6 +95,10 @@ def hwtimer():
 def stub():
     return render_template("stub.html")
 
+@app.route('/tips/')
+def tips():
+    return render_template("tips.html")
+
 @app.route('/kamryn_abt/', methods=['GET'])
 def kamryn_abt():
     #if request.form:
