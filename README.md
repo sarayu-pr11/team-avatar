@@ -120,7 +120,7 @@ We want to have a study hall themed website. Users can find a variety of study t
 
 ####Below we have tables that provide a complete timeline of our work and commits over the past few weeks. They are divided into tables by sprints:
 ****
-## Week 4
+## Week 4/5
 <table>
 <tr>
 <td>Scrum Master</td>
@@ -129,6 +129,9 @@ We want to have a study hall themed website. Users can find a variety of study t
 <a href="https://github.com/sarayu-pr11/team-narks/commit/20faf35afca594be580224bf002836a66c0dbc52" target="_blank">Ticket</a><br>
 <a href="https://github.com/sarayu-pr11/team-narks/commit/9cf6f5bfe9cd2a36ecc5c0dc9121618788cac860" target="_blank">Ticket</a><br>
 <a href="https://github.com/sarayu-pr11/team-narks/commit/2a67c2c683be79b5f51b5325a8d0e0767941773c" target="_blank">Ticket</a><br>
+<a href="https://github.com/sarayu-pr11/team-narks/commit/2e68b7be012d16b2b76b7bc31594d0f12276baf4" target="_blank">Ticket</a><br>
+<a href="https://github.com/sarayu-pr11/team-narks/commit/d6504d79e482cf059d28f146f4df9f24ee41b7c1" target="_blank">Ticket</a><br>
+
 
 </td>
 </tr>
@@ -139,6 +142,8 @@ We want to have a study hall themed website. Users can find a variety of study t
 <td>
 <a href="https://github.com/sarayu-pr11/team-narks/commit/e68606c099afdeb833dc037baf96bb1693f986e6" target="_blank">Ticket</a><br>
 <a href="https://github.com/sarayu-pr11/team-narks/commit/25a4dfb96eec7e1a61e739107d25c62bfc5a530f" target="_blank">Ticket </a><br>
+<a href="https://github.com/sarayu-pr11/team-narks/commit/c7c4a395ec7cc7e5241da7b02cbf8035f8cf9187" target="_blank">Ticket </a><br>
+
 also branching strategies!
 </td>
 </tr>
@@ -156,6 +161,7 @@ no commits as of this week
 <td>Sarayu</td>
 <td>
 <a href="https://github.com/sarayu-pr11/team-narks/commit/f04274920d83938a571aa55590a01a1193adce47" target="_blank">Ticket</a><br>
+<a href="https://github.com/sarayu-pr11/team-narks/commit/91fedff84afee1fb94d6990bbef0ece069daae5c" target="_blank">Ticket</a><br>
 </td>
 </tr>
 
