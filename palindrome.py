@@ -59,3 +59,5 @@ if __name__ == "__main__":
     palindrome = Palindrome(n)
 
     print(f"Checking: {n} = {palindrome.isPalindrome}")
+
+    ## palindrome tester added
