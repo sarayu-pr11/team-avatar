@@ -8,14 +8,14 @@ import random
 
 
 import json
-from templates.crud.app_crud import app_crud
+#from templates.crud.app_crud import app_crud
 nextAnswerString=""
 
 # create a Flask instance
 app = Flask(__name__)
 
 
-app.register_blueprint(app_crud)
+#app.register_blueprint(app_crud)
 
 
 # connects default URL to render index.html
