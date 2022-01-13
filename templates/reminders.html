@@ -26,11 +26,13 @@
 
     </style>
 
+
     <body>
 
     <div id="header">
-        <h2>Hello!</h2>
+        <h2>Write on the sticky notes!</h2>
     </div>
+
 <!--   <div class="textpanel">
         <textarea id="box1" style="margin: 2%" rows="9" cols="32" placeholder="remind me..."></textarea>
         <textarea id="box2" style="margin: 2%" rows="9" cols="32" placeholder="remind me..."></textarea>
@@ -53,7 +55,7 @@
                 //  This code borrowed from:
                 // https://stackoverflow.com/questions/6396101/pure-javascript-send-post-data-without-a-form
                 var xhr = new XMLHttpRequest();
-                xhr.open("POST", 'http://127.0.0.1:5000/reminders/', true);
+                xhr.open("POST", 'https://studycalm.ddns.net:5000', true);
                 //xhr.setRequestHeader('Content-Type', 'text/plain');
                 xhr.setRequestHeader('Content-Type', 'application/json');
                 xhr.send(JSON.stringify({
@@ -66,13 +68,24 @@
     <div class="textpanel">
         {% for ii in range(numUpdates) %}
             <!--<textarea id={{attrib_names[ii].idName}} style={{attrib_names[ii].style}} rows={{attrib_names[ii].rows}} cols={{attrib_names[ii].cols}} placeholder={{attrib_names[ii].placeholder}}>{{persistentNotes[ii]}}</textarea>-->
-            <textarea id={{attrib_names[ii].idName}} style="margin: 2%; background-color:yellow" rows="11" cols="40" placeholder="remind me...">{{persistentNotes[ii]}}</textarea>
+            <textarea id={{attrib_names[ii].idName}} style="margin: 2%; background-color: #f0f0bd" rows="11" cols="40" placeholder="remind me...">{{persistentNotes[ii]}}</textarea>
         {% endfor %}
     </div>
 
     <input type="button" value="Post" onclick="onSubmit()">
 
+    <IMG  SRC="/static/assets/flamingo.gif/" height= 394px width= 470px>.
+
+
     </body>
+
+    <div style="background-color: white">
+        <br>
+    </div>
+    <div style="color: white; text-align: center; background-image:url('https://64.media.tumblr.com/0d2bb0b845da02c3242d55f6fc2bd4b3/tumblr_ovmsbvaPai1ro1qj8o1_1280.png'); background-repeat:no-repeat; background-attachment:fixed; background-position:100% 100%; background-size:cover;">
+        <br> <br> <br> <br> <br> <br>
+
+
     </html>
 {% endblock %}
 {% block background %}

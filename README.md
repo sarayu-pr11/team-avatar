@@ -126,8 +126,10 @@ We want to have a study hall themed website. Users can find a variety of study t
 <td>Scrum Master</td>
 <td>Riya</td>
 <td>
-<a href="" target="_blank">Ticket</a><br>
-<a href="" target="_blank">Ticket</a><br>
+<a href="https://github.com/sarayu-pr11/team-narks/commit/20faf35afca594be580224bf002836a66c0dbc52" target="_blank">Ticket</a><br>
+<a href="https://github.com/sarayu-pr11/team-narks/commit/9cf6f5bfe9cd2a36ecc5c0dc9121618788cac860" target="_blank">Ticket</a><br>
+<a href="https://github.com/sarayu-pr11/team-narks/commit/2a67c2c683be79b5f51b5325a8d0e0767941773c" target="_blank">Ticket</a><br>
+
 </td>
 </tr>
 
@@ -135,8 +137,9 @@ We want to have a study hall themed website. Users can find a variety of study t
 <td>Designer</td>
 <td>Natalie</td>
 <td>
-<a href="" target="_blank">Ticket</a><br>
-<a href="" target="_blank">Ticket </a><br>
+<a href="https://github.com/sarayu-pr11/team-narks/commit/e68606c099afdeb833dc037baf96bb1693f986e6" target="_blank">Ticket</a><br>
+<a href="https://github.com/sarayu-pr11/team-narks/commit/25a4dfb96eec7e1a61e739107d25c62bfc5a530f" target="_blank">Ticket </a><br>
+also branching strategies!
 </td>
 </tr>
 
@@ -144,8 +147,7 @@ We want to have a study hall themed website. Users can find a variety of study t
 <td>TO</td>
 <td>Abigail</td>
 <td>
-<a href="" target="_blank">Ticket</a><br>
-<a href="" target="_blank">Ticket</a><br>
+no commits as of this week
 </td>
 </tr>
 
@@ -153,7 +155,7 @@ We want to have a study hall themed website. Users can find a variety of study t
 <td>Github Admin</td>
 <td>Sarayu</td>
 <td>
-<a href="" target="_blank">Ticket</a><br>
+<a href="https://github.com/sarayu-pr11/team-narks/commit/f04274920d83938a571aa55590a01a1193adce47" target="_blank">Ticket</a><br>
 </td>
 </tr>
 
@@ -161,8 +163,8 @@ We want to have a study hall themed website. Users can find a variety of study t
 <td>Deployment Manager</td>
 <td>Kamryn</td>
 <td>
-<a href="">Ticket</a><br>
-<a href="" target="_blank">Domain</a><br>
+<a href="https://github.com/sarayu-pr11/team-narks/commit/e30891cfc74f1460266a8c6233c0a38040273404">Ticket</a><br>
+<a href="https://studycalm.ddns.net:5000" target="_blank">Domain</a><br>
 
 </td>
 </tr>
