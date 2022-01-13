@@ -15,6 +15,7 @@ nextAnswerString=""
 app = Flask(__name__)
 
 
+
 # connects default URL to render index.html
 @app.route('/')
 def index():
@@ -217,6 +218,9 @@ def wheel():
     return render_template("wheel.html")
 
 
+
+
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
+
