@@ -231,7 +231,9 @@ def wheel():
 def draw():
     return render_template("draw.html")
 
-
+@app.route('/flashcards/')
+def flashcards():
+    return render_template("flashcards.html")
 
 
 # runs the application on the development server
