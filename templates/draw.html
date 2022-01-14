@@ -1,4 +1,15 @@
 <!DOCTYPE html>
+
+{% extends "layouts/base.html" %}
+
+<!- This variable sets name of browser tab  -->
+{% set project = "Natalie" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+    <!- Try building a new body here ->
+
+
 <html>
     <script type="text/javascript">
     var canvas, ctx, flag = false,
@@ -71,7 +82,7 @@
     }
 
     function erase() {
-        var m = confirm("Want to clear");
+        var m = confirm("Are you sure you want to clear?");
         if (m) {
             ctx.clearRect(0, 0, w, h);
             document.getElementById("canvasimg").style.display = "none";
@@ -116,19 +127,40 @@
         }
     }
 </script>
+
+
+
+<style>
+    html, body{
+        margin: 0;
+        height: 100%;
+        background-image:url('https://ar.toneden.io/34195020/tracks/temp1140?cache=1583207606412g');
+    }
+
+
+</style>
+
+
 <body onload="init()">
-<canvas id="can" width="400" height="400" style="position:absolute;top:10%;left:10%;border:2px solid;"></canvas>
-<div style="position:absolute;top:12%;left:43%;">Choose Color</div>
+<canvas id="can" width="400" height="400" style="position:absolute;top:10%;left:10%;border:2px solid; background-color: white"></canvas>
+<div style="background-color: white; color: #454e54; position:absolute;top:10%;left:43%;">Choose Color: </div>
 <div style="position:absolute;top:15%;left:45%;width:10px;height:10px;background:green;" id="green" onclick="color(this)"></div>
 <div style="position:absolute;top:15%;left:46%;width:10px;height:10px;background:blue;" id="blue" onclick="color(this)"></div>
 <div style="position:absolute;top:15%;left:47%;width:10px;height:10px;background:red;" id="red" onclick="color(this)"></div>
 <div style="position:absolute;top:17%;left:45%;width:10px;height:10px;background:yellow;" id="yellow" onclick="color(this)"></div>
 <div style="position:absolute;top:17%;left:46%;width:10px;height:10px;background:orange;" id="orange" onclick="color(this)"></div>
 <div style="position:absolute;top:17%;left:47%;width:10px;height:10px;background:black;" id="black" onclick="color(this)"></div>
-<div style="position:absolute;top:20%;left:43%;">Eraser</div>
-<div style="position:absolute;top:22%;left:45%;width:15px;height:15px;background:white;border:2px solid;" id="white" onclick="color(this)"></div>
+<div style="background-color: white; color: #454e54; position:absolute;top:20%;left:43%;">Eraser: </div>
+<div style="position:absolute;top:25%;left:45%;width:15px;height:15px;background:white;border:2px solid;" id="white" onclick="color(this)"></div>
 <img id="canvasimg" style="position:absolute;top:10%;left:52%;" style="display:none;">
-<input type="button" value="save" id="btn" size="30" onclick="save()" style="position:absolute;top:55%;left:10%;">
-<input type="button" value="clear" id="clr" size="23" onclick="erase()" style="position:absolute;top:55%;left:15%;">
+<input type="button" value="save" id="btn" size="30" onclick="save()" style="position:absolute;top:65%;left:10%;">
+<input type="button" value="clear" id="clr" size="23" onclick="erase()" style="position:absolute;top:65%;left:15%;">
 </body>
 </html>
+
+
+{% endblock %}
+
+<!- This is turning off birds background from base.html -->
+{% block background %}
+{% endblock %}
