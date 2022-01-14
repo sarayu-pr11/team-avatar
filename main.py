@@ -1,5 +1,7 @@
 # import "packages" from flask
-from flask import Flask, render_template, request
+from flask import render_template, request
+from __init__ import app
+
 import requests
 import os
 import pickle
@@ -8,14 +10,17 @@ import random
 
 
 import json
-#from templates.crud.app_crud import app_crud
+
 nextAnswerString=""
 
 # create a Flask instance
-app = Flask(__name__)
+#app = Flask(__name__)
 
 
-#app.register_blueprint(app_crud)
+from templates.crud.app_crud import app_crud
+from templates.crud.app_crud_api import app_crud_api
+app.register_blueprint(app_crud_api)
+app.register_blueprint(app_crud)
 
 
 # connects default URL to render index.html

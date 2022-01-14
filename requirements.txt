@@ -1,3 +1,11 @@
-flask~=1.1.2
- numpy
-Pillow~=8.2.0
+flask==2.0.2
+requests==2.27.1
+SQLAlchemy==1.4.29
+Werkzeug==2.0.2
+flask_login
+flask_sqlalchemy
+flask_migrate
+flask_restful
+numpy
+Pillow==9.0.0
+crud~=0.1
