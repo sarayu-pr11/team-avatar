@@ -56,20 +56,20 @@ In our code we use data from other sources (API) which interact with each other<
   <tr>
     <td>Protocol</td>
     <td>a set of rules or procedures for transmitting data between electronic devices</td>
-    <td></td>
+    <td>Ex: HTTP or HTTPS</td>
   </tr>
   
    <tr>
     <td>TCP/IP</td>
-    <td>a set of rules that governs the connection of computer systems to the internet</td>
+    <td>a set of rules that governs the connection of computer systems to the internet/allow systems to communicate across long distances</td>
     <td>(ex: higher layer (TCP) disassembles message content into small "data packets". Then these packets are transmitted across the internet to be re-assembled by the receiving computer's TCP back to messages original content)</td>
   </tr>
   
    <tr>
     <td>HTTP</td>
     <td>application-layer protocol for transmitting hypermedia documents; client-server protocol,
-requests are initiated by the recipient - usually the web browser</td>
-    <td></td>
+requests are initiated by the recipient - usually the web browser -- both this and secure counterpart: facilitate how  how web servers and browsers should respond to commands.HTTPS </td>
+    <td>EX:  appears at the beginning of various URLs or web addresses online/ usually used for transmitting data across internet</td>
   </tr>
   
    <tr>
@@ -95,7 +95,7 @@ https://github.com/sarayu-pr11/team-narks/blob/main/main.py#L113</td>
    <tr>
     <td>Library</td>
     <td>collections of prewritten code that users can use to optimize tasks</td>
-    <td></td>
+    <td>In FIRST competitions, give you JAVA libraries to start coding robot with -- don't have to start from scratch </td>
   </tr>
   
    <tr>
@@ -112,9 +112,13 @@ https://github.com/sarayu-pr11/team-narks/blob/main/main.py#L113</td>
   
    <tr>
     <td>CRUD</td>
-    <td>Create Read Update Delete; mainly used for databases
+    <td>Four actions needed to maintain a storage application. Create Read Update Delete; mainly used for databases
 </td>
     <td>Ex. crud in our project
+      CREATE:
+      READ: 
+      UPDATE:
+      DELETE:
 
 https://github.com/sarayu-pr11/team-narks/tree/main/templates/crud</td>
   </tr>
@@ -133,7 +137,7 @@ https://github.com/sarayu-pr11/team-narks/tree/main/templates/crud</td>
   
    <tr>
     <td>Binary searching</td>
-    <td>starts in the center and moves outward</td>
+    <td>starts in the center and moves outward, works by repeatedly diving the list in half, until you have found the item</td>
     <td>let array = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,20,24,25,28,29,30,39,400000,5000000]
 
    function binary_search(arr,value){
@@ -158,9 +162,7 @@ https://github.com/sarayu-pr11/team-narks/tree/main/templates/crud</td>
        }
        return -1;
    }
-let sorted = array.sort(function(a,b) {return a-b}) console.log(sorted); let wasItFound = binary_search(sorted, 83); console.log(wasItFound);</td>
-  </tr>
-  
+
   <tr>
     <td>Metadata</td>
     <td>a set of data that describes and gives information about other data</td>
