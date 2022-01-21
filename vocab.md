@@ -61,30 +61,49 @@ In our code we use data from other sources (API) which interact with each other<
   
    <tr>
     <td>TCP/IP</td>
-    <td>a set of rules that governs the connection of computer systems to the internet/allow systems to communicate across long distances</td>
-    <td>(ex: higher layer (TCP) disassembles message content into small "data packets". Then these packets are transmitted across the internet to be re-assembled by the receiving computer's TCP back to messages original content)</td>
+    <td>a set of rules that mediate the connection of computer systems to the internet/allow systems to communicate across long distances</td>
+    <td>disassembled data is sent through a text message and when it reaches its destination, its is reassembled by the other devices TCP protocol</td>
+  </tr>
+  
+   <tr>
+    <td>Asynch</td>
+    <td>allows code to execute without stopping the rest of the code while it is being run</td>
+    <td>when a website is loading, but you can still open a new tab and acesss another website</td>
+  </tr>
+  
+   <tr>
+    <td>WEB API</td>
+    <td>application programming interface that can be extended through a browser/accessed on the web using http protocol</td>
+    <td>Twitter apis allow you to display tweets on a website</td>
+  </tr>
+  
+   <tr>
+    <td></td>
+    <td></td>
+    <td></td>
   </tr>
   
    <tr>
     <td>HTTP</td>
     <td>application-layer protocol for transmitting hypermedia documents; client-server protocol,
-requests are initiated by the recipient - usually the web browser -- both this and secure counterpart: facilitate how  how web servers and browsers should respond to commands.HTTPS </td>
+requests are created by the receiver - usually the web browser -- both this and secure counterpart: facilitate how  how web servers and browsers should respond to commands.HTTPS </td>
     <td>EX:  appears at the beginning of various URLs or web addresses online/ usually used for transmitting data across internet</td>
   </tr>
   
    <tr>
     <td>GET</td>
     <td>While connected to another computer using an FTP, get is a command line command used to download a file or files from that computer</td>
-    <td>usually used in cases when the data does not contain sensitive things; @app.route('/reminders/', methods=['POST']) def storeNotes(): #kdf = open('/tmp/KammyDebug.txt', 'wt+')
+    <td>usually used in cases when the data does not contain sensitive things; @app.route('/reminders/', methods=['GET'])
+def reminders():
+    #kdf = open('/tmp/KammyDebug.txt', 'wt+'))
 
 </td>
   </tr>
   
    <tr>
     <td>POST</td>
-    <td>When power is turned on, POST (Power-On Self-Test) is the diagnostic testing sequence that a computer's basic input/output system (or "starting program") runs to determine if the computer keyboard, random access memory, disk drives, and other hardware are working correctly</td>
-    <td>Basically is used to send data to update a resource
-Usually the data contains sensitive information; @app.route('/reminders/', methods=['POST']) def storeNotes(): #kdf = open('/tmp/KammyDebug.txt', 'wt+')
+    <td>Basically is used to send data to update a resource Usually the data contains sensitive information</td>
+    <td>@app.route('/reminders/', methods=['POST']) def storeNotes(): #kdf = open('/tmp/KammyDebug.txt', 'wt+')
 RUNTIME EXAMPLE:
 
 https://github.com/sarayu-pr11/team-narks/blob/main/main.py#L85
@@ -217,35 +236,62 @@ function play4() {
     audio.play();
 } </td>
   </tr>
-  
-  <tr>
-    <td>OOP </td>
-    <td>Object Oriented Programming</td>
-    <td>Response: the first computer sends a request for some data and the second responds to the request/ how long it takes for computer to respond to whatever you asked it do:
+      
+   <tr>
+      <td>Response</td><td>the first computer sends a request for some data and the second responds to the request/ how long it takes for computer to respond to whatever you asked it do</td>
+      <td>
 
 url = "https://dog.ceo/api/breeds/image/random";
 
       fetch(url)
           .then(function(response){
               return response.json();</td>
+      </tr>
+  
+  <tr>
+    <td>OOP </td>
+    <td>Object Oriented Programming is a programming model that organizes the program around objects rather than functions</td>
+ 
+    
   </tr>
   
   <tr>
     <td>Class </td>
     <td>A class is a blueprint that defines the variables and the methods common to all objects of a certain kind.</td>
-    <td>Ex. Vehicles</td>
+    <td>Ex. Vehicles; class="table"; <div class="container">
+        https://github.com/sarayu-pr11/team-narks/blob/43417b0ed0c8c822cf649a15f85a8f2ef233e5d3/templates/flashcards.html#L19</td>
   </tr>
   
   <tr>
+        <td>REST</td>
+        <td>REST APIs are created withing the interface and accesses a database created by the user and returns response in HTML and JSON data</td>
+        <td>JOKES API since it accesses a list of jokes made by the coder</td>
+  </tr>    
+      
+  <tr>
     <td>Attribute </td>
     <td>changeable property or characteristic of some component of a program that can be set to different values.</td>
-    <td>Ex: Model of Car, Year it was made, color
+    <td>Ex: Model of Car, Year it was made, color<a style="background-color: #F9ECD9; color: #A66A7A; font-size: 30px" class="nav-link" href={{ url_for('index') }}>Home</a>
 
-Object- instance of a class Ex: Cars
+      <tr><td>Object- instance of a class Ex: Cars<td></tr>
 
-Methods in OOP: are like drive and brake function
-</td>
+      <tr><td>Methods</td><td> in OOP: are like drive and brake function</td></tr>
+
   </tr>
+      
+<tr>
+  <td>Request</td>
+  <td>a message sent between objects</td>
+  <td>payload = "{ \"key1\": \"value\",\"key2\": \"value\"}"
+headers = {
+    'content-type': "application/json",
+    'x-rapidapi-host': "motivational-quotes1.p.rapidapi.com",
+    'x-rapidapi-key': "066e279e11mshd6855dd2ac40d0dp19761ajsn088d1e5fbc92"
+}
+
+response = requests.request("POST", url, data=payload, headers=headers)</td>
+      </tr>
   
+      
 
  
