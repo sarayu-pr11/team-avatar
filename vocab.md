@@ -138,31 +138,8 @@ https://github.com/sarayu-pr11/team-narks/tree/main/templates/crud</td>
    <tr>
     <td>Binary searching</td>
     <td>starts in the center and moves outward, works by repeatedly diving the list in half, until you have found the item</td>
-    <td>let array = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,20,24,25,28,29,30,39,400000,5000000]
-
-   function binary_search(arr,value){
-       let high = arr.length -1;
-       let low = 0;
-       let mid = 0;
-
-       while (low <= high){
-           mid = Math.floor ((high + low)/2)
-           //middle == value being searched
-           if(arr[mid]==value) {
-               //return value
-               return arr [mid];
-           }else if(value>arr[mid]) {
-               //move the low up one
-               low = mid + 1;
-           }else{
-               //move the high down one
-               high = mid -1;
-
-           }
-       }
-       return -1;
-   }
-
+     <td> <img src="static/assets/021020_0556_BinarySearc2.png"></td>
+    <td>
   <tr>
     <td>Metadata</td>
     <td>a set of data that describes and gives information about other data</td>
