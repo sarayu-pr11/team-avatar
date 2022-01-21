@@ -9,6 +9,8 @@
  <tr> 
   <td> Binary </td>
   <td> number system consisting of 1s and 0s; the primary language used by computers in order to comprehend human logic </td>
+   <td> <img src="static/assets/binary.png"> </td>
+
   </tr>
   
   <tr>
@@ -16,6 +18,7 @@
     <td>an alphanumeric system consisting of number 0-9 and letters a-f; another language used mainly for pictures and RGB</td>
     <td>Ex: Color Codes in HTML and CSS. One hexadecimal digit is equivalent to four binary digits.
     .button:hover { background-color: #f9ece7; color: #44312b; }
+       <img src="static/assets/hex.png">
 </td>
   </tr>
   
@@ -161,7 +164,8 @@ let sorted = array.sort(function(a,b) {return a-b}) console.log(sorted); let was
   <tr>
     <td>Metadata</td>
     <td>a set of data that describes and gives information about other data</td>
-    <td>Author; Date Created; Date Accessed</td>
+    <td>Author; Date Created; Date Accessed
+     <img src="static/assets/metadata.png"></td>
   </tr>
   
   <tr>
@@ -200,7 +204,7 @@ function play1() { var audio = document.getElementById("audio"); audio.play(); }
    <td>Model-view-controller 
  is a pattern in software design commonly used to implement user interfaces, data, and controlling logic. 
 </td>
-   <td></td>
+   <td> <img src="static/assets/mvc.png"></td>
   </tr>
 
   
