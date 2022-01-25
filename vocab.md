@@ -196,6 +196,14 @@ https://github.com/sarayu-pr11/team-narks/tree/main/templates/crud</td>
 function play1() { var audio = document.getElementById("audio"); audio.play(); }
 </td>
   </tr>
+      
+ <tr>
+    <td>Procedural Abstraction</td>
+    <td>When properties of a procedure are separated from it's implementation; makes programs easier to understand.</td>
+    <td>onclick="onSubmit();         function onSubmit()
+
+</td>
+  </tr>
   
  <tr>
    <td>MVC</td>
