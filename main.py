@@ -18,6 +18,8 @@ nextAnswerString=""
 
 from blueprints.sarayu_blueprint import sarayu_blueprint
 app.register_blueprint(sarayu_blueprint)
+from blueprints.riya_blueprint import riya_blueprint
+app.register_blueprint(riya_blueprint)
 from templates.crud.app_crud import app_crud
 from templates.crud.app_crud_api import app_crud_api
 app.register_blueprint(app_crud_api)
@@ -48,10 +50,6 @@ def walruses():
 @app.route('/hawkers/')
 def hawkers():
     return render_template("hawkers.html")
-
-@app.route('/music/')
-def music():
-    return render_template("music.html")
 
 
 
@@ -109,13 +107,8 @@ def hwtimer():
 def stub():
     return render_template("stub.html")
 
-@app.route('/tips/')
-def tips():
-    return render_template("tips.html")
 
-@app.route('/calendar/')
-def calendar():
-    return render_template("calendar.html")
+
 
 @app.route('/kamryn_abt/', methods=['GET'])
 def kamryn_abt():
@@ -151,21 +144,7 @@ def kamryn_abt():
             #return render_template("kamryn_abt.html", name=name)
     #return render_template("kamryn_abt.html", name="World")
 
-@app.route('/riya_abt/')
-def riya_abt():
-    url = "https://motivational-quotes1.p.rapidapi.com/motivation"
 
-    payload = "{ \"key1\": \"value\",\"key2\": \"value\"}"
-    headers = {
-        'content-type': "application/json",
-        'x-rapidapi-host': "motivational-quotes1.p.rapidapi.com",
-        'x-rapidapi-key': "066e279e11mshd6855dd2ac40d0dp19761ajsn088d1e5fbc92"
-    }
-
-    response = requests.request("POST", url, data=payload, headers=headers)
-
-    text = response.text
-    return render_template("riya_abt.html", results=text)
     #url = "https://covid-19-data.p.rapidapi.com/report/totals"
     # querystring = {"date":"2020-07-21"}
     # headers = {
