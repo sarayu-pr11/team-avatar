@@ -119,6 +119,68 @@ We want to have a study hall themed website. Users can find a variety of study t
 <a href="https://github.com/sarayu-pr11/team-narks/wiki/Deployment-Plan" target="_blank">Link to running website</a><br>
 
 ####Below we have tables that provide a complete timeline of our work and commits over the past few weeks. They are divided into tables by sprints:
+
+****
+## Week 7
+<table>
+<tr>
+<td>Scrum Master</td>
+<td>Riya</td>
+<td>
+<a href="https://github.com/sarayu-pr11/team-narks/commit/ecde652df823ed580359c785e09dd16bb5238ff0" target="_blank">Ticket</a><br>
+<a href="https://github.com/sarayu-pr11/team-narks/commit/87b8e63d2ce261a73bbb35d15a7dc2efbe507f44" target="_blank">Ticket</a><br>
+<a href="https://github.com/sarayu-pr11/team-narks/commit/87b8e63d2ce261a73bbb35d15a7dc2efbe507f44" target="_blank">Ticket</a><br>
+
+
+</td>
+</tr>
+
+<tr>
+<td>Designer</td>
+<td>Natalie</td>
+<td>
+<a href="https://github.com/sarayu-pr11/team-narks/commit/b0dc4b6988d8ef5165dd8ab3e6763191ce1d4f9b" target="_blank">Ticket</a><br>
+<a href="" target="_blank">Ticket </a><br>
+
+
+</td>
+</tr>
+
+<tr>
+<td>TO</td>
+<td>Abigail</td>
+<td>
+no commits as of this week
+</td>
+</tr>
+
+<tr>
+<td>Github Admin</td>
+<td>Sarayu</td>
+<td>
+<a href="https://github.com/sarayu-pr11/team-narks/commit/61bcf439739e2876fd67b9faab6026f411a24034" target="_blank">Ticket</a><br>
+<a href="https://github.com/sarayu-pr11/team-narks/commit/91705fb1bb3025bb77107842298dc09060d0a4d6" target="_blank">Ticket</a><br>
+<a href="https://github.com/sarayu-pr11/team-narks/commit/72ae613fdbd84c88b19bd58ded2004490d6bdff8" target="_blank">Ticket</a><br>
+
+</td>
+</tr>
+
+<tr>
+<td>Deployment Manager</td>
+<td>Kamryn</td>
+<td>
+<a href="https://github.com/sarayu-pr11/team-narks/commit/8f0858221778c7d8a06e35f935eeeff69b7d9227">Ticket</a><br>
+<a href="https://studycalm.ddns.net:5000" target="_blank">Domain</a><br>
+
+</td>
+</tr>
+</table>
+
+This week we worked on adding more techicals and developing our about pages
+
+****
+
+
 ****
 ## Week 4/5
 <table>
