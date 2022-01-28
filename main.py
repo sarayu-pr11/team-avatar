@@ -18,6 +18,8 @@ from blueprints.sarayu_blueprint import sarayu_blueprint
 app.register_blueprint(sarayu_blueprint)
 from blueprints.kamryn_blueprint import kamryn_blueprint
 app.register_blueprint(kamryn_blueprint)
+from blueprints.riya_blueprint import riya_blueprint
+app.register_blueprint(riya_blueprint)
 from templates.crud.app_crud import app_crud
 from templates.crud.app_crud_api import app_crud_api
 app.register_blueprint(app_crud_api)
