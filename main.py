@@ -110,6 +110,10 @@ def stub():
 def tips():
     return render_template("tips.html")
 
+@app.route('/calendar/')
+def calendar():
+    return render_template("calendar.html")
+
 @app.route('/kamryn_abt/', methods=['GET'])
 def kamryn_abt():
     #if request.form:
