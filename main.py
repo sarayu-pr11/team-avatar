@@ -16,7 +16,8 @@ nextAnswerString=""
 # create a Flask instance
 #app = Flask(__name__)
 
-
+from blueprints.sarayu_blueprint import sarayu_blueprint
+app.register_blueprint(sarayu_blueprint)
 from templates.crud.app_crud import app_crud
 from templates.crud.app_crud_api import app_crud_api
 app.register_blueprint(app_crud_api)
@@ -51,6 +52,8 @@ def hawkers():
 @app.route('/music/')
 def music():
     return render_template("music.html")
+
+
 
 @app.route('/reminders/', methods=['GET'])
 def reminders():
@@ -109,6 +112,10 @@ def stub():
 @app.route('/tips/')
 def tips():
     return render_template("tips.html")
+
+@app.route('/calendar/')
+def calendar():
+    return render_template("calendar.html")
 
 @app.route('/kamryn_abt/', methods=['GET'])
 def kamryn_abt():
@@ -210,31 +217,12 @@ def abby_abt():
     return render_template("abby_abt.html")
 
 
-@app.route('/sarayu_abt/')
-def sarayu_abt():
-    url = "https://random-facts2.p.rapidapi.com/getfact"
-
-    headers = {
-        'x-rapidapi-host': "random-facts2.p.rapidapi.com",
-        'x-rapidapi-key': "b581a96906msh6a688955e0452dfp1a1198jsn9c876326a4f3"
-    }
-
-    response = requests.request("GET", url, headers=headers)
-
-    #response.text
-    return render_template("sarayu_abt.html", stats=response.json())
 
 @app.route('/aboutus/')
 def aboutus():
     return render_template("aboutus.html")
 
-@app.route('/wheel/')
-def wheel():
-    return render_template("wheel.html")
 
-@app.route('/draw/')
-def draw():
-    return render_template("draw.html")
 
 @app.route('/flashcards/')
 def flashcards():
