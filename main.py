@@ -240,6 +240,10 @@ def draw():
 def flashcards():
     return render_template("flashcards.html")
 
+@app.route('/calculator/')
+def calculator():
+    return render_template("calculator.html")
+
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)

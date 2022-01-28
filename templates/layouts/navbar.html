@@ -15,14 +15,13 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
 
 
     <!--<img src="https://d1x26sjkwh9vok.cloudfront.net/uploads/profile/20210318/6d4b2890-31a2-4ce1-b600-7f17a7ed555d.png" height="40px" width="40px" style="margin-right: 15px"> -->
-    <a class="navbar-brand" href="https://csp.nighthawkcodingsociety.com/">{{basename}}</a>
+    <a class="navbar-brand" href="{{ url_for('index') }}">{{basename}}</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
             <!-- url_for is a Jinja2 pre-processor that finds route from function name (def) -->
-            <a class="nav-link" href={{ url_for('index') }}>Home</a>
             <a class="nav-link" href="https://sarayu-pr11.github.io/team-narks/">GitHub Page</a>
             <a class="nav-link" href={{ url_for('crud.crud') }}>SQL CRUD</a>
             <a class="nav-link" href={{ url_for('crud.search') }}>SQL Search</a>
@@ -61,11 +60,7 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                     <a class="dropdown-item" href="/draw">Draw</a>
                     <a class="dropdown-item" href="/tips">Tips</a>
                     <a class="dropdown-item" href="/flashcards">Flashcards</a>
-
-
-
-
-
+                    <a class="dropdown-item" href="/calculator">Calculator</a>
 
 
                 </div>
