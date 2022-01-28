@@ -24,6 +24,8 @@ from templates.crud.app_crud import app_crud
 from templates.crud.app_crud_api import app_crud_api
 app.register_blueprint(app_crud_api)
 app.register_blueprint(app_crud)
+from blueprints.natalie_blueprint import natalie_blueprint
+app.register_blueprint(natalie_blueprint)
 
 
 # connects default URL to render index.html
@@ -35,31 +37,22 @@ def index():
 def pali():
     return render_template("palindrome.html")
 
-
 # connects /kangaroos path to render kangaroos.html
 @app.route('/kangaroos/')
 def kangaroos():
     return render_template("kangaroos.html")
 
-
 @app.route('/walruses/')
 def walruses():
     return render_template("walruses.html")
-
 
 @app.route('/hawkers/')
 def hawkers():
     return render_template("hawkers.html")
 
-
 @app.route('/music/')
 def music():
     return render_template("music.html")
-
-
-@app.route('/hwtimer/')
-def hwtimer():
-    return render_template("hwtimer.html")
 
 @app.route('/stub/')
 def stub():
@@ -112,23 +105,6 @@ def riya_abt():
 
     #return render_template("riya_abt.html", data=stats)
 
-@app.route('/natalie_abt/')
-def natalie_abt():
-    #url = "https://numbersapi.p.rapidapi.com/1492/year"
-    #querystring = {"fragment":"true","json":"true"}
-    #headers = {
-    #    'x-rapidapi-host': "numbersapi.p.rapidapi.com",
-    #   'x-rapidapi-key': "57a15be86bmsh8ab5c9d255b7689p1346f0jsnb3b6bfbfaba4"
-    #}
-    #response = requests.request("GET", url, headers=headers, params=querystring)
-    #results = json.loads(response.content.decode("utf-8"))['results']
-    #year = []
-    #for result in results:
-    #        # result['year']
-    #        year.append(result['year'])
-    #    # tournament = json.loads(response.content.decode("utf-8"))['results'][0]['year']
-
-    return render_template("natalie_abt.html")
 
 @app.route('/abby_abt/')
 def abby_abt():
@@ -138,11 +114,6 @@ def abby_abt():
 @app.route('/aboutus/')
 def aboutus():
     return render_template("aboutus.html")
-
-
-@app.route('/calculator/')
-def calculator():
-    return render_template("calculator.html")
 
 
 @app.route('/reminders/', methods=['GET'])
