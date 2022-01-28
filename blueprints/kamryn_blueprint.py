@@ -33,7 +33,7 @@ def kamryn_abt():
     return render_template("kamryn_abt.html", currentAnswer=answerString)
 
 
-#@kamryn_blueprint.route('/reminders/', methods=['GET'])
+@kamryn_blueprint.route('/reminders/', methods=['GET'])
 def reminders():
     #kdf = open('/tmp/KammyDebug.txt', 'wt+')
     MAX_NUM_NOTES=8
@@ -62,7 +62,7 @@ def reminders():
     #kdf.close()
     return render_template("reminders.html", attrib_names=attribNames, persistentNotes=tmpNotes, numUpdates=MAX_NUM_NOTES)
 
-#@kamryn_blueprint.route('/reminders/', methods=['POST'])
+@kamryn_blueprint.route('/reminders/', methods=['POST'])
 def storeNotes():
     #kdf = open('/tmp/KammyDebug.txt', 'wt+')
     blob = request.data
