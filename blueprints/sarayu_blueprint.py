@@ -9,6 +9,10 @@ sarayu_blueprint = Blueprint('sarayu_blueprint', __name__)
 def quiz():
     return render_template("quiz.html")
 
+
+
+
+
 @sarayu_blueprint.route('/sarayu_abt/')
 def sarayu_abt():
     url = "https://random-facts2.p.rapidapi.com/getfact"
