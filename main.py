@@ -52,6 +52,10 @@ def hawkers():
 def music():
     return render_template("music.html")
 
+@app.route('/quiz/')
+def quiz():
+    return render_template("quiz.html")
+
 @app.route('/reminders/', methods=['GET'])
 def reminders():
     #kdf = open('/tmp/KammyDebug.txt', 'wt+')
