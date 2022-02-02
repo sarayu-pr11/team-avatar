@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<!-- Preparing search using asynchronous "fetch" (no page reload, no wait)
-inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
--->
+
 {% extends "layouts/base.html" %}
 
 {% block head %}
@@ -9,6 +7,23 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
 {% endblock %}
 
 {% block body %}
+    <style>
+        table, td, th {
+            border: 10px solid rgb(255, 255, 255);
+            padding: 50px;
+        }
+        td, th {
+            text-align:center;
+            color: #ffffff;
+            font-weight: bolder;
+        }
+        table{
+            width: 50%;
+            margin: auto;
+        }
+
+
+    </style>
     <div class="container py-4 bg-primary">
         <!-- heading -->
         <header class="pb-3 mb-4 border-bottom">
@@ -46,7 +61,7 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
             };
 
             // fetch call with header options
-            fetch('/crud/search/term/', {
+            fetch('/planner/search/term/', {
                 method: "POST",
                 credentials: "include",
                 body: JSON.stringify(body),
@@ -75,12 +90,16 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
                     // response contains valid result
                     response.json().then(function(data) {
                         // loop through JSON and build HTML output
+                        const div = document.createElement("div");
+                        let table = "<table>"
                         for (let i = 0; i < data.length; i++) {
-                            const div = document.createElement("div");
-                            div.innerHTML = data[i].name + ' ' + data[i].email;
+                            table += "<tr><td>" + data[i].name + "</td><td>" + data[i].classname + "</td><td>" + data[i].duedate + "</td><td>" + data[i].notes + "</td></tr>"
+                            div.innerHTML = table
                             resultContainer.appendChild(div);
                         }
                     })
+
+
                 })
         }
     </script>

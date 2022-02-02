@@ -25,6 +25,10 @@ from templates.crud.app_crud_api import app_crud_api
 app.register_blueprint(app_crud_api)
 app.register_blueprint(app_crud)
 
+from templates.planner.app_planner import app_planner
+from templates.planner.app_planner_api import app_planner_api
+app.register_blueprint(app_planner_api)
+app.register_blueprint(app_planner)
 
 # connects default URL to render index.html
 @app.route('/')
