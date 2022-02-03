@@ -2,6 +2,10 @@
 
 {% extends "layouts/base.html" %}
 
+<!- This variable sets name of browser tab  -->
+{% set project = "planner" %}
+
+
 {% block head %}
     <title>SQL search</title>
 {% endblock %}
@@ -22,11 +26,18 @@
             margin: auto;
         }
 
+        body {
+            background-image:url('https://i.ytimg.com/vi/gnZImHvA0ME/maxresdefault.jpg');
+            background-repeat:no-repeat;
+            background-attachment:fixed;
+            background-size:cover;
+        }
 
     </style>
-    <div class="container py-4 bg-primary">
+
+    <div style="background-color: #3d503e; margin: 2%">
         <!-- heading -->
-        <header class="pb-3 mb-4 border-bottom">
+        <header style="margin: 2% 2% 5%; font-size: 30px" class="pb-3 mb-4 border-bottom">
             <a href="#" class="d-flex align-items-center text-light text-decoration-none">
                 <span class="fs-4">Search Database</span>
             </a>
@@ -37,17 +48,17 @@
                 <div class="col">
                     <div class="mb-3">
                         <div class="form-group">
-                            <input type="text" class="form-control" id="term" placeholder="enter search term">
+                            <input style="background-color: #f9ecd9; border-color: #d0572b" type="text" class="form-control" id="term" placeholder="enter search term">
                             <label></label> <!-- used for spacer -->
                         </div>
-                        <button class="btn btn-primary bg-secondary" onclick="search_data();">Search</button>
+                        <button class="btn btn-primary" style="background-color: #721c24; border-color: #d0572b" onclick="search_data();">Search</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- result of search -->
-    <div class="container">
+    <div style="background-color: white; text-align: center" class="container">
         <div class="row" id="result">
         </div>
     </div>
@@ -103,4 +114,9 @@
                 })
         }
     </script>
+
+{% endblock %}
+
+<!- This is turning off birds background from base.html -->
+{% block background %}
 {% endblock %}
