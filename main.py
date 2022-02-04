@@ -143,6 +143,9 @@ def abby_abt():
 def aboutus():
     return render_template("aboutus.html")
 
+@app.route('/motivation/')
+def motivation():
+    return render_template("motivational.html")
 
 @app.route('/calculator/')
 def calculator():

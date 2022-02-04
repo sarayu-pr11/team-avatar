@@ -1,0 +1,162 @@
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background-color: #c27370; font-family: Trebuchet MS;">
+    <IMG SRC="/static/assets/flamingo.gif/ " height="40px" width="40px" style="margin-right: 15px; font-family: Trebuchet MS">
+
+
+    <!--<img src="https://d1x26sjkwh9vok.cloudfront.net/uploads/profile/20210318/6d4b2890-31a2-4ce1-b600-7f17a7ed555d.png" height="40px" width="40px" style="margin-right: 15px"> -->
+    <a class="navbar-brand" href="{{ url_for('index') }}">{{basename}}</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <!-- url_for is a Jinja2 pre-processor that finds route from function name (def) -->
+            <a class="nav-link" href="https://sarayu-pr11.github.io/team-narks/">GitHub Page</a>
+            <a class="nav-link" href={{ url_for('crud.crud') }}>SQL CRUD</a>
+            <a class="nav-link" href={{ url_for('crud.search') }}>SQL Search</a>
+
+
+
+
+            <!-- stub is shown using the name of the route -->
+
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarLabs" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    About Us!
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/natalie_abt">Natalie</a>
+                    <a class="dropdown-item" href="/abby_abt">Abby</a>
+                    <a class="dropdown-item" href="/riya_abt">Riya</a>
+                    <a class="dropdown-item" href="/kamryn_abt">Kamryn</a>
+                    <a class="dropdown-item" href="/sarayu_abt">Sarayu</a>
+
+                </div>
+            </li>
+
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarLabs" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Layout Ideas
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/music">Music</a>
+                    <a class="dropdown-item" href="/hwtimer">Homework Timer</a>
+                    <a class="dropdown-item" href="/reminders">Reminders</a>
+                    <a class="dropdown-item" href="/wheel">Meals</a>
+                    <a class="dropdown-item" href="/palindrome">Pali</a>
+                    <a class="dropdown-item" href="/draw">Draw</a>
+                    <a class="dropdown-item" href="/tips">Tips</a>
+                    <a class="dropdown-item" href="/flashcards">Flashcards</a>
+                    <a class="dropdown-item" href="/calculator">Calculator</a>
+                    <a class="dropdown-item" href="/calendar">Calendar</a>
+                    <a class="dropdown-item" href="/quiz">Quiz</a>
+                    <a class="dropdown-item" href="/study_break">Study Break</a>
+
+
+                </div>
+            </li>
+
+        </div>
+    </div>
+</nav>
+
+
+{% block body %}
+
+
+    <script>
+        var NumberOfWords = 5
+
+        var words = new BuildArray(NumberOfWords)
+
+        // Use the following variables to
+        // defines countries:
+        words[1] = "There are two ways of spreading light: to be the candle or the mirror that reflects it.  – Edith Wharton"
+        words[2] = "Believe you can and you’re halfway there. – Theodore Roosevelt"
+        words[3] = "If you’re going through hell, keep going. – Winston Churchill"
+        words[4] = "No greater gift there is, than a generous heart. – Yoda"
+        words[5] = "Worrying is like paying a debt you don’t owe. – Mark Twain"
+        function BuildArray(size){
+            this.length = size
+            for (var i = 1; i <= size; i++){
+                this[i] = null}
+            return this
+        }
+
+        function PickRandomWord(frm) {
+// Generate a random number between 1 and NumberOfWords
+            var rnd = Math.ceil(Math.random() * NumberOfWords)
+
+// Display the word inside the text box
+            frm.WordBox.value = words[rnd]
+        }</script>
+
+
+
+    <FORM NAME="WordForm">
+        <INPUT TYPE=TEXT NAME="WordBox" id="wordbox"><BR>
+        <INPUT TYPE=BUTTON VALUE="Generate" onClick="PickRandomWord(document.WordForm);" id="button">
+
+    </FORM>
+    <style>
+
+
+        h1 {
+            text-align: center;
+            margin: 20% 0 5% 0;
+        }
+
+        #wordbox {
+            /*opacity: 0;*/
+            margin: 30px auto 0;
+            display: block;
+            width: 1000px;
+            height: 400px;
+            font-size: 15px;
+            text-align: center;
+            background: #fff;
+            border-radius: 6px;
+            color: #black;
+            transition: 1s linear;
+        }
+
+        #button {
+            background: #0b7fba;
+            border: 0;
+            color: #fff;
+            font-size: 20px;
+            padding: 1em 2em;
+            cursor: pointer;
+            margin: 0 auto 60px;
+            display: block;
+            text-align: center;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+
+
+    </style>
+
+
+
+    </body>
+
+    </html>
+
+
+
+    </body>
+
+    </html>
+{% endblock %}
