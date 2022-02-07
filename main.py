@@ -155,6 +155,10 @@ def calculator():
 def tictactoe():
     return render_template("tictactoe.html")
 
+@app.route('/sudoku/')
+def sudoku():
+    return render_template("sudoku.html")
+
 @app.route('/dictionary/', methods=['GET','POST'])
 def dictionary():
     try:
