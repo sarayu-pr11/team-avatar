@@ -151,6 +151,10 @@ def motivation():
 def calculator():
     return render_template("calculator.html")
 
+@app.route('/tictactoe/')
+def tictactoe():
+    return render_template("tictactoe.html")
+
 @app.errorhandler(404)
 def page_not_found(e):
     # note that we set the 404 status explicitly

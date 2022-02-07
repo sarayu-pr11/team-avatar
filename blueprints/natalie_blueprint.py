@@ -31,3 +31,4 @@ def calculator():
 @natalie_blueprint.route('/hwtimer/')
 def hwtimer():
     return render_template("hwtimer.html")
+
