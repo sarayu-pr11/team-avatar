@@ -24,7 +24,7 @@
 
 <body>
 <div id="main">
-    <h1>TIC TAC TOE</h1>
+    <h1>Tic-Tac-Toe</h1>
 
     <!-- Game Instructions -->
     <p id="ins">Game starts by just tapping on
@@ -35,8 +35,6 @@
 
 
 
-
-    <br>
     <!-- 3*3 grid of Boxes -->
     <input type="text" id="b1" onclick=
             "myfunc_3(); myfunc();" readonly>
@@ -46,7 +44,7 @@
 
     <input type="text" id="b3" onclick=
             "myfunc_5(); myfunc();" readonly>
-    <br><br>
+    <br>
 
     <input type="text" id="b4" onclick=
             "myfunc_6(); myfunc();" readonly>
@@ -56,7 +54,7 @@
 
     <input type="text" id="b6" onclick=
             "myfunc_8(); myfunc();" readonly>
-    <br><br>
+    <br>
 
     <input type="text" id="b7" onclick=
             "myfunc_9(); myfunc();" readonly>
@@ -68,7 +66,7 @@
             "myfunc_11();myfunc();" readonly>
 
     <!-- Grid end here  -->
-    <br><br><br>
+    <br><br>
     <!-- Button to reset game -->
     <button id="but" onclick="myfunc_2()">
         RESET
@@ -104,13 +102,16 @@
     /* 3*3 Grid */
     #b1, #b2, #b3, #b4, #b5,
     #b6, #b7, #b8, #b9 {
-        width: 80px;
-        height: 52px;
+        width: 75px;
+        height: 75px;
         margin: auto;
-        border: 3px solid rgb(96, 159, 169);
+        border: 3px solid rgb(87, 123, 129);
         border-radius: 6px;
         font-size: 24px;
         text-align: center;
+        background-color: #ffe9b1;
+        color: #8a5149;
+        margin: 2px;
     }
 
     /* Reset Button */
@@ -118,14 +119,14 @@
         box-sizing: border-box;
         width: 95px;
         height: 40px;
-        border: 1px solid #8a5149;
+        border: 3px solid #ffe9b1;
         margin: auto;
         border-radius: 4px;
         font-family: "Trebuchet MS",
         Geneva, Tahoma, sans-serif;
 
         background-color: #8a5149;
-        color: white;
+        color: #ffffff;
         font-size: 20px;
         cursor: pointer;
     }
