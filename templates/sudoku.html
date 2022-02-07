@@ -1,0 +1,195 @@
+{% extends "layouts/base.html" %}
+
+{% block body %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+    <input type="text"></input>
+
+</body>
+<script>
+    //TODO: define a 9x9 array to hold the number info, initialize everything to empty string
+    var sudoku = [
+        ["","","","","","","","",""],
+        ["","","","","","","","",""],
+        ["","","","","","","","",""],
+        ["","","","","","","","",""],
+        ["","","","","","","","",""],
+        ["","","","","","","","",""],
+        ["","","","","","","","",""],
+        ["","","","","","","","",""],
+        ["","","","","","","","",""]
+    ];
+    var validInputs = ["", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+    //TODO: after finishing the rest, come back here and write a function that runs through everything below
+    function sudokuCheck() {
+        for(let i=0; i<9; i++){
+            if(!columncheck(i) || !rowcheck(i)){
+                alert("Incorrect");
+                return;
+            }
+        }
+        for(let i=0; i<3; i++){
+            for(let j=0; j<3; j++){
+                if(!boxcheck(i,j)){
+                    alert("Incorrect");
+                    return;
+                }
+            }
+        }
+        alert("Still valid");
+    }
+    //TODO: define a function to check each column for correctness. Return false if incorrect and true if ok
+    //TODO: give it a parameter for which column to check
+    //TODO: checks for correctness should look for whether or not there's more than 1 of any digit
+    //TODO: checks for correctness should look for whether or not there's any invalid "digits" aka anything not 1-9
+    //TODO: Hint: create an array and fill it with true at the index = to the number present at the cell you check
+    //TODO: Use that array to check whether or not a number is in a second time by using if
+    function columncheck(columnnToCheck) {
+        let checkArray=[];
+        for(let i=0; i<9; i++){
+            if(!validInputs.includes(sudoku[i][columnnToCheck])){
+                return false;
+            }
+            if (sudoku[i][columnnToCheck] != "") {
+                if(checkArray[sudoku[i][columnnToCheck]]){
+                    return false;
+                }
+                checkArray[sudoku[i][columnnToCheck]]=true;
+            }
+
+        }
+        return true;
+    }
+
+    //TODO: define a function to check each row for correctness
+    //TODO: give it a parameter for which row to check
+
+    function rowcheck(rowToCheck) {
+        let checkArray=[];
+        for(let i=0; i<9; i++){
+            if(!validInputs.includes(sudoku[rowToCheck][i])){
+                return false;
+            }
+            if (sudoku[rowToCheck][i] != "") {
+                if(checkArray[sudoku[rowToCheck][i]]){
+                    return false;
+                }
+                checkArray[sudoku[rowToCheck][i]]=true;
+            }
+
+        }
+        return true;
+    }
+
+    //TODO: define a function to check each box for correctness
+    //TODO: two different inputs of 0, 1, or 2. Will be dividing the sudoku board into 3x3 boxes and using those two inputs to reference which one
+    function boxcheck(rowToCheck, columnToCheck) {
+        let checkArray=[];
+        for(let i=0; i<3; i++) {
+            for(let j=0; j<3; j++){
+                if(!validInputs.includes(sudoku[3*rowToCheck+i][3*columnToCheck+j])){
+                    return false;
+                }
+                if (sudoku[3*rowToCheck+i][3*columnToCheck+j] != "") {
+                    if(checkArray[sudoku[3*rowToCheck+i][3*columnToCheck+j]]){
+                        return false;
+                    }
+                    checkArray[sudoku[3*rowToCheck+i][3*columnToCheck+j]]=true;
+                }
+            }
+        }
+        return true;
+    }
+
+</script>
+</html>
+
+{% endblock %}
+{% block background %}
+{% endblock %}
