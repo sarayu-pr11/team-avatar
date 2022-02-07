@@ -8,7 +8,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/png" href="flashcard.png" />
-    <link rel="stylesheet" href="style.css">
     <title>Flashcards</title>
 </head>
 <body>
@@ -56,7 +55,7 @@
 </html>
 
 <script>
-var contentArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
+var conjtentArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
 
 document.getElementById("save_card").addEventListener("click", () => {
 addFlashcard();
