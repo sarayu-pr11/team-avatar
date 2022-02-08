@@ -12,6 +12,9 @@
 <!- This variable sets name of browser tab  -->
 {% set project = "Abby" %}
 
+    {% set randquote = quotes %}
+
+
 
 
     <!-- this is the title and the name bar code -->
@@ -37,6 +40,9 @@
         <h4 style="text-align: center; color: #b4f1ff;"
         >I wanted my Create task to have something to do with recreation since having fun is something literally everyone can relate to. Therefore, some of my ideas were to create a recommended game search box, a music recs generator, or simply a searchable table full of my own favorite songs/games. </h4>
 
+        <h3>Random Quote Generator!</h3>
+        <p>{{ randquote.author }} ": " {{ randquote.quote }}</p>
+
 
         <img height="200">
         <img id="oldImage" src="/static/assets/abbymask.jpg/" onclick="this.src='/static/assets/abbyfamily.jpg'">
@@ -44,7 +50,7 @@
                  if you need help doing this, ask  ~big n -->
 
 
-    </body>
+
 
 {% endblock %}
 
