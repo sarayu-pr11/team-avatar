@@ -1,0 +1,44 @@
+={% extends "layouts/base.html" %}
+
+{% set project = "Translate" %}
+{% block body %}
+    <style>
+        table, td, th {
+            border: 10px solid rgb(255, 255, 255);
+            padding: 50px;
+        }
+        td, th {
+            text-align:center;
+            color: #ffffff;
+            font-weight: bolder;
+        }
+        table{
+            width: 50%;
+            margin: auto;
+        }
+
+    </style>
+
+    h1>Translator</h1>
+    <form action="/translate/" method="POST" class="form">
+        <input type="text" placeholder="Enter Text to Translate" name='text'>
+        <input type="text" placeholder="Enter Target Language" name='target'>
+        <button type="submit">Translate</button>
+    </form>
+
+
+    <table>
+        <tr>
+            <th>Text</th>
+            <th>Translated Text</th>
+        </tr>
+        <tr>
+            <td>{{text}}</td>
+            <td>{{results.data.translations[0].translatedText}}</td>
+        </tr>
+    </table>
+
+
+{% endblock %}
+
+

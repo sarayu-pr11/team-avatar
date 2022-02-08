@@ -193,6 +193,57 @@ def page_not_found(e):
     # note that we set the 404 status explicitly
     return render_template('404.html'), 404
 
+
+@app.route('/translate/', methods=['GET', 'POST'])
+def translate():
+    try:
+        text = request.form['text']
+        target = request.form['target']
+    except:
+        text = "   "
+        target = "es"
+
+    url = "https://google-translate1.p.rapidapi.com/language/translate/v2"
+
+    headers = {
+        'content-type': "application/x-www-form-urlencoded",
+        'accept-encoding': "application/gzip",
+        'x-rapidapi-host': "google-translate1.p.rapidapi.com",
+        'x-rapidapi-key': "e2d0d1a7efmsh5668be741c711ffp1a3e44jsnfc9e0a91c2b2"
+        }
+
+    # text = request.form['text']
+    # target = request.form['target']
+
+    # text = "Sample Text"
+    # text = request.form.get('text')
+    # target = request.form.get('target')
+
+
+
+
+
+    # url encode text
+    long_list_of_words = text.split(' ')
+    url_encoded_text = f"q={'%20'.join(long_list_of_words)}&target={target}"
+    payload = url_encoded_text
+
+    response = requests.request("POST", url, data=payload, headers=headers)
+
+    results = json.loads(response.content.decode("utf-8"))
+    
+    print(response.text)
+
+    if len(text) != 0:
+        return render_template("translate.html", headers=headers, results=results, text=text, target=target)
+
+    return render_template("translate.html", headers=headers, results=results, text='Enter Text To Translate', target='es')
+
+
+
+
+
+
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
