@@ -83,6 +83,6 @@ def flashcards():
     return render_template("flashcards.html")
 
 
-@kamryn_blueprint.route('/study_break/')
-def study_break():
-    return render_template("study_break.html")
+@kamryn_blueprint.route('/meditation/')
+def meditation():
+    return render_template("meditation.html")
