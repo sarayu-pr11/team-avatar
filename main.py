@@ -130,6 +130,11 @@ def stub():
 def tips():
     return render_template("tips.html")
 
+@app.route('/extracurricularslist/')
+def extracurriculars():
+    return render_template("extracurricularslist.html")
+
+
 #@app.route('/kamryn_abt/', methods=['GET', 'POST'])
 #def kamryn_abt():
     #if request.form:
@@ -201,9 +206,9 @@ def rewording():
                 'x-rapidapi-key': "e2d0d1a7efmsh5668be741c711ffp1a3e44jsnfc9e0a91c2b2"
             }
             response = requests.request("POST", url, data=querystring, headers=headers)
-            return render_template("pbl/rewording.html", results=response.json(), darkmode=darkmode)
+            return render_template("rewording.html", results=response.json())
     else:
-        return render_template("pbl/rewording.html", results="", darkmode=darkmode)
+        return render_template("rewording.html", results="")
 
 @app.errorhandler(404)
 def page_not_found(e):
