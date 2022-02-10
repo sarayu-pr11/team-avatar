@@ -188,6 +188,23 @@ def dictionary():
         return render_template("dictionary.html", word=keyword)
     # print(response.text)
 
+@app.route('/rewording/', methods=['GET', 'POST'])
+def rewording():
+    if request.form:
+        url = "https://rimedia-paraphraser.p.rapidapi.com/api_paraphrase.php"
+        user_text = request.form.get("user_text")
+        if len(user_text) != 0:
+            querystring = {"text": user_text, "lang":"en"}
+            headers = {
+                'content-type': "application/x-www-form-urlencoded",
+                'x-rapidapi-host': "rimedia-paraphraser.p.rapidapi.com",
+                'x-rapidapi-key': "e2d0d1a7efmsh5668be741c711ffp1a3e44jsnfc9e0a91c2b2"
+            }
+            response = requests.request("POST", url, data=querystring, headers=headers)
+            return render_template("pbl/rewording.html", results=response.json(), darkmode=darkmode)
+    else:
+        return render_template("pbl/rewording.html", results="", darkmode=darkmode)
+
 @app.errorhandler(404)
 def page_not_found(e):
     # note that we set the 404 status explicitly
