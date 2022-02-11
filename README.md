@@ -25,7 +25,7 @@
 <td>
 <a href="https://github.com/sarayu-pr11/team-avatar/projects/1?card_filter_query=assignee%3Asarayu-pr11" target="_blank">Scrum Board</a>
 <td>
-<a href="https://github.com/sarayu-pr11/team-avatar/commits/main" target="_blank">Commits</a>
+<a href="https://github.com/sarayu-pr11/team-narks/commits?author=sarayu-pr11" target="_blank">Commits</a>
 </td>
 <td>
 <a href="https://docs.google.com/document/d/1S97_rP7HPPTj5MZeCIcP4AtwwZ15FzRRUY2SwV650ME/edit?usp=sharing" target="_blank">Sarayu Pair Journal</a>
