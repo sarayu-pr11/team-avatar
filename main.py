@@ -33,6 +33,8 @@ app.register_blueprint(kamryn_blueprint)
 from blueprints.abby_blueprint import abby_blueprint
 app.register_blueprint(abby_blueprint)
 
+from blueprints.riya_blueprint import riya_blueprint
+app.register_blueprint(riya_blueprint)
 
 from blueprints.sarayu_blueprint import sarayu_blueprint
 app.register_blueprint(sarayu_blueprint)
