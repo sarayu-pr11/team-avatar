@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 {% extends "layouts/base.html" %}
 
+<!- This variable sets name of browser tab  -->
+{% set project = "Paraphraser" %}
+
+<!- This is a replacement block for Body in base.html -->
 {% block body %}
     <html lang="en">
     <head>
@@ -8,29 +12,37 @@
         <title>Checklist</title>
         <style>
             table, td, th {
-                border: 4px black;
+                border: 4px #4e6937;
                 padding: 50px;
+                background-color: rgba(249, 236, 217, 0.51);
+
             }
             td, th {
                 text-align:center;
-                color: black;
+                color: #4e6937;
                 font-size: 20px;
+                background-color: rgba(249, 236, 217, 0.51);
             }
             table{
                 width: 75%;
                 margin: auto;
             }
             html,body{
-                background-color: lightpink;
+                background-image:url('https://ihdwall.com/storage/202103/lofi-cafe-studying-art-hd-wallpaper-1920x1080.jpg');
+                background-repeat:no-repeat;
+                background-attachment:fixed;
+                background-size:cover;
             }
 
         </style>
     </head>
     <body>
-    <form action="/rewording/" method="POST">
+    <br><br>
+    <form style="text-align: center;" action="/rewording/" method="POST">
         <input name="user_text" id="user_text" type="text" placeholder="Enter a phrase" name='keyword'>
-        <button type="submit">Reword</button>
+        <button style="background-color: #d7b165; color: #b05d30" type="submit">Reword</button>
     </form>
+    <br>
     <table>
         <tr>
             <th>Original Sentence</th>
@@ -46,4 +58,8 @@
     <style>
     </style>
 
+{% endblock %}
+
+<!- This is turning off birds background from base.html -->
+{% block background %}
 {% endblock %}

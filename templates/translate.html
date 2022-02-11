@@ -1,16 +1,30 @@
-={% extends "layouts/base.html" %}
+{% extends "layouts/base.html" %}
 
+<!- This variable sets name of browser tab  -->
 {% set project = "Translate" %}
+
+<!- This is a replacement block for Body in base.html -->
 {% block body %}
+    <!- Try building a new body here ->
+
     <style>
+    body {
+        background-image:url('https://cdn.shopify.com/s/files/1/0011/6005/2795/articles/16_9_6.jpg?v=1615983408');
+        background-repeat:no-repeat;
+        background-attachment:fixed;
+        background-size:cover;
+    }
         table, td, th {
-            border: 10px solid rgb(255, 255, 255);
+            border: 5px solid rgb(27, 61, 87);
             padding: 50px;
+            margin: 2%;
+            background-color: white;
         }
         td, th {
             text-align:center;
-            color: #ffffff;
+            color: #1b3d57;
             font-weight: bolder;
+            margin: 2%;
         }
         table{
             width: 50%;
@@ -19,13 +33,13 @@
 
     </style>
 
-    h1>Translator</h1>
-    <form action="/translate/" method="POST" class="form">
+    <h1 style="color: white; font-family: 'Trebuchet MS'; text-align: center;">Translator</h1> <br><br>
+    <form style="text-align: center" action="/translate/" method="POST" class="form">
         <input type="text" placeholder="Enter Text to Translate" name='text'>
         <input type="text" placeholder="Enter Target Language" name='target'>
-        <button type="submit">Translate</button>
+        <button style="background-color: #c4713e; color: white" type="submit">Translate</button>
     </form>
-
+<br>
 
     <table>
         <tr>
@@ -41,4 +55,7 @@
 
 {% endblock %}
 
+<!- This is turning off birds background from base.html -->
+{% block background %}
+{% endblock %}
 
