@@ -182,6 +182,10 @@ def tictactoe():
 def sudoku():
     return render_template("sudoku.html")
 
+@app.route('/memory/')
+def memory():
+    return render_template("memory.html")
+
 @app.route('/dictionary/', methods=['GET','POST'])
 def dictionary():
     try:

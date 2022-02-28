@@ -122,13 +122,15 @@ We want to have a study hall themed website. Users can find a variety of study t
 
 
 ****
-## Week 11 Final!
+## Week 11 Final! Video: [video!](https://www.loom.com/share/01857cefb7bf42f29b26e2331344f950)
 <table>
 <tr>
 <td>Scrum Master</td>
 <td>Riya</td>
 <td>
 <a href="https://github.com/sarayu-pr11/team-narks/commit/87b8e63d2ce261a73bbb35d15a7dc2efbe507f44" target="_blank">Create Task!</a><br>
+  <a href="https://github.com/sarayu-pr11/team-narks/commit/87b8e63d2ce261a73bbb35d15a7dc2efbe507f44" target="_blank">Ticket!</a><br>
+
 
 
 
