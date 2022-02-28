@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<!- This variable sets name of browser tab  -->
+{% set project = "Natalie" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+    <!- Try building a new body here ->
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Trivia Game</title>
+    </head>
+    <body>
+
+    <h1>Let's Play!</h1>
+    <div id="game"></div>
+    <h2>Score:<span id="score">0</span></h2>
+
+    <script>
+        const game = document.getElementById('game')
+        const scoreDisplay = document.getElementById('score')
+        let score = 0
+
+        const genres = [
+            {
+                name: 'Books',
+                id: 10
+            },
+            {
+                name: 'Film',
+                id: 11
+            },
+            {
+                name: 'Music',
+                id: 12
+            },
+            {
+                name: 'Video Games',
+                id: 15
+            }
+        ]
+
+        const levels = ['easy', 'medium', 'hard']
+
+        function addGenre(genre) {
+            const column = document.createElement('div')
+            column.classList.add('genre-column')
+            column.innerHTML = genre.name
+            game.append(column)
+
+            levels.forEach(level => {
+                const card = document.createElement('div')
+                card.classList.add('card')
+                column.append(card)
+
+                if (level === 'easy') {
+                    card.innerHTML = 100
+                }
+                if (level === 'medium') {
+                    card.innerHTML = 200
+                }
+                if (level === 'hard') {
+                    card.innerHTML = 300
+                }
+
+                fetch(`https://opentdb.com/api.php?amount=1&category=${genre.id}&difficulty=${level}&type=boolean`)
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log(data)
+                        card.setAttribute('data-question', data.results[0].question)
+                        card.setAttribute('data-answer', data.results[0].correct_answer)
+                        card.setAttribute('data-value', card.getInnerHTML())
+                    })
+                    .then(done => card.addEventListener('click', flipCard))
+
+            })
+        }
+        genres.forEach(genre => addGenre(genre))
+
+
+        function flipCard() {
+            this.innerHTML = ''
+            this.style.fontSize = '15px'
+            const textDisplay = document.createElement('div')
+            const trueButton = document.createElement('button')
+            const falseButton = document.createElement('button')
+            trueButton.innerHTML = 'True'
+            falseButton.innerHTML = 'False'
+            trueButton.classList.add('true-button')
+            falseButton.classList.add('false-button')
+            trueButton.addEventListener('click', getResult)
+            falseButton.addEventListener('click', getResult)
+            textDisplay.innerHTML = this.getAttribute('data-question')
+            this.append(textDisplay, trueButton, falseButton)
+
+            const allCards = Array.from(document.querySelectorAll('.card'))
+            allCards.forEach(card => card.removeEventListener('click', flipCard))
+        }
+
+        function getResult() {
+            const allCards = Array.from(document.querySelectorAll('.card'))
+            allCards.forEach(card => card.addEventListener('click', flipCard))
+
+            const cardOfButton = this.parentElement
+            if (cardOfButton.getAttribute('data-answer') === this.innerHTML) {
+                score = score + parseInt(cardOfButton.getAttribute('data-value'))
+                scoreDisplay.innerHTML = score
+                cardOfButton.classList.add('correct-answer')
+                setTimeout(() => {
+                    while (cardOfButton.firstChild) {
+                        cardOfButton.removeChild(cardOfButton.lastChild)
+                    }
+                    cardOfButton.innerHTML = cardOfButton.getAttribute('data-value')
+                }, 100)
+            } else {
+                cardOfButton.classList.add('wrong-answer')
+                setTimeout(() => {
+                    while (cardOfButton.firstChild) {
+                        cardOfButton.removeChild(cardOfButton.lastChild)
+                    }
+                    cardOfButton.innerHTML = 0
+                }, 100)
+            }
+            cardOfButton.removeEventListener('click',flipCard)
+        }
+
+    </script>
+
+
+    </body>
+
+    <style>
+        body {
+            marign: 0;
+            padding: 0;
+            background-color: #7aa4a4;
+            color: #fff;
+            font-family: 'Trebuchet MS', Arial;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #game {
+            display: flex;
+        }
+
+        .genre-column {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .card {
+            width: 200px;
+            height: 120px;
+            border-radius: 20px;
+            background-color: #66ab63;
+            border: solid #6a3680 5px;
+            text-align: center;
+            padding: 5px;
+            margin: 10px;
+            font-size: 100px;
+        }
+
+        .correct-answer {
+            background-color: #07cc00;
+        }
+
+        .wrong-answer {
+            background-color: #c73b1e;
+        }
+
+        .true-button {
+            background-color: #63b36e;
+        }
+
+        .false-button {
+            background-color: #aa231e;
+        }
+
+        button {
+            margin: 5px;
+        }
+    </style>
+    </html>
+
+
+
+{% endblock %}

@@ -7,7 +7,7 @@ sarayu_blueprint = Blueprint('sarayu_blueprint', __name__)
 
 @sarayu_blueprint.route('/quiz/')
 def quiz():
-    return render_template("quiz.html")
+    return render_template("sarayu/quiz.html")
 
 
 
@@ -25,13 +25,17 @@ def sarayu_abt():
     response = requests.request("GET", url, headers=headers)
 
     #response.text
-    return render_template("sarayu_abt.html", stats=response.json())
+    return render_template("sarayu/sarayu_abt.html", stats=response.json())
 
 @sarayu_blueprint.route('/wheel/')
 def wheel():
-    return render_template("wheel.html")
+    return render_template("sarayu/wheel.html")
 
 @sarayu_blueprint.route('/draw/')
 def draw():
-    return render_template("draw.html")
+    return render_template("sarayu/draw.html")
+
+@sarayu_blueprint.route('/sarayucreatetask')
+def sarayucreatetask():
+    return render_template("sarayu/sarayucreatetask.html")
 
