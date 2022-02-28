@@ -166,6 +166,10 @@ def draw():
 def dog():
     return render_template("dog.html")
 
+@app.route('/reminder/')
+def reminder():
+    return render_template("reminder.html")
+
 @app.route('/flashcards/')
 def flashcards():
     return render_template("flashcards.html")
