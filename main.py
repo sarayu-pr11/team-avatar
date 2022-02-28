@@ -162,6 +162,13 @@ def motivation():
 @app.route('/draw/')
 def draw():
     return render_template("draw.html")
+@app.route('/dog/')
+def dog():
+    return render_template("dog.html")
+
+@app.route('/reminder/')
+def reminder():
+    return render_template("reminder.html")
 
 @app.route('/flashcards/')
 def flashcards():
@@ -174,6 +181,10 @@ def tictactoe():
 @app.route('/sudoku/')
 def sudoku():
     return render_template("sudoku.html")
+
+@app.route('/memory/')
+def memory():
+    return render_template("memory.html")
 
 @app.route('/dictionary/', methods=['GET','POST'])
 def dictionary():
