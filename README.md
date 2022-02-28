@@ -120,6 +120,65 @@ We want to have a study hall themed website. Users can find a variety of study t
 
 ####Below we have tables that provide a complete timeline of our work and commits over the past few weeks. They are divided into tables by sprints:
 
+
+****
+## Week 11 Final! Video: [video!](https://www.loom.com/share/01857cefb7bf42f29b26e2331344f950)
+<table>
+<tr>
+<td>Scrum Master</td>
+<td>Riya</td>
+<td>
+<a href="https://github.com/sarayu-pr11/team-narks/commit/87b8e63d2ce261a73bbb35d15a7dc2efbe507f44" target="_blank">Create Task!</a><br>
+  <a href="https://github.com/sarayu-pr11/team-narks/commit/87b8e63d2ce261a73bbb35d15a7dc2efbe507f44" target="_blank">Ticket!</a><br>
+
+
+
+
+</td>
+</tr>
+
+<tr>
+<td>Designer</td>
+<td>Natalie</td>
+<td>
+<a href="" target="_blank">Create Task  </a><br>
+
+
+</td>
+</tr>
+
+<tr>
+<td>TO</td>
+<td>Abigail</td>
+<td>
+no commits as of this week
+</td>
+</tr>
+
+<tr>
+<td>Github Admin</td>
+<td>Sarayu</td>
+<td>
+<a href="https://github.com/sarayu-pr11/team-narks/commit/61bcf439739e2876fd67b9faab6026f411a24034" target="_blank">Create Task</a><br>
+
+</td>
+</tr>
+
+<tr>
+<td>Deployment Manager</td>
+<td>Kamryn</td>
+<td>
+<a href="https://github.com/sarayu-pr11/team-narks/commit/8f0858221778c7d8a06e35f935eeeff69b7d9227">Create Task</a><br>
+<a href="https://studycalm.ddns.net:5000" target="_blank">Domain</a><br>
+
+</td>
+</tr>
+</table>
+
+This week we worked on adding more techicals and developing our about pages
+
+****
+
 ****
 ## Crossover week!
 <table>
