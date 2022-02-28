@@ -1,0 +1,80 @@
+{% extends "layouts/base.html" %}
+
+<!- This variable sets name of browser tab  -->
+{% set project = "Dog fun!" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta charset="utf-8">
+        <title>Random Dog Generator!</title>
+        <script src="index.js"></script>
+    </head>
+
+    <style>
+
+    </style>
+
+
+    <br>
+    <br>
+
+    <body>
+
+
+
+
+    <script>
+        // document.getElementById(demo).innerHTML = data;
+        function swapPicture(){
+            //get the file path of current image
+            let img = document.getElementById("oldImage") ;
+            // check if the path matches path of the current page image matches
+            // with image to swap, if not matched - swap
+            if (img.getAttribute('src') == "/static/assets/Riya Drawing.png/"){
+                img.src = "/static/assets/riyamask.png/";
+            } else {
+                img.src = "/static/assets/Riya Drawing.png/";
+            }
+        }
+
+        function get_random_dog_image(){
+
+            url = "https://dog.ceo/api/breeds/image/random";
+
+            fetch(url)
+                .then(function(response){
+                    return response.json();
+                })
+                .then(function(data){
+                    display_image(data.message);
+                })
+                .catch(function(error){
+                    console.log("Error: " + error);
+                });
+
+
+        }
+
+        function display_image(image_url){
+            document.getElementById("image").src = image_url;
+        }
+    </script>
+    <div id="container">
+        <img id="image"/>
+        <button id="button" onclick="get_random_dog_image()"> Random </button>
+    </div>
+
+
+    </body>
+    </html>
+
+{% endblock %}
+
+<!- This is turning off birds background from base.html -->
+{% block background %}
+{% endblock %}

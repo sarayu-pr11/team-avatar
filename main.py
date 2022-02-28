@@ -162,6 +162,9 @@ def motivation():
 @app.route('/draw/')
 def draw():
     return render_template("draw.html")
+@app.route('/dog/')
+def dog():
+    return render_template("dog.html")
 
 @app.route('/flashcards/')
 def flashcards():
