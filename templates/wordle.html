@@ -28,17 +28,14 @@
     const tileDisplay = document.querySelector('.tile-container')
     const keyboard = document.querySelector('.key-container')
     const messageDisplay = document.querySelector('.message-container')
-    const wordle = 'CHANT'
 
-    //const wordBank = ["SUPER", "BLOKE"];
-    //const wordle = Math.floor(Math.random() * wordBank.length);
-
-    //const words = ['BLOKE', 'CHANT', 'SPILL', 'VIVID', 'TACIT', 'DODGE', 'AMUSE', 'LEARN', 'SHAKE',
-                  //'ROUTE', 'ELDER', 'GROWL', 'FIEND', 'JOINT', 'PLANE', 'HEART', 'IGLOO'
-    //]
-    //const wordle = Math.floor(Math.random() * words.length);
-    //const wordBank = ["SUPER", "BLOKE"];
-    //const wordle = Math.floor(Math.random() * wordBank.length);
+    var wordList = ["cigar", "rebut", "sissy", "humph", "awake", "blush", "focal", "evade", "naval", "serve", "heath", "dwarf", "model", "karma", "stink", "grade", "quiet", "bench",]
+    var wordListlen = wordList.length;
+    function random(mx) {
+        return Math.random() * mx;
+    }
+    var wordle = wordList[Math.floor(random(wordListlen))-1].toUpperCase()
+    console.log(wordle);
 
 
     const keys = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P',
