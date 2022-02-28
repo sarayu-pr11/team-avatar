@@ -1,0 +1,281 @@
+{% extends "layouts/base.html" %}
+
+<!DOCTYPE html>
+{% block body %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wordle</title>
+</head>
+<body>
+        <div class="rules-container">
+            Rules: You have 6 attempts to guess the correct 5-letter word. Green letters mean they are in the
+            word and correct position. Yellow letters mean they are in the word but in the wrong position.
+        </div>
+        <div class="game-container">
+            <div class="title-container">
+                <h1>Wordle</h1>
+            </div>
+            <div class="message-container"></div>
+            <div class="tile-container"></div>
+            <div class="key-container"></div>
+        </div>
+
+</body>
+</html>
+
+<script>
+    const tileDisplay = document.querySelector('.tile-container')
+    const keyboard = document.querySelector('.key-container')
+    const messageDisplay = document.querySelector('.message-container')
+    const wordle = 'CHANT'
+
+    //const wordBank = ["SUPER", "BLOKE"];
+    //const wordle = Math.floor(Math.random() * wordBank.length);
+
+    //const words = ['BLOKE', 'CHANT', 'SPILL', 'VIVID', 'TACIT', 'DODGE', 'AMUSE', 'LEARN', 'SHAKE',
+                  //'ROUTE', 'ELDER', 'GROWL', 'FIEND', 'JOINT', 'PLANE', 'HEART', 'IGLOO'
+    //]
+    //const wordle = Math.floor(Math.random() * words.length);
+    //const wordBank = ["SUPER", "BLOKE"];
+    //const wordle = Math.floor(Math.random() * wordBank.length);
+
+
+    const keys = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P',
+        'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'ENTER',
+        'Z', 'X', 'C', 'V', 'B', 'N', 'M', '«',
+    ]
+    const guessRows = [
+        ['', '', '', '', ''],
+        ['', '', '', '', ''],
+        ['', '', '', '', ''],
+        ['', '', '', '', ''],
+        ['', '', '', '', ''],
+        ['', '', '', '', ''],
+    ]
+    let currentRow = 0
+    let currentTile = 0
+    let isGameOver = false
+
+    guessRows.forEach((guessRow, guessRowIndex) => {
+        const rowElement = document.createElement('div')
+        rowElement.setAttribute('id', 'guessRow-' + guessRowIndex)
+        guessRow.forEach((guess, guessIndex) => {
+            const tileElement = document.createElement('div')
+            tileElement.setAttribute('id', 'guessRow-' + guessRowIndex + '-tile-' + guessIndex)
+            tileElement.classList.add('tile')
+            rowElement.append(tileElement)
+        })
+
+        tileDisplay.append(rowElement)
+    })
+
+    keys.forEach(key => {
+        const buttonElement = document.createElement('button')
+        buttonElement.textContent = key
+        buttonElement.setAttribute('id', key)
+        buttonElement.addEventListener('click', () => handleClick(key))
+        keyboard.append(buttonElement)
+    })
+
+    const handleClick = (letter) => {
+        if (letter === '«') {
+            deleteLetter()
+            return
+        }
+        if(letter === 'ENTER') {
+            checkRow()
+            return
+        }
+        addLetter(letter)
+    }
+
+    const addLetter = (letter) => {
+        if (currentTile < 5 && currentRow < 6) {
+        const tile = document.getElementById('guessRow-' + currentRow + '-tile-' + currentTile)
+        tile.textContent = letter
+        guessRows[currentRow][currentTile] = letter
+        tile.setAttribute('data', letter)
+        currentTile++
+        }
+    }
+
+    const deleteLetter = () => {
+        if (currentTile > 0) {
+            currentTile--
+            const tile = document.getElementById('guessRow-' + currentRow + '-tile-' + currentTile)
+            tile.textContent =''
+            guessRows[currentRow][currentTile] = ''
+            tile.setAttribute('data', '')
+        }
+    }
+
+    const checkRow = () => {
+        const guess = guessRows[currentRow].join('')
+
+        if (currentTile === 5) {
+            flipTile()
+            if (wordle == guess) {
+                showMessage('You won!')
+                isGameOver = true
+                return
+            } else {
+                if (currentRow >= 5) {
+                    isGameOver = false
+                    showMessage('You lost :(')
+                    return
+                }
+                if (currentRow < 5) {
+                    currentRow++
+                    currentTile = 0
+                }
+            }
+        }
+    }
+
+    const showMessage = (message) => {
+        const messageElement = document.createElement('p')
+        messageElement.textContent = message
+        messageDisplay.append(messageElement)
+        setTimeout(() => messageDisplay.removeChild(messageElement), 2000)
+    }
+
+    const addColorToKey = (keyLetter, color) => {
+        const key = document.getElementById(keyLetter)
+        key.classList.add(color)
+    }
+
+    const flipTile = () => {
+        const rowTiles = document.querySelector('#guessRow-' + currentRow).childNodes
+        let checkWordle = wordle
+        const guess = []
+
+            rowTiles.forEach(tile => {
+                guess.push({letter: tile.getAttribute('data'), color: 'grey-overlay'})
+            })
+
+            guess.forEach((guess, index) => {
+                if (guess.letter == wordle[index]) {
+                    guess.color = 'green-overlay'
+                    checkWordle = checkWordle.replace(guess.letter, '')
+                }
+            })
+
+            guess.forEach(guess => {
+                if (checkWordle.includes(guess.letter)) {
+                    guess.color = 'yellow-overlay'
+                    checkWordle = checkWordle.replace(guess.letter, '')
+                }
+            })
+
+            rowTiles.forEach((tile, index) => {
+                setTimeout(() => {
+                    tile.classList.add('flip')
+                    tile.classList.add(guess[index].color)
+                    addColorToKey(guess[index].letter, guess[index].color)
+            }, 500 * index)
+        })
+    }
+</script>
+
+<style>
+    * {
+          color: #ffffff;
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+          'Lucida Sans', Arial, sans-serif;
+      }
+
+    body {
+        background-color: #121213;
+    }
+
+    .game-container {
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .rules-container {
+        align-items: center;
+    }
+
+    .title-container {
+        text-align: center;
+        width: 510px;
+        border-bottom: solid 1px #3a3a3c;
+    }
+
+    .tile-container {
+        width: 330px;
+        margin-bottom: 30px;
+    }
+
+    .key-container {
+        width: 510px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .key-container button {
+        width: 43px;
+        height: 58px;
+        border-radius: 4px;
+        border: none;
+        background-color: #818384;
+        margin: 4px;
+    }
+
+    .key-container button:nth-child(11) {
+        margin-left: 30px;
+    }
+
+    .key-container button:nth-child(20),
+    .key-container button:nth-child(28) {
+        width: 68px;
+    }
+
+    .tile-container div {
+        display: flex;
+    }
+
+    .tile-container .tile {
+        width: 62px;
+        height: 62px;
+        border: 2px solid#3a3a3c;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2px;
+    }
+
+    .message-container {
+        height: 30px;
+    }
+
+    .message-container p {
+        background-color: #818384;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 0;
+    }
+
+    .grey-overlay {
+        background-color: #3a3a3c !important;
+        border:none !important;
+    }
+    .yellow-overlay {
+        background-color: #b59f3a !important;
+        border:none !important;
+    }
+
+    .green-overlay {
+        background-color: #538d4e !important;
+        border:none !important;
+    }
+</style>
+
+{% endblock %}
+{% block background %}
+{% endblock %}

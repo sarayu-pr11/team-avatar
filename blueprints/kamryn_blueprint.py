@@ -2,17 +2,13 @@ from flask import render_template, request
 from flask import Blueprint
 import math
 import random
+import os
 nextAnswerString=""
 
 kamryn_blueprint = Blueprint('kamryn_blueprint', __name__)
 
 @kamryn_blueprint.route('/kamryn_abt/', methods=['GET'])
 def kamryn_abt():
-    #if request.form:
-    #name = request.form.get("name")
-    #if len(name) != 0:
-    #return render_template("kamryn_abt.html", name=name)
-    #, methods=['GET']
     global nextAnswerString
     answerString = nextAnswerString
 
@@ -62,6 +58,7 @@ def reminders():
     #kdf.close()
     return render_template("reminders.html", attrib_names=attribNames, persistentNotes=tmpNotes, numUpdates=MAX_NUM_NOTES)
 
+
 @kamryn_blueprint.route('/reminders/', methods=['POST'])
 def storeNotes():
     #kdf = open('/tmp/KammyDebug.txt', 'wt+')
@@ -86,3 +83,8 @@ def flashcards():
 @kamryn_blueprint.route('/meditation/')
 def meditation():
     return render_template("meditation.html")
+
+
+@kamryn_blueprint.route('/wordle/')
+def wordle():
+    return render_template("wordle.html")
