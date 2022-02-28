@@ -117,7 +117,7 @@ font-size: 30px;
         popup.style.display = "none";
         array.forEach((arr, index) => {
             let img = document.createElement("img");
-            img.setAttribute("src", "blank.png");
+            img.setAttribute("src", "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAPFBMVEX///+AgIB7e3u9vb2ZmZn6+vqBgYHs7Ozy8vLExMTMzMzU1NR9fX14eHja2tpzc3O5ubnm5ubQ0NDu7u6FpwGzAAABk0lEQVR4nO3dS27CUBBEUYP5GwOG/e81DDJIFAGRpSjVj3NX0GdeUnfderedpul0b7h3+Gz/vX5++5cdftN1+E2nH2274Tx+bRnbOKvzpRvGRcst+zcQXpsXHpb/fcSfRlg/wvoR1o+wfoT1I6zfXbgnrB1h/QjrR1i/txduqjRXuJlu2wrdptVxpnDX1WhNSBgfIWF+hIT5ERLmR0iYHyFhfoSE+T0X9oQFIiTMj5AwP0LC/AgJ8yMkzI+QMD9CwvwICfMjJMyPkDA/QsL8CAnzI2xd2P5iiLBChIT5ERLmR0iYHyFhfoSE+RES5kdImB8hYX6EhPkREuZHSJgfIWF+hK0Ln3xhIYyJkDA/QsL8CAnzIyTMj5AwP0LC/AgJ8yMkzI+QMD9CwvwICfMjbF04jIT5ERLmR0iYHyFhfoSE+RES5kdImB8hYX6EhPkRPhbe1jXazRauqrR5aHguXByr9JjwQthAhPUjrB9h/e7CE2HtCOtHWD/C+hHWj7B+hPUjrN97CM/Llhsv3fbSt9zl9AFh5ZpFXJFJCAAAAABJRU5ErkJggg==");
             img.setAttribute("data-id", index);
             grid.appendChild(img);
         })
@@ -156,8 +156,8 @@ font-size: 30px;
             setTimeout(checkWon,500)
         } else {
 
-            imgs[firstCard].setAttribute("src", "blank.png");
-            imgs[secondCard].setAttribute("src", "blank.png"); alert("wrong, please try again"); imgs[firstCard].classList.remove("flip"); imgs[secondCard].classList.remove("flip");
+            imgs[firstCard].setAttribute("src", "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAPFBMVEX///+AgIB7e3u9vb2ZmZn6+vqBgYHs7Ozy8vLExMTMzMzU1NR9fX14eHja2tpzc3O5ubnm5ubQ0NDu7u6FpwGzAAABk0lEQVR4nO3dS27CUBBEUYP5GwOG/e81DDJIFAGRpSjVj3NX0GdeUnfderedpul0b7h3+Gz/vX5++5cdftN1+E2nH2274Tx+bRnbOKvzpRvGRcst+zcQXpsXHpb/fcSfRlg/wvoR1o+wfoT1I6zfXbgnrB1h/QjrR1i/txduqjRXuJlu2wrdptVxpnDX1WhNSBgfIWF+hIT5ERLmR0iYHyFhfoSE+T0X9oQFIiTMj5AwP0LC/AgJ8yMkzI+QMD9CwvwICfMjJMyPkDA/QsL8CAnzI2xd2P5iiLBChIT5ERLmR0iYHyFhfoSE+RES5kdImB8hYX6EhPkREuZHSJgfIWF+hK0Ln3xhIYyJkDA/QsL8CAnzIyTMj5AwP0LC/AgJ8yMkzI+QMD9CwvwICfMjbF04jIT5ERLmR0iYHyFhfoSE+RES5kdImB8hYX6EhPkRPhbe1jXazRauqrR5aHguXByr9JjwQthAhPUjrB9h/e7CE2HtCOtHWD/C+hHWj7B+hPUjrN97CM/Llhsv3fbSt9zl9AFh5ZpFXJFJCAAAAABJRU5ErkJggg==");
+            imgs[secondCard].setAttribute("src", "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAPFBMVEX///+AgIB7e3u9vb2ZmZn6+vqBgYHs7Ozy8vLExMTMzMzU1NR9fX14eHja2tpzc3O5ubnm5ubQ0NDu7u6FpwGzAAABk0lEQVR4nO3dS27CUBBEUYP5GwOG/e81DDJIFAGRpSjVj3NX0GdeUnfderedpul0b7h3+Gz/vX5++5cdftN1+E2nH2274Tx+bRnbOKvzpRvGRcst+zcQXpsXHpb/fcSfRlg/wvoR1o+wfoT1I6zfXbgnrB1h/QjrR1i/txduqjRXuJlu2wrdptVxpnDX1WhNSBgfIWF+hIT5ERLmR0iYHyFhfoSE+T0X9oQFIiTMj5AwP0LC/AgJ8yMkzI+QMD9CwvwICfMjJMyPkDA/QsL8CAnzI2xd2P5iiLBChIT5ERLmR0iYHyFhfoSE+RES5kdImB8hYX6EhPkREuZHSJgfIWF+hK0Ln3xhIYyJkDA/QsL8CAnzIyTMj5AwP0LC/AgJ8yMkzI+QMD9CwvwICfMjbF04jIT5ERLmR0iYHyFhfoSE+RES5kdImB8hYX6EhPkRPhbe1jXazRauqrR5aHguXByr9JjwQthAhPUjrB9h/e7CE2HtCOtHWD/C+hHWj7B+hPUjrN97CM/Llhsv3fbSt9zl9AFh5ZpFXJFJCAAAAABJRU5ErkJggg=="); alert("wrong, please try again"); imgs[firstCard].classList.remove("flip"); imgs[secondCard].classList.remove("flip");
         }
         cardsSelected = [];
         cardsId = [];
