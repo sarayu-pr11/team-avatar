@@ -50,7 +50,7 @@ def getUserChoice():
     return userChoice
 
 #-----------------------------------------------------------------------------------
-# Starting procedure to get user input based on random quote selected
+# Starting procedure to get user input based on random quote selected !
 #-----------------------------------------------------------------------------------
 def getUserInput():
     global quoteString
