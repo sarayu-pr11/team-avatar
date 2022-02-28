@@ -25,15 +25,15 @@ def sarayu_abt():
     response = requests.request("GET", url, headers=headers)
 
     #response.text
-    return render_template("sarayu/sarayu_abt.html", stats=response.json())
+    return render_template("sarayu_abt.html", stats=response.json())
 
 @sarayu_blueprint.route('/wheel/')
 def wheel():
-    return render_template("sarayu/wheel.html")
+    return render_template("wheel.html")
 
 @sarayu_blueprint.route('/draw/')
 def draw():
-    return render_template("sarayu/draw.html")
+    return render_template("draw.html")
 
 @sarayu_blueprint.route('/sarayucreatetask')
 def sarayucreatetask():
