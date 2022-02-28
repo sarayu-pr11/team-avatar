@@ -27,6 +27,7 @@ def sarayu_abt():
     #response.text
     return render_template("sarayu/sarayu_abt.html", stats=response.json())
 
+
 @sarayu_blueprint.route('/wheel/')
 def wheel():
     return render_template("sarayu/wheel.html")

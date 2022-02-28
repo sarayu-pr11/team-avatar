@@ -27,7 +27,10 @@ def assignments_all_sql():
 def assignments_ilike(term):
     """filter Users table by term into JSON list (ordered by User.name)"""
     term = "%{}%".format(term)  # "ilike" is case insensitive and requires wrapped  %term%
-    table = Assignments.query.order_by(Assignments.name).filter((Assignments.name.ilike(term)) | (Assignments.classname.ilike(term)))
+    table = Assignments.query.order_by(Assignments.name).filter((Assignments.name.ilike(term))
+                                                                | (Assignments.classname.ilike(term))
+                                                                | (Assignments.duedate.ilike(term))
+                                                                | (Assignments.notes.ilike(term)))
     return [peep.read() for peep in table]
 
 

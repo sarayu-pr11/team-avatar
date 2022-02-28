@@ -23,10 +23,19 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
         <div class="navbar-nav">
             <!-- url_for is a Jinja2 pre-processor that finds route from function name (def) -->
             <a class="nav-link" href="https://sarayu-pr11.github.io/team-narks/">GitHub Page</a>
-            <a class="nav-link" href={{ url_for('crud.crud') }}>SQL CRUD</a>
-            <a class="nav-link" href={{ url_for('crud.search') }}>SQL Search</a>
-            <a class="nav-link" href={{ url_for('planner.planner') }}>Planner</a>
-            <a class="nav-link" href={{ url_for('planner.search') }}>Planner Search</a>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarLabs" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Database~
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a style="color: black" class="nav-link" href={{ url_for('crud.crud') }}>SQL CRUD</a>
+                    <a style="color: black"class="nav-link" href={{ url_for('crud.search') }}>SQL Search</a>
+                    <a style="color: black"class="nav-link" href={{ url_for('planner.planner') }}>Planner</a>
+                    <a style="color: black"class="nav-link" href={{ url_for('planner.search') }}>Planner Search</a>
+
+                </div>
+            </li>
 
 
 
@@ -59,17 +68,33 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                     <a class="dropdown-item" href="/reminders">Reminders</a>
                     <a class="dropdown-item" href="/wheel">Meals</a>
                     <a class="dropdown-item" href="/palindrome">Pali</a>
-                    <a class="dropdown-item" href="/draw">Draw</a>
                     <a class="dropdown-item" href="/tips">Tips</a>
                     <a class="dropdown-item" href="/flashcards">Flashcards</a>
                     <a class="dropdown-item" href="/calculator">Calculator</a>
                     <a class="dropdown-item" href="/calendar">Calendar</a>
                     <a class="dropdown-item" href="/quiz">Quiz</a>
-                    <a class="dropdown-item" href="/study_break">Study Break</a>
+                    <a class="dropdown-item" href="/dictionary">Dictionary</a>
+                    <a class="dropdown-item" href="/motivation">Motivational Quotes</a>
+                    <a class="dropdown-item" href="/translate">Translate</a>
+                    <a class="dropdown-item" href="/rewording">Paraphraser</a>
+
+                </div>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarLabs" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Break from Studying
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/tictactoe">Tic-Tac-Toe</a>
+                    <a class="dropdown-item" href="/sudoku">Sudoku</a>
+                    <a class="dropdown-item" href="/meditation">Meditation</a>
+                    <a class="dropdown-item" href="/draw">Draw</a>
 
 
                 </div>
             </li>
+
 
         </div>
     </div>

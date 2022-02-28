@@ -1,0 +1,405 @@
+{% extends "layouts/base.html" %}
+
+{% block body %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            background-image:url('https://i.ytimg.com/vi/y4mvJUwgtwQ/maxresdefault.jpg');
+            background-repeat:no-repeat;
+            background-attachment:fixed;
+            background-size:cover;
+        }
+        #sudokuTable {
+            background-color: #f9ecd9;
+            max-width:500px;
+            margin: 2%;
+        }
+        td {
+            border: 3px solid #571d1d;
+            width: 50px;
+        }
+        input {
+            width: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <button style="margin: 2%; background-color: #f9ecd9; color: #571D1DFF" onclick="sudokuCheck()">Check!</button>
+    <table id="sudokuTable">
+        <tr>
+            <td>
+                <input type="text" oninput="changeValue(0, 0)"></input>
+                <!--<div>5</div> also change the array below-->
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(0, 1)"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(0, 2)"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(0, 3)" value="2"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(0, 4)" value="6"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(0, 5)"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(0, 6)" value="7"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(0, 7)"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(0, 8)" value="1"></input>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" oninput="changeValue(1, 0)" value="6"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(1, 1)" value="8"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(1, 2)"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(1, 3)"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(1, 4)" value="7"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(1, 5)"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(1, 6)"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(1, 7)" value="9"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(1, 8)"></input>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" oninput="changeValue(2, 0)" value="1"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(2, 1)" value="9"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(2, 2)"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(2, 3)"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(2, 4)"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(2, 5)" value="4"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(2, 6)" value="5"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(2, 7)"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(2, 8)"></input>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" oninput="changeValue(3, 0)" value="8"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(3, 1)" value="2"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(3, 2)"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(3, 3)" value="1"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(3, 4)"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(3, 5)"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(3, 6)"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(3, 7)" value="4"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(3, 8)"></input>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" oninput="changeValue(4, 0)"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(4, 1)"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(4, 2)" value="4"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(4, 3)" value="6"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(4, 4)"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(4, 5)" value="2"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(4, 6)" value="9"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(4, 7)"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(4, 8)"></input>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" oninput="changeValue(5, 0)"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(5, 1)" value="5"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(5, 2)"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(5, 3)"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(5, 4)"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(5, 5)" value="3"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(5, 6)"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(5, 7)" value="2"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(5, 8)" value="8"></input>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" oninput="changeValue(6, 0)"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(6, 1)"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(6, 2)" value="9"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(6, 3)" value="3"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(6, 4)"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(6, 5)"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(6, 6)"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(6, 7)" value="7"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(6, 8)" value="4"></input>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" oninput="changeValue(7, 0)"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(7, 1)" value="4"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(7, 2)"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(7, 3)"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(7, 4)" value="5"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(7, 5)"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(7, 6)"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(7, 7)" value="3"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(7, 8)" value="6"></input>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" oninput="changeValue(8, 0)" value="7"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(8, 1)"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(8, 2)" value="3"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(8, 3)"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(8, 4)" value="1"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(8, 5)" value="8"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(8, 6)"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(8, 7)"></input>
+            </td>
+            <td>
+                <input type="text" oninput="changeValue(8, 8)"></input>
+            </td>
+        </tr>
+    </table>
+
+
+</body>
+<script>
+    //TODO: define a 9x9 array to hold the number info, initialize everything to empty string
+    var sudoku = [
+        ["","","","","","","","",""],
+        ["","","","","","","","",""],
+        ["","","","","","","","",""],
+        ["","","","","","","","",""],
+        ["","","","","","","","",""],
+        ["","","","","","","","",""],
+        ["","","","","","","","",""],
+        ["","","","","","","","",""],
+        ["","","","","","","","",""]
+    ];
+    var validInputs = ["", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+    //TODO: after finishing the rest, come back here and write a function that runs through everything below
+    function sudokuCheck() {
+        for(let i=0; i<9; i++){
+            if(!columncheck(i) || !rowcheck(i)){
+                alert("Incorrect");
+                return;
+            }
+        }
+        for(let i=0; i<3; i++){
+            for(let j=0; j<3; j++){
+                if(!boxcheck(i,j)){
+                    alert("Incorrect");
+                    return;
+                }
+            }
+        }
+        alert("Still valid");
+    }
+    //TODO: define a function to check each column for correctness. Return false if incorrect and true if ok
+    //TODO: give it a parameter for which column to check
+    //TODO: checks for correctness should look for whether or not there's more than 1 of any digit
+    //TODO: checks for correctness should look for whether or not there's any invalid "digits" aka anything not 1-9
+    //TODO: Hint: create an array and fill it with true at the index = to the number present at the cell you check
+    //TODO: Use that array to check whether or not a number is in a second time by using if
+    function columncheck(columnnToCheck) {
+        let checkArray=[];
+        for(let i=0; i<9; i++){
+            if(!validInputs.includes(sudoku[i][columnnToCheck])){
+                return false;
+            }
+            if (sudoku[i][columnnToCheck] != "") {
+                if(checkArray[sudoku[i][columnnToCheck]]){
+                    return false;
+                }
+                checkArray[sudoku[i][columnnToCheck]]=true;
+            }
+
+        }
+        return true;
+    }
+
+    //TODO: define a function to check each row for correctness
+    //TODO: give it a parameter for which row to check
+
+    function rowcheck(rowToCheck) {
+        let checkArray=[];
+        for(let i=0; i<9; i++){
+            if(!validInputs.includes(sudoku[rowToCheck][i])){
+                return false;
+            }
+            if (sudoku[rowToCheck][i] != "") {
+                if(checkArray[sudoku[rowToCheck][i]]){
+                    return false;
+                }
+                checkArray[sudoku[rowToCheck][i]]=true;
+            }
+
+        }
+        return true;
+    }
+
+    //TODO: define a function to check each box for correctness
+    //TODO: two different inputs of 0, 1, or 2. Will be dividing the sudoku board into 3x3 boxes and using those two inputs to reference which one
+    function boxcheck(rowToCheck, columnToCheck) {
+        let checkArray=[];
+        for(let i=0; i<3; i++) {
+            for(let j=0; j<3; j++){
+                if(!validInputs.includes(sudoku[3*rowToCheck+i][3*columnToCheck+j])){
+                    return false;
+                }
+                if (sudoku[3*rowToCheck+i][3*columnToCheck+j] != "") {
+                    if(checkArray[sudoku[3*rowToCheck+i][3*columnToCheck+j]]){
+                        return false;
+                    }
+                    checkArray[sudoku[3*rowToCheck+i][3*columnToCheck+j]]=true;
+                }
+            }
+        }
+        return true;
+    }
+
+    function changeValue(row, column) {
+        sudoku[row][column] = document.getElementById("sudokuTable").rows[row].cells[column].children[0].value;
+    }
+
+</script>
+</html>
+
+{% endblock %}
+{% block background %}
+{% endblock %}

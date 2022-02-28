@@ -25,7 +25,7 @@
 <td>
 <a href="https://github.com/sarayu-pr11/team-avatar/projects/1?card_filter_query=assignee%3Asarayu-pr11" target="_blank">Scrum Board</a>
 <td>
-<a href="https://github.com/sarayu-pr11/team-avatar/commits/main" target="_blank">Commits</a>
+<a href="https://github.com/sarayu-pr11/team-narks/commits?author=sarayu-pr11" target="_blank">Commits</a>
 </td>
 <td>
 <a href="https://docs.google.com/document/d/1S97_rP7HPPTj5MZeCIcP4AtwwZ15FzRRUY2SwV650ME/edit?usp=sharing" target="_blank">Sarayu Pair Journal</a>
@@ -119,6 +119,61 @@ We want to have a study hall themed website. Users can find a variety of study t
 <a href="https://github.com/sarayu-pr11/team-narks/wiki/Deployment-Plan" target="_blank">Link to running website</a><br>
 
 ####Below we have tables that provide a complete timeline of our work and commits over the past few weeks. They are divided into tables by sprints:
+
+****
+## Crossover week!
+<table>
+<tr>
+<td>Scrum Master</td>
+<td>Brian</td>
+<td>
+<a href="https://github.com/sarayu-pr11/team-narks/issues/79" target="_blank">Ticket</a><br>
+
+
+</td>
+</tr>
+
+<tr>
+<td>Designer</td>
+<td>Divya</td>
+<td>
+<a href="" target="_blank">Ticket</a><br>
+<a href="" target="_blank">Ticket </a><br>
+
+
+</td>
+</tr>
+
+<tr>
+<td>TO</td>
+<td>Adi</td>
+<td>
+<a href="https://github.com/sarayu-pr11/team-narks/issues/76" target="_blank">Ticket</a><br>
+</td>
+</tr>
+
+<tr>
+<td>Designer</td>
+<td>Natalie</td>
+<td>
+<a href="https://github.com/sarayu-pr11/team-narks/issues/80" target="_blank">Ticket</a><br>
+
+</td>
+</tr>
+
+<tr>
+<td>Deployment Manager</td>
+<td>Jason</td>
+<td>
+<a href="https://github.com/sarayu-pr11/team-narks/issues/81">Ticket</a><br>
+
+</td>
+</tr>
+</table>
+
+This week we worked on adding more techicals and developing our about pages
+
+****
 
 ****
 ## Week 7

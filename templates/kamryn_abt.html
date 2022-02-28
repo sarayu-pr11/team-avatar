@@ -7,7 +7,7 @@
 {% block body %}
     <h2 id="abt_header"> About Kamryn </h2>
 
-    <button class="closing" onClick="pause()"><img height=100px width=100px id="pauseButton" src="/static/assets/pause.png" /></button>
+   <!-- <button class="closing" onClick="pause()"><img height=100px width=100px id="pauseButton" src="/static/assets/pause.png" /></button>-->
 
 
     <form action="/kamryn_abt"  id="8ball_form" method="GET" >
@@ -47,31 +47,31 @@
     </div>
 
 
-    <div id="audio_file">
+    <!--<div id="audio_file">
             <audio id="evermore" autoplay loop runat="server" >
                 <source src="/static/assets/backgroundmusic.mp3" type="audio/mpeg">
-            </audio>
+            </audio>-->
 
 <script>
     var audio = document.getElementById("evermore");
     audio.volume = 0.2;
 </script>
 
-<script>
-    function pause() {
-        var x = document.getElementById("evermore");
-        x.pause();
-        setTimeout(function () {
-            x.play();
+//<script>
+  //  function pause() {
+    //    var x = document.getElementById("evermore");
+      //  x.pause();
+        //setTimeout(function () {
+          //  x.play();
 
-        }, 5000);   // wait 5 second
-    }
+    {#    }, 5000);   // wait 5 second#}
+    {#}#}
 </script>
-    <!--<div id="wrapper">
+    <div id="wrapper">
         <audio loop controls autoplay>
             <source src="/static/assets/backgroundmusic.mp3" type="audio/mpeg">
         </audio>
-    </div>-->
+    </div>
 
     <p id="create_task"> Create Task Notes:
         Website to help people find their style/fashion inspiration
