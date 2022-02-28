@@ -7,7 +7,7 @@ sarayu_blueprint = Blueprint('sarayu_blueprint', __name__)
 
 @sarayu_blueprint.route('/quiz/')
 def quiz():
-    return render_template("sarayu/quiz.html")
+    return render_template("quiz.html")
 
 
 
