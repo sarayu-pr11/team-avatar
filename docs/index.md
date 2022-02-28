@@ -1,3 +1,4 @@
+#Team NARKS
 ## [Scrum Board](https://github.com/sarayu-pr11/team-avatar/projects/1?card_filter_query=assignee%3A)
 ## [Github Repository](https://github.com/sarayu-pr11/team-avatar)
 
@@ -24,7 +25,7 @@
 <td>
 <a href="https://github.com/sarayu-pr11/team-avatar/projects/1?card_filter_query=assignee%3Asarayu-pr11" target="_blank">Scrum Board</a>
 <td>
-<a href="https://github.com/sarayu-pr11/team-avatar/commits/main" target="_blank">Commits</a>
+<a href="https://github.com/sarayu-pr11/team-narks/commits?author=sarayu-pr11" target="_blank">Commits</a>
 </td>
 <td>
 <a href="https://docs.google.com/document/d/1S97_rP7HPPTj5MZeCIcP4AtwwZ15FzRRUY2SwV650ME/edit?usp=sharing" target="_blank">Sarayu Pair Journal</a>
@@ -118,8 +119,184 @@ We want to have a study hall themed website. Users can find a variety of study t
 <a href="https://github.com/sarayu-pr11/team-narks/wiki/Deployment-Plan" target="_blank">Link to running website</a><br>
 
 ####Below we have tables that provide a complete timeline of our work and commits over the past few weeks. They are divided into tables by sprints:
+
+
 ****
-## Week 4
+## Week 11 Final! Video: [video!](https://www.loom.com/share/01857cefb7bf42f29b26e2331344f950)
+<table>
+<tr>
+<td>Scrum Master</td>
+<td>Riya</td>
+<td>
+<a href="https://github.com/sarayu-pr11/team-narks/commit/87b8e63d2ce261a73bbb35d15a7dc2efbe507f44" target="_blank">Create Task!</a><br>
+  <a href="https://github.com/sarayu-pr11/team-narks/commit/87b8e63d2ce261a73bbb35d15a7dc2efbe507f44" target="_blank">Ticket!</a><br>
+
+
+
+
+</td>
+</tr>
+
+<tr>
+<td>Designer</td>
+<td>Natalie</td>
+<td>
+<a href="" target="_blank">Create Task  </a><br>
+
+
+</td>
+</tr>
+
+<tr>
+<td>TO</td>
+<td>Abigail</td>
+<td>
+no commits as of this week
+</td>
+</tr>
+
+<tr>
+<td>Github Admin</td>
+<td>Sarayu</td>
+<td>
+<a href="https://github.com/sarayu-pr11/team-narks/commit/61bcf439739e2876fd67b9faab6026f411a24034" target="_blank">Create Task</a><br>
+
+</td>
+</tr>
+
+<tr>
+<td>Deployment Manager</td>
+<td>Kamryn</td>
+<td>
+<a href="https://github.com/sarayu-pr11/team-narks/commit/8f0858221778c7d8a06e35f935eeeff69b7d9227">Create Task</a><br>
+<a href="https://studycalm.ddns.net:5000" target="_blank">Domain</a><br>
+
+</td>
+</tr>
+</table>
+
+This week we worked on adding more techicals and developing our about pages
+
+****
+
+****
+## Crossover week!
+<table>
+<tr>
+<td>Scrum Master</td>
+<td>Brian</td>
+<td>
+<a href="https://github.com/sarayu-pr11/team-narks/issues/79" target="_blank">Ticket</a><br>
+
+
+</td>
+</tr>
+
+<tr>
+<td>Designer</td>
+<td>Divya</td>
+<td>
+<a href="" target="_blank">Ticket</a><br>
+<a href="" target="_blank">Ticket </a><br>
+
+
+</td>
+</tr>
+
+<tr>
+<td>TO</td>
+<td>Adi</td>
+<td>
+<a href="https://github.com/sarayu-pr11/team-narks/issues/76" target="_blank">Ticket</a><br>
+</td>
+</tr>
+
+<tr>
+<td>Designer</td>
+<td>Natalie</td>
+<td>
+<a href="https://github.com/sarayu-pr11/team-narks/issues/80" target="_blank">Ticket</a><br>
+
+</td>
+</tr>
+
+<tr>
+<td>Deployment Manager</td>
+<td>Jason</td>
+<td>
+<a href="https://github.com/sarayu-pr11/team-narks/issues/81">Ticket</a><br>
+
+</td>
+</tr>
+</table>
+
+This week we worked on adding more techicals and developing our about pages
+
+****
+
+****
+## Week 7
+<table>
+<tr>
+<td>Scrum Master</td>
+<td>Riya</td>
+<td>
+<a href="https://github.com/sarayu-pr11/team-narks/commit/ecde652df823ed580359c785e09dd16bb5238ff0" target="_blank">Ticket</a><br>
+<a href="https://github.com/sarayu-pr11/team-narks/commit/87b8e63d2ce261a73bbb35d15a7dc2efbe507f44" target="_blank">Ticket</a><br>
+<a href="https://github.com/sarayu-pr11/team-narks/commit/87b8e63d2ce261a73bbb35d15a7dc2efbe507f44" target="_blank">Ticket</a><br>
+
+
+</td>
+</tr>
+
+<tr>
+<td>Designer</td>
+<td>Natalie</td>
+<td>
+<a href="https://github.com/sarayu-pr11/team-narks/commit/b0dc4b6988d8ef5165dd8ab3e6763191ce1d4f9b" target="_blank">Ticket</a><br>
+<a href="" target="_blank">Ticket </a><br>
+
+
+</td>
+</tr>
+
+<tr>
+<td>TO</td>
+<td>Abigail</td>
+<td>
+no commits as of this week
+</td>
+</tr>
+
+<tr>
+<td>Github Admin</td>
+<td>Sarayu</td>
+<td>
+<a href="https://github.com/sarayu-pr11/team-narks/commit/61bcf439739e2876fd67b9faab6026f411a24034" target="_blank">Ticket</a><br>
+<a href="https://github.com/sarayu-pr11/team-narks/commit/91705fb1bb3025bb77107842298dc09060d0a4d6" target="_blank">Ticket</a><br>
+<a href="https://github.com/sarayu-pr11/team-narks/commit/72ae613fdbd84c88b19bd58ded2004490d6bdff8" target="_blank">Ticket</a><br>
+
+</td>
+</tr>
+
+<tr>
+<td>Deployment Manager</td>
+<td>Kamryn</td>
+<td>
+<a href="https://github.com/sarayu-pr11/team-narks/commit/8f0858221778c7d8a06e35f935eeeff69b7d9227">Ticket</a><br>
+<a href="https://studycalm.ddns.net:5000" target="_blank">Domain</a><br>
+
+</td>
+</tr>
+</table>
+
+This week we worked on adding more techicals and developing our about pages
+
+****
+
+
+****
+## Week 4/5
 <table>
 <tr>
 <td>Scrum Master</td>
@@ -128,6 +305,9 @@ We want to have a study hall themed website. Users can find a variety of study t
 <a href="https://github.com/sarayu-pr11/team-narks/commit/20faf35afca594be580224bf002836a66c0dbc52" target="_blank">Ticket</a><br>
 <a href="https://github.com/sarayu-pr11/team-narks/commit/9cf6f5bfe9cd2a36ecc5c0dc9121618788cac860" target="_blank">Ticket</a><br>
 <a href="https://github.com/sarayu-pr11/team-narks/commit/2a67c2c683be79b5f51b5325a8d0e0767941773c" target="_blank">Ticket</a><br>
+<a href="https://github.com/sarayu-pr11/team-narks/commit/2e68b7be012d16b2b76b7bc31594d0f12276baf4" target="_blank">Ticket</a><br>
+<a href="https://github.com/sarayu-pr11/team-narks/commit/d6504d79e482cf059d28f146f4df9f24ee41b7c1" target="_blank">Ticket</a><br>
+
 
 </td>
 </tr>
@@ -138,6 +318,8 @@ We want to have a study hall themed website. Users can find a variety of study t
 <td>
 <a href="https://github.com/sarayu-pr11/team-narks/commit/e68606c099afdeb833dc037baf96bb1693f986e6" target="_blank">Ticket</a><br>
 <a href="https://github.com/sarayu-pr11/team-narks/commit/25a4dfb96eec7e1a61e739107d25c62bfc5a530f" target="_blank">Ticket </a><br>
+<a href="https://github.com/sarayu-pr11/team-narks/commit/c7c4a395ec7cc7e5241da7b02cbf8035f8cf9187" target="_blank">Ticket </a><br>
+
 also branching strategies!
 </td>
 </tr>
@@ -155,6 +337,7 @@ no commits as of this week
 <td>Sarayu</td>
 <td>
 <a href="https://github.com/sarayu-pr11/team-narks/commit/f04274920d83938a571aa55590a01a1193adce47" target="_blank">Ticket</a><br>
+<a href="https://github.com/sarayu-pr11/team-narks/commit/91fedff84afee1fb94d6990bbef0ece069daae5c" target="_blank">Ticket</a><br>
 </td>
 </tr>
 
