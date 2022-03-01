@@ -13,14 +13,14 @@
     </div>
     <div class="grid">
         <div class="popup">
-            <button class="playAgain">play Again</button>
+            <button style="text-align: center; font-size: 30px; margin-right: 30px; background-color: rgb(206,138,138); color: #8a203f" class="playAgain">play again</button>
         </div>
     </div>
 </div>
 
 <style>
     body {
-        background-image: url("https://i.ytimg.com/vi/9FvvbVI5rYA/maxresdefault.jpg");
+        background-image: url("https://wallpaperaccess.com/full/3951116.jpg");
         background-repeat:no-repeat;
         background-attachment:fixed;
         background-size:cover;
@@ -44,7 +44,6 @@ transform: rotateY(180deg);
 }
 
 .popup {
-background: red;
 width: 200px;
 height: 200px;
 z-index:20;
@@ -156,7 +155,6 @@ font-size: 30px;
         let firstCard = cardsId[0];
         let secondCard = cardsId[1];
         if (cardsSelected[0] === cardsSelected[1] && firstCard !== secondCard) {
-            alert("you have found a match");
             cardsWon += 1;
             scoreBoard.innerHTML = cardsWon;
             setTimeout(checkWon,500)
@@ -164,7 +162,6 @@ font-size: 30px;
 
             imgs[firstCard].setAttribute("src", "https://ouch-cdn2.icons8.com/mdUfwmtrhbQ943Q03pvbYk2d8w8ZvbFQ6uAzGxoZ2GI/rs:fit:256:256/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9zdmcvNjAz/L2QzNGQxNTE4LTY5/NTYtNGNiYS04OWI5/LTM0YjUyODg0NDhl/Ni5zdmc.png");
             imgs[secondCard].setAttribute("src", "https://ouch-cdn2.icons8.com/mdUfwmtrhbQ943Q03pvbYk2d8w8ZvbFQ6uAzGxoZ2GI/rs:fit:256:256/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9zdmcvNjAz/L2QzNGQxNTE4LTY5/NTYtNGNiYS04OWI5/LTM0YjUyODg0NDhl/Ni5zdmc.png");
-            alert("wrong, please try again");
             imgs[firstCard].classList.remove("flip");
             imgs[secondCard].classList.remove("flip");
         }
