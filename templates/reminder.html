@@ -1,6 +1,11 @@
 {% extends "layouts/base.html" %}
 
+<!- This variable sets name of browser tab  -->
+{% set project = "Reminder" %}
+
+<!- This is a replacement block for Body in base.html -->
 {% block body %}
+    <!- Try building a new body here ->
 
     <!DOCTYPE html>
     <html lang="en">
@@ -10,27 +15,35 @@
         <title>Last Minute Study Reminders!</title>
         <style>
             body {
-                background-image: url(/static/assets/flamingo/);
+                background-image: url("https://wallpapercave.com/wp/wp6922439.jpg");
+                background-repeat:no-repeat;
+                background-attachment:fixed;
+                background-size:cover;
             }
             h2 {
-                color: blue;
+                color: #3d3544;
                 font-family: Copperplate;
                 font-size: 300%;
                 text-align: center;
 
             }
             h4 {
-                color: #000000;
-                font-family:Copperplate;
-                font-size: 160%;
+                background-color: rgba(0, 0, 0, 0.35);
+                color: #f9ecd9;
+                font-family: "Trebuchet MS";
+                font-size: 150%;
                 text-align: center;
-                border: 3px solid #000000;
+                border: 3px solid #3d3544;
+                margin: 2%;
+
+            }
 
             textarea.center {
                 margin: auto;
                 width: 50%;
                 border: 3px solid green;
                 padding: 10px;
+
             }
 
         </style>
@@ -39,10 +52,10 @@
     <body>
     <h2>Don't forget to do:</h2>
     <h4>Simply type any reminders in the text box, and click save. When you reload the page, click "load" to reload any of your previous reminders!</h4>
-    <textarea id="myTextarea" rows="10" cols="80"></textarea>
+    <textarea style="background-color: rgba(249,236,217,0.64); color: #3d3544; margin: 2%" id="myTextarea" rows="10" cols="115"></textarea>
     <p></p>
-    <button onclick="mySave()">Save</button>
-    <button onclick="myLoad()">Load</button>
+    <button style="background-color: #3d3544; color: #f9ecd9; margin: 2%" onclick="mySave()">Save</button>
+    <button style="background-color: #3d3544; color: #f9ecd9; margin: 2%" onclick="myLoad()">Load</button>
     </body>
     </html>
 
@@ -56,4 +69,9 @@
             document.getElementById("myTextarea").value = myContent;
         }
     </script>
+
+{% endblock %}
+
+<!- This is turning off birds background from base.html -->
+{% block background %}
 {% endblock %}

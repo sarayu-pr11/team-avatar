@@ -5,6 +5,8 @@
     <title>Memory</title>
 </head>
 
+<a style="background-color: #ce8a8a; color: #8a203f; font-size: 30px;" class="nav-link" href={{ url_for('index') }}>Home</a>
+
 
 <div class="container">
     <div class="data">
@@ -122,7 +124,7 @@ font-size: 30px;
         popup.style.display = "none";
         array.forEach((arr, index) => {
             let img = document.createElement("img");
-            img.setAttribute("src", "https://ouch-cdn2.icons8.com/mdUfwmtrhbQ943Q03pvbYk2d8w8ZvbFQ6uAzGxoZ2GI/rs:fit:256:256/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9zdmcvNjAz/L2QzNGQxNTE4LTY5/NTYtNGNiYS04OWI5/LTM0YjUyODg0NDhl/Ni5zdmc.png");
+            img.setAttribute("src", "https://images.vexels.com/media/users/3/143241/isolated/lists/6c77ea3ed3b60c01d8f245cf6d3a6169-square-logo-isotype.png");
             img.setAttribute("data-id", index);
             grid.appendChild(img);
         })
@@ -160,8 +162,8 @@ font-size: 30px;
             setTimeout(checkWon,500)
         } else {
 
-            imgs[firstCard].setAttribute("src", "https://ouch-cdn2.icons8.com/mdUfwmtrhbQ943Q03pvbYk2d8w8ZvbFQ6uAzGxoZ2GI/rs:fit:256:256/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9zdmcvNjAz/L2QzNGQxNTE4LTY5/NTYtNGNiYS04OWI5/LTM0YjUyODg0NDhl/Ni5zdmc.png");
-            imgs[secondCard].setAttribute("src", "https://ouch-cdn2.icons8.com/mdUfwmtrhbQ943Q03pvbYk2d8w8ZvbFQ6uAzGxoZ2GI/rs:fit:256:256/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9zdmcvNjAz/L2QzNGQxNTE4LTY5/NTYtNGNiYS04OWI5/LTM0YjUyODg0NDhl/Ni5zdmc.png");
+            imgs[firstCard].setAttribute("src", "https://images.vexels.com/media/users/3/143241/isolated/lists/6c77ea3ed3b60c01d8f245cf6d3a6169-square-logo-isotype.png");
+            imgs[secondCard].setAttribute("src", "https://images.vexels.com/media/users/3/143241/isolated/lists/6c77ea3ed3b60c01d8f245cf6d3a6169-square-logo-isotype.png");
             imgs[firstCard].classList.remove("flip");
             imgs[secondCard].classList.remove("flip");
         }
